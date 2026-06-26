@@ -7,7 +7,7 @@ O site apresenta os programas de pesquisa, projetos em andamento, ferramentas an
 ---
 
 ## 📁 Estrutura do Projeto
-´´´
+/
 ├── index.html # Página inicial (Home)
 ├── pages/ # Páginas internas do site
 ├── css/ # Arquivos de estilo (CSS)
@@ -19,7 +19,6 @@ O site apresenta os programas de pesquisa, projetos em andamento, ferramentas an
 ├── content/ # Conteúdo editável via CMS
 ├── .gitignore # Arquivos ignorados pelo Git
 └── README.md # Documentação do projeto
-´´´
 
 ---
 
