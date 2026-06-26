@@ -1,0 +1,62 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# Dependências e pacotes (caso use algum no futuro)
+node_modules/
+package-lock.json
+yarn.lock
+.env
+
+# Arquivos temporários
+*.log
+*.tmp
+*.temp
+.cache/
+dist/
+build/
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# GitHub Pages (arquivos gerados localmente)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# CMS local (Decap CMS / Pages CMS)
+/admin/config.local.yml
+/admin/config.yml.local
+/admin/local/
+.admin/
+*.local.yml
+
+# Conteúdo sensível (se houver)
+*.key
+*.pem
+*.crt
+*.p12
+secrets.json
+
+# Arquivos grandes ou desnecessários
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.psd
+*.ai
+*.eps
+*.tiff
+
+# Arquivos de log do navegador
+*.log
