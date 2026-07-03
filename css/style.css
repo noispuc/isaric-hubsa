@@ -54,7 +54,7 @@ img {
     --bg-light: #F7F9FC;
     --bg-bege: #F0E8D9;
     --white: #FFFFFF;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     --radius: 12px;
     --transition: 0.3s ease;
 }
@@ -103,12 +103,12 @@ img {
 }
 
 /* ============================================
-   HEADER / MENU
+   HEADER / MENU 
    ============================================ */
 #main-header {
     background: var(--white);
     border-bottom: 1px solid #eee;
-    padding: 16px 0;
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -128,25 +128,153 @@ img {
     width: auto;
 }
 
+/* ----- Navegação principal ----- */
 nav ul {
     display: flex;
-    gap: 24px;
+    gap: 0;
     align-items: center;
     flex-wrap: wrap;
 }
 
-nav a {
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: var(--text-dark);
-    padding: 4px 0;
-    border-bottom: 2px solid transparent;
-    transition: border-color var(--transition);
+/* Itens do menu */
+nav ul li {
+    position: relative;
+    list-style: none;
 }
 
-nav a:hover {
-    border-bottom-color: var(--primary);
+/* Botões do menu principal */
+nav ul li a,
+nav ul li .dropdown-toggle {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover do menu principal - fundo vermelho, texto branco */
+nav ul li a:hover,
+nav ul li .dropdown-toggle:hover,
+nav ul li:hover .dropdown-toggle {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Mantém o destaque quando o dropdown está aberto */
+.dropdown.open .dropdown-toggle {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ----- Dropdown (alinhado à esquerda do botão) ----- */
+/* ----- Dropdown (alinhado à esquerda do botão) ----- */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    padding: 32px 40px;
+    min-width: 600px;
+    max-width: 800px;
+    box-shadow: var(--shadow);
+    z-index: 1001;
+    text-align: left;  /* ← garante alinhamento à esquerda */
+}
+
+/* Mostra o dropdown no hover (desktop) */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Grid de colunas dentro do dropdown */
+.dropdown-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: left;  /* ← garante alinhamento à esquerda */
+}
+
+/* Título do dropdown (ex: "Programs" dentro do card) */
+.dropdown-menu-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    display: block;
+    grid-column: 1 / -1;
+    cursor: default;
+    text-align: left;  /* ← alinhado à esquerda */
+}
+
+/* Título da coluna (categoria) com linha vermelha */
+.dropdown-category {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    display: block;
+    cursor: default;
+    letter-spacing: 0.3px;
+    position: relative;
+    padding-bottom: 8px;
+    text-align: left;  /* ← alinhado à esquerda */
+}
+
+/* Linha vermelha fina abaixo da categoria (estilo PMI) */
+.dropdown-category::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary);
+}
+
+/* Links dentro do dropdown */
+.dropdown-menu a {
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    width: auto;
+    text-align: left;  /* ← alinhado à esquerda */
+}
+
+/* Hover dos subitens - apenas texto vermelho + sublinhado vermelho */
+.dropdown-menu a:hover {
     color: var(--primary);
+    border-bottom-color: var(--primary);
+    background: transparent;
+}
+
+/* Espaçamento entre os itens da lista */
+.dropdown-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;  /* ← alinha os itens à esquerda */
+    padding: 0;
+    margin: 0;
+}
+
+/* Tamanho dinâmico do dropdown para menus menores */
+.dropdown-menu-small {
+    min-width: auto;
+    padding: 24px 32px;
+}
+
+.dropdown-menu-small .dropdown-menu-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
 }
 
 .idioma {
@@ -263,13 +391,14 @@ nav a:hover {
    RESPONSIVIDADE
    ============================================ */
 @media (max-width: 992px) {
-    nav ul {
-        gap: 16px;
+    .dropdown-menu {
+        min-width: 400px;
+        padding: 24px;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+    .dropdown-menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
 }
 
@@ -286,7 +415,8 @@ nav a:hover {
 
     nav ul {
         justify-content: center;
-        gap: 12px;
+        gap: 4px;
+        flex-wrap: wrap;
     }
 
     .idioma {
@@ -295,6 +425,32 @@ nav a:hover {
 
     .container {
         padding: 0 16px;
+    }
+
+    /* Dropdown em mobile */
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        border: none;
+        box-shadow: none;
+        padding: 16px 0;
+        min-width: auto;
+        max-width: 100%;
+        background: #f9f9f9;
+        border-radius: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
 
     .footer-grid {
@@ -310,5 +466,18 @@ nav a:hover {
 
     .footer-social {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    nav ul li a,
+    nav ul li .dropdown-toggle {
+        padding: 6px 10px;
+        font-size: 0.8rem;
     }
 }

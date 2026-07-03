@@ -5,42 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="site_title">ISARIC South America Hub</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/dropdown.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
     <!-- ===== MENU SUPERIOR ===== -->
-    <header id="main-header">
-        <div class="container">
-            <div class="logo">
-                <img src="./assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/index.html" data-i18n="menu_home">Home</a></li>
-                    <li><a href="./pages/programs.html" data-i18n="menu_programs">Programas</a></li>
-                    <li><a href="./pages/learn.html" data-i18n="menu_learn">Aprenda</a></li>
-                    <li><a href="./pages/tools.html" data-i18n="menu_tools">Tools</a></li>
-                    <li><a href="./pages/team.html" data-i18n="menu_team">Equipe</a></li>
-                    <li><a href="./pages/publications.html" data-i18n="menu_publications">Publicações</a></li>
-                    <li><a href="./pages/news.html" data-i18n="menu_news">Notícias</a></li>
-                    <li><a href="./pages/contact.html" data-i18n="menu_contact">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="idioma">
-                <button onclick="switchLanguage('pt')" data-i18n="lang_pt">PT</button>
-                <button onclick="switchLanguage('en')" data-i18n="lang_en">EN</button>
-                <button onclick="switchLanguage('es')" data-i18n="lang_es">ES</button>
-            </div>
+    <!-- ===== MENU SUPERIOR ===== -->
+<header id="main-header">
+    <div class="container">
+        <div class="logo">
+            <img src="./assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
         </div>
+        <nav>
+            <ul>
+                <!-- Home -->
+                <li><a href="/index.html" data-i18n="menu_home">Home</a></li>
+
+                <!-- Programs (dropdown) -->
+                <li class="dropdown">
+                    <span class="dropdown-toggle" data-i18n="menu_programs">Programas</span>
+                    <div class="dropdown-menu">
+                        <span class="dropdown-menu-title" data-i18n="menu_programs">Programas</span>
+                        <div class="dropdown-menu-grid">
+                            <!-- Coluna 1: IPOP -->
+                            <div>
+                                <span class="dropdown-category" data-i18n="menu_ipop">IPOP</span>
+                                <ul>
+                                    <li><a href="pages/programs/aria.html" data-i18n="menu_aria">ARIA</a></li>
+                                    <li><a href="pages/programs/pocus.html" data-i18n="menu_pocus">POCUS</a></li>
+                                    <li><a href="pages/programs/mosaic.html" data-i18n="menu_mosaic">MOSAIC</a></li>
+                                </ul>
+                            </div>
+                            <!-- Coluna 2: Scalable Analytics -->
+                            <div>
+                                <span class="dropdown-category" data-i18n="menu_scalable">Scalable Analytics</span>
+                                <ul>
+                                    <li><a href="pages/programs/arc-bridge.html" data-i18n="menu_arc_bridge">ARC-BRIDGE</a></li>
+                                    <li><a href="pages/programs/vertex.html" data-i18n="menu_vertex">VERTEX</a></li>
+                                </ul>
+                            </div>
+                            <!-- Coluna 3: Community -->
+                            <div>
+                                <span class="dropdown-category" data-i18n="menu_community">Community</span>
+                                <ul>
+                                    <li><a href="pages/programs/credo.html" data-i18n="menu_credo">CREDO</a></li>
+                                    <li><a href="pages/programs/fellowship.html" data-i18n="menu_fellowship">Fellowship</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Resources (dropdown) - com tamanho menor -->
+                <li class="dropdown">
+                    <span class="dropdown-toggle" data-i18n="menu_resources">Recursos</span>
+                    <div class="dropdown-menu dropdown-menu-small">
+                        <span class="dropdown-menu-title" data-i18n="menu_resources">Recursos</span>
+                        <div class="dropdown-menu-grid">
+                            <div>
+                                <ul>
+                                    <li><a href="pages/resources/learn.html" data-i18n="menu_learn">Aprenda</a></li>
+                                    <li><a href="pages/resources/tools.html" data-i18n="menu_tools">Ferramentas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Learn More (dropdown) - com tamanho menor -->
+                <li class="dropdown">
+                    <span class="dropdown-toggle" data-i18n="menu_learn_more">Saiba Mais</span>
+                    <div class="dropdown-menu dropdown-menu-small">
+                        <span class="dropdown-menu-title" data-i18n="menu_learn_more">Saiba Mais</span>
+                        <div class="dropdown-menu-grid">
+                            <div>
+                                <ul>
+                                    <li><a href="pages/learn-more/events.html" data-i18n="menu_events">Eventos</a></li>
+                                    <li><a href="pages/learn-more/news.html" data-i18n="menu_news">Notícias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- About (dropdown) - com tamanho menor -->
+                <li class="dropdown">
+                    <span class="dropdown-toggle" data-i18n="menu_about">Sobre</span>
+                    <div class="dropdown-menu dropdown-menu-small">
+                        <span class="dropdown-menu-title" data-i18n="menu_about">Sobre</span>
+                        <div class="dropdown-menu-grid">
+                            <div>
+                                <ul>
+                                    <li><a href="pages/about/team.html" data-i18n="menu_team">Equipe</a></li>
+                                    <li><a href="pages/about/publications.html" data-i18n="menu_publications">Publicações</a></li>
+                                    <li><a href="pages/about/contact.html" data-i18n="menu_contact">Contato</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="idioma">
+            <button onclick="switchLanguage('pt')" data-i18n="lang_pt">PT</button>
+            <button onclick="switchLanguage('en')" data-i18n="lang_en">EN</button>
+            <button onclick="switchLanguage('es')" data-i18n="lang_es">ES</button>
+        </div>
+    </div>
     </header>
 
     <!-- ===== HERO ===== -->
     <section id="hero">
-    <div class="container">
-        <h1 data-i18n="hero_title">ISARIC South America Hub</h1>
-        <p data-i18n="hero_subtitle">Referência em pesquisa de arbovírus na região</p>
-    </div>
+        <div class="container">
+            <h1 data-i18n="hero_title">ISARIC South America Hub</h1>
+            <p data-i18n="hero_subtitle">Referência em pesquisa de arbovírus na região</p>
+        </div>
     </section>
 
     <!-- ===== ÚLTIMAS NOTÍCIAS (1+4) ===== -->
@@ -48,15 +128,15 @@
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="news_title">Últimas Notícias</h2>
-                <a href="/pages/news.html" data-i18n="news_view_all">Ver todas →</a>
+                <a href="pages/learn-more/news.html" data-i18n="news_view_all">Ver todas →</a>
             </div>
             <div class="noticias-grid">
                 <!-- Notícia Principal (1) -->
                 <div class="noticia-principal">
-                    <img src="/assets/images/nois.jpeg" alt="CREDO 2026">
+                    <img src="./assets/images/nois.jpeg" alt="CREDO 2026">
                     <h3 data-i18n="news_credo_title">CREDO 2026 - Workshop em Salvador, BA</h3>
                     <p data-i18n="news_credo_text">O workshop CREDO 2026 reunirá pesquisadores de toda a América do Sul em Salvador para discutir avanços em pesquisa de arbovírus e compartilhar metodologias inovadoras.</p>
-                    <a href="/pages/news.html" data-i18n="news_read_more">Leia mais →</a>
+                    <a href="pages/learn-more/news.html" data-i18n="news_read_more">Leia mais →</a>
                 </div>
                 <!-- Thumbnails (4) - grid 2x2 -->
                 <div class="noticias-thumbnails">
@@ -74,33 +154,33 @@
         <div class="container">
             <h2 data-i18n="projects_title">Projetos em Destaque</h2>
             <div class="cards-grid">
-                <!-- Card 1: IPOP -->
+                <!-- Card 1: IPOP / ARIA -->
                 <div class="card">
                     <h3 data-i18n="projects_ipop_title">IPOP</h3>
                     <p><strong data-i18n="projects_ipop_desc">ARIA – Chamada para colaboradores internacionais</strong></p>
                     <p data-i18n="projects_ipop_text">Participe do maior estudo abarcando o desenvolvimento de produtos para o controle de arbovírus.</p>
-                    <a href="/pages/programs.html#ipop" data-i18n="projects_learn_more">Saiba mais →</a>
+                    <a href="pages/programs/aria.html" data-i18n="projects_learn_more">Saiba mais →</a>
                 </div>
                 <!-- Card 2: CREDO -->
                 <div class="card">
                     <h3 data-i18n="projects_credo_title">CREDO</h3>
                     <p><strong data-i18n="projects_credo_desc">CREDO 2025 (Maio) e 2026 (Abril) – Treinamento em pesquisa durante surtos</strong></p>
                     <p data-i18n="projects_credo_text">Acesso ao material e apresentação das atividades do CREDO realizado no Rio de Janeiro (2025) e Salvador (2026).</p>
-                    <a href="/pages/programs.html#credo" data-i18n="projects_view_material">Ver material →</a>
+                    <a href="pages/programs/credo.html" data-i18n="projects_view_material">Ver material →</a>
                 </div>
-                <!-- Card 3: Scalable Analytics -->
+                <!-- Card 3: Scalable Analytics / ARC -->
                 <div class="card">
                     <h3 data-i18n="projects_scalable_title">Scalable Analytics</h3>
-                    <p><strong data-i18n="projects_scalable_desc">RAPID – Nova ferramenta de análise</strong></p>
-                    <p data-i18n="projects_scalable_text">Ferramenta para análise rápida de dados epidemiológicos em tempo real.</p>
-                    <a href="/pages/programs.html#scalable" data-i18n="projects_learn_more">Saiba mais →</a>
+                    <p><strong data-i18n="projects_scalable_desc">ARC – Modelos preditivos para arboviroses</strong></p>
+                    <p data-i18n="projects_scalable_text">Conjunto de modelos preditivos para estimar risco de transmissão de arboviroses com base em variáveis climáticas e de mobilidade.</p>
+                    <a href="pages/programs/arc-bridge.html" data-i18n="projects_learn_more">Saiba mais →</a>
                 </div>
                 <!-- Card 4: Todos os Projetos -->
                 <div class="card">
                     <h3 data-i18n="projects_all_title">Todos os Projetos</h3>
                     <p><strong data-i18n="projects_all_desc">Conheça todos os projetos</strong></p>
                     <p data-i18n="projects_all_text">Explore os programas e projetos do ISARIC South America Hub.</p>
-                    <a href="/pages/programs.html" data-i18n="projects_view_all">Ver todos →</a>
+                    <a href="pages/programs/aria.html" data-i18n="projects_view_all">Ver todos →</a>
                 </div>
             </div>
         </div>
@@ -132,69 +212,70 @@
 
     <!-- ===== NEWSLETTER ===== -->
     <section id="newsletter">
-    <div class="container">
-        <h3 data-i18n="newsletter_title">Receba Nossas Atualizações</h3>
-        <p data-i18n="newsletter_text">Inscreva-se em nossa newsletter para receber as últimas notícias, publicações e eventos.</p>
-        <form onsubmit="event.preventDefault(); subscribeNewsletter();">
-            <input type="email" placeholder="Seu e-mail" required data-i18n-placeholder="newsletter_email_placeholder">
-            <button type="submit" class="btn-subscribe" data-i18n="newsletter_subscribe">Inscrever</button>
-        </form>
-    </div>
+        <div class="container">
+            <h3 data-i18n="newsletter_title">Receba Nossas Atualizações</h3>
+            <p data-i18n="newsletter_text">Inscreva-se em nossa newsletter para receber as últimas notícias, publicações e eventos.</p>
+            <form onsubmit="event.preventDefault(); subscribeNewsletter();">
+                <input type="email" placeholder="Seu e-mail" required data-i18n-placeholder="newsletter_email_placeholder">
+                <button type="submit" class="btn-subscribe" data-i18n="newsletter_subscribe">Inscrever</button>
+            </form>
+        </div>
     </section>
 
     <!-- ===== RODAPÉ ===== -->
-  <footer id="main-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <!-- Coluna 1: Logo + descrição -->
-            <div class="footer-brand">
-                <img src="assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
-                <p data-i18n="footer_description">Referência em pesquisa de arboviroses na América do Sul</p>
-            </div>
-
-            <!-- Coluna 2: Programas -->
-            <div class="footer-col">
-                <h4 data-i18n="footer_programs_title">Programas</h4>
-                <ul>
-                    <li><a href="pages/programs.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
-                </ul>
-            </div>
-
-            <!-- Coluna 3: Recursos -->
-            <div class="footer-col">
-                <h4 data-i18n="footer_resources_title">Recursos</h4>
-                <ul>
-                    <li><a href="pages/publications.html" data-i18n="footer_publications">Publicações</a></li>
-                    <li><a href="pages/learn.html" data-i18n="footer_learn">Aprenda</a></li>
-                    <li><a href="pages/tools.html" data-i18n="footer_tools">Tools</a></li>
-                    <li><a href="pages/news.html" data-i18n="footer_news">Notícias</a></li>
-                </ul>
-            </div>
-
-            <!-- Coluna 4: Redes Sociais -->
-            <div class="footer-col">
-                <h4 data-i18n="footer_connect_title">Conecte-se</h4>
-                <div class="footer-social">
-                    <a href="#" aria-label="Twitter/X"><img src="assets/icons/x.svg" alt="X"></a>
-                    <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                    <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
-                    <a href="#" aria-label="GitHub"><img src="assets/icons/github.svg" alt="GitHub"></a>
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Coluna 1: Logo + descrição -->
+                <div class="footer-brand">
+                    <img src="./assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+                    <p data-i18n="footer_description">Referência em pesquisa de arboviroses na América do Sul</p>
                 </div>
-                <ul style="margin-top: 12px;">
-                    <li><a href="pages/contact.html" data-i18n="footer_contact">Fale Conosco</a></li>
-                </ul>
+
+                <!-- Coluna 2: Programas -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_programs_title">Programas</h4>
+                    <ul>
+                        <li><a href="pages/programs/aria.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Recursos -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_resources_title">Recursos</h4>
+                    <ul>
+                        <li><a href="pages/resources/learn.html" data-i18n="footer_learn">Aprenda</a></li>
+                        <li><a href="pages/resources/tools.html" data-i18n="footer_tools">Tools</a></li>
+                        <li><a href="pages/learn-more/events.html" data-i18n="footer_events">Eventos</a></li>
+                        <li><a href="pages/learn-more/news.html" data-i18n="footer_news">Notícias</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Redes Sociais -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_connect_title">Conecte-se</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter/X"><img src="./assets/icons/x.svg" alt="X"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="./assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="YouTube"><img src="./assets/icons/youtube.svg" alt="YouTube"></a>
+                        <a href="#" aria-label="GitHub"><img src="./assets/icons/github.svg" alt="GitHub"></a>
+                    </div>
+                    <ul style="margin-top: 12px;">
+                        <li><a href="pages/about/contact.html" data-i18n="footer_contact">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rodapé inferior -->
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 ISARIC South America Hub. Todos os direitos reservados.</p>
             </div>
         </div>
-
-        <!-- Rodapé inferior -->
-        <div class="footer-bottom">
-            <p data-i18n="footer_copyright">&copy; 2026 ISARIC South America Hub. Todos os direitos reservados.</p>
-        </div>
-    </div>
     </footer>
 
     <!-- ===== SCRIPTS ===== -->
-    <script src="/js/main.js"></script>
-    <script src="/js/news.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/news.js"></script>
 </body>
 </html>

@@ -1,0 +1,210 @@
+/* ============================================
+   EVENTS – ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* ----- HERO ----- */
+#hero {
+    background: #BA0225;
+    padding: 30px 0;
+    text-align: left;
+    border-bottom: none;
+}
+
+#hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+#hero p {
+    font-size: 1rem;
+    color: #CCCCCC;
+    font-weight: 300;
+}
+
+/* ----- SEÇÃO DE EVENTOS ----- */
+#events-section {
+    padding: 48px 0;
+    background: #FFFFFF;
+}
+
+/* ----- FILTROS ----- */
+.events-filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.events-filters select {
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: #FFFFFF;
+    transition: border-color 0.2s ease;
+    min-width: 150px;
+}
+
+.events-filters select:focus {
+    outline: none;
+    border-color: #BA0225;
+}
+
+/* ----- LISTA DE EVENTOS ----- */
+#events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ----- EVENTO INDIVIDUAL ----- */
+.event-item {
+    display: flex;
+    gap: 24px;
+    padding: 20px 24px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #FFFFFF;
+    transition: box-shadow 0.2s ease;
+}
+
+.event-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* ----- DATA ----- */
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    padding: 8px 12px;
+    background: #F7F9FC;
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.event-day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #BA0225;
+    line-height: 1.2;
+}
+
+.event-month {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4A4A4A;
+    text-transform: uppercase;
+}
+
+.event-year {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+/* ----- CONTEÚDO DO EVENTO ----- */
+.event-content {
+    flex: 1;
+}
+
+.event-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 4px 0;
+}
+
+.event-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0 0 8px 0;
+}
+
+.event-desc {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+}
+
+.event-badge {
+    display: inline-block;
+    padding: 2px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.event-badge.workshop {
+    background: #E3F2FD;
+    color: #1565C0;
+}
+
+.event-badge.training {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.event-badge.symposium {
+    background: #FFF3E0;
+    color: #E65100;
+}
+
+/* ----- MENSAGEM DE NENHUM RESULTADO ----- */
+.no-results {
+    text-align: center;
+    padding: 48px 0;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    #hero {
+        text-align: center;
+        padding: 24px 0;
+    }
+
+    #hero h1 {
+        font-size: 1.6rem;
+    }
+
+    #hero p {
+        font-size: 0.95rem;
+    }
+
+    .events-filters {
+        flex-direction: column;
+    }
+
+    .events-filters select {
+        min-width: 100%;
+    }
+
+    .event-item {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .event-date {
+        flex-direction: row;
+        min-width: auto;
+        padding: 6px 16px;
+        gap: 8px;
+    }
+
+    .event-day {
+        font-size: 1.2rem;
+    }
+}

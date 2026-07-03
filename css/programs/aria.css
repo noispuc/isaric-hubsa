@@ -1,0 +1,228 @@
+/* ============================================
+   ARIA – ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* ----- HERO ----- */
+#hero {
+    background: #BA0225;
+    padding: 40px 0;
+    text-align: left;
+    border-bottom: none;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.hero-icon img {
+    width: 80px;
+    height: 80px;
+    /*filter: brightness(0) invert(1);*/
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #CCCCCC;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-ativo {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+/* ----- CONTEÚDO ----- */
+#aria-content {
+    padding: 48px 0;
+    background: #FFFFFF;
+}
+
+.content-block {
+    margin-bottom: 48px;
+}
+
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 16px;
+    border-bottom: 3px solid #BA0225;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.content-block p {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* ----- TIERS ----- */
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.tier-card {
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid #ccc;
+    background: #F7F9FC;
+}
+
+.tier-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+.tier-card p {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+    margin-bottom: 0;
+}
+
+.tier-1 {
+    border-left-color: #568784;
+}
+
+.tier-2 {
+    border-left-color: #D1964F;
+}
+
+.tier-3 {
+    border-left-color: #BA0225;
+}
+
+/* ----- LISTAS ----- */
+.objectives-list,
+.participation-list,
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.objectives-list li,
+.participation-list li,
+.benefits-list li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+}
+
+.objectives-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #BA0225;
+    font-weight: 700;
+}
+
+.participation-list li::before {
+    content: '•';
+    position: absolute;
+    left: 4px;
+    color: #BA0225;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.benefits-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #D1964F;
+    font-weight: 700;
+}
+
+/* ----- JOIN CTA ----- */
+.join-cta {
+    background: #F7F9FC;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 24px;
+    border: 1px solid #eee;
+}
+
+.join-cta p {
+    font-size: 1.1rem;
+    color: #1A1A1A;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.join-cta .btn {
+    font-size: 1rem;
+    padding: 12px 32px;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .hero-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    #hero {
+        padding: 30px 0;
+    }
+
+    .tiers-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .content-block h2 {
+        font-size: 1.3rem;
+    }
+
+    .join-cta {
+        padding: 20px;
+    }
+}

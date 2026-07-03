@@ -1,0 +1,285 @@
+/* ============================================
+   PUBLICATIONS – ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* ----- HERO ----- */
+#hero {
+    background: #BA0225;
+    padding: 30px 0;
+    text-align: left;
+    border-bottom: none;
+}
+
+#hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+#hero p {
+    font-size: 1rem;
+    color: #CCCCCC;
+    font-weight: 300;
+}
+
+/* ----- TOOLBAR (busca + filtros) ----- */
+#publications-section {
+    padding: 48px 0;
+    background: #FFFFFF;
+}
+
+.publications-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding: 20px;
+    background: #F7F9FC;
+    border-radius: 12px;
+}
+
+.search-bar {
+    display: flex;
+    flex: 2;
+    min-width: 200px;
+    gap: 8px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #BA0225;
+}
+
+.search-bar button {
+    padding: 10px 24px;
+    background: #BA0225;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-bar button:hover {
+    background: #8A001C;
+}
+
+.filters {
+    display: flex;
+    flex: 3;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: #FFFFFF;
+    transition: border-color 0.2s ease;
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: #BA0225;
+}
+
+/* ----- LISTA DE PUBLICAÇÕES ----- */
+#publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.publication-item {
+    padding: 20px 24px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease;
+    background: #FFFFFF;
+}
+
+.publication-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.pub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pub-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.pub-badge {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.disease-dengue {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.disease-zika {
+    background: #E3F2FD;
+    color: #1565C0;
+}
+
+.disease-chikungunya {
+    background: #FFF3E0;
+    color: #E65100;
+}
+
+.disease-yellow-fever {
+    background: #FFF8E1;
+    color: #F57F17;
+}
+
+.pub-authors {
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    margin: 6px 0 2px;
+}
+
+.pub-journal {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.pub-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.pub-program {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    color: #555;
+}
+
+.pub-doi {
+    font-size: 0.85rem;
+    color: #BA0225;
+    font-weight: 500;
+}
+
+.pub-doi:hover {
+    color: #8A001C;
+    text-decoration: underline;
+}
+
+.pub-cite {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #BA0225;
+    background: transparent;
+    border: 1px solid #BA0225;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pub-cite:hover {
+    background: #BA0225;
+    color: #FFFFFF;
+}
+
+/* ----- MENSAGEM DE NENHUM RESULTADO ----- */
+.no-results {
+    text-align: center;
+    padding: 48px 0;
+    color: #888;
+    font-size: 1.1rem;
+    display: none;
+}
+
+.no-results.visible {
+    display: block;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    #hero {
+        text-align: center;
+        padding: 24px 0;
+    }
+
+    #hero h1 {
+        font-size: 1.6rem;
+    }
+
+    #hero p {
+        font-size: 0.95rem;
+    }
+
+    .publications-toolbar {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters select {
+        min-width: 100%;
+    }
+
+    .pub-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pub-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .publication-item {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="contact_title">Contato – ISARIC South America Hub</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/about/contact.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html" data-i18n="menu_home">Home</a></li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_programs">Programas</span>
+                        <div class="dropdown-menu">
+                            <span class="dropdown-menu-title" data-i18n="menu_programs">Programas</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_ipop">IPOP</span>
+                                    <ul>
+                                        <li><a href="../programs/aria.html" data-i18n="menu_aria">ARIA</a></li>
+                                        <li><a href="../programs/pocus.html" data-i18n="menu_pocus">POCUS</a></li>
+                                        <li><a href="../programs/mosaic.html" data-i18n="menu_mosaic">MOSAIC</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_scalable">Scalable Analytics</span>
+                                    <ul>
+                                        <li><a href="../programs/arc-bridge.html" data-i18n="menu_arc_bridge">ARC-BRIDGE</a></li>
+                                        <li><a href="../programs/vertex.html" data-i18n="menu_vertex">VERTEX</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_community">Community</span>
+                                    <ul>
+                                        <li><a href="../programs/credo.html" data-i18n="menu_credo">CREDO</a></li>
+                                        <li><a href="../programs/fellowship.html" data-i18n="menu_fellowship">Fellowship</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_resources">Recursos</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_resources">Recursos</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="../resources/learn.html" data-i18n="menu_learn">Aprenda</a></li>
+                                        <li><a href="../resources/tools.html" data-i18n="menu_tools">Ferramentas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_learn_more">Saiba Mais</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_learn_more">Saiba Mais</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="../learn-more/events.html" data-i18n="menu_events">Eventos</a></li>
+                                        <li><a href="../learn-more/news.html" data-i18n="menu_news">Notícias</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_about">Sobre</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_about">Sobre</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="team.html" data-i18n="menu_team">Equipe</a></li>
+                                        <li><a href="publications.html" data-i18n="menu_publications">Publicações</a></li>
+                                        <li><a href="contact.html" data-i18n="menu_contact">Contato</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" data-i18n="lang_pt">PT</button>
+                <button onclick="switchLanguage('en')" data-i18n="lang_en">EN</button>
+                <button onclick="switchLanguage('es')" data-i18n="lang_es">ES</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="container">
+            <h1 data-i18n="contact_title">Contato</h1>
+            <p data-i18n="contact_subtitle">Entre em contato com nossa equipe</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO: FORMULÁRIO + INFORMAÇÕES ===== -->
+    <section id="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Coluna 1: Formulário -->
+                <div class="contact-form">
+                    <h2 data-i18n="contact_form_title">Envie uma Mensagem</h2>
+                    <form id="contact-form" onsubmit="event.preventDefault(); submitForm();">
+                        <div class="form-group">
+                            <label for="nome" data-i18n="contact_name">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact_email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="email@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="instituicao" data-i18n="contact_institution">Instituição</label>
+                            <input type="text" id="instituicao" name="instituicao" placeholder="Sua instituição de pesquisa">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto" data-i18n="contact_subject">Assunto</label>
+                            <select id="assunto" name="assunto">
+                                <option value="colaboracao" data-i18n="contact_subject_collaboration">Colaboração em Pesquisa</option>
+                                <option value="duvida" data-i18n="contact_subject_question">Dúvida</option>
+                                <option value="imprensa" data-i18n="contact_subject_press">Imprensa</option>
+                                <option value="outro" data-i18n="contact_subject_other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem" data-i18n="contact_message">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact_send">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <!-- Coluna 2: Informações de Contato -->
+                <div class="contact-info">
+                    <h2 data-i18n="contact_info_title">Informações de Contato</h2>
+
+                    <div class="info-item">
+                        <h4 data-i18n="contact_email">E-mail</h4>
+                        <p>contato@isaric.org</p>
+                        <span class="info-detail" data-i18n="contact_email_detail">Respondemos em até 48 horas</span>
+                    </div>
+
+                    <div class="info-item">
+                        <h4 data-i18n="contact_phone">Telefone</h4>
+                        <p>+55 21 9999-9999</p>
+                        <span class="info-detail" data-i18n="contact_phone_detail">Segunda a sexta, 9h às 17h (horário de Brasília)</span>
+                    </div>
+
+                    <div class="info-item">
+                        <h4 data-i18n="contact_address">Endereço</h4>
+                        <p>Ed. Dr. Beltrão, 1200</p>
+                        <p>R. Marquês de São Vicente, 225 - Gávea</p>
+                        <p>Rio de Janeiro - RJ</p>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="info-map">
+                        <h4 data-i18n="contact_map">Localização</h4>
+                        <div id="map-container">
+                            <!-- Google Maps embed será inserido aqui -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1462.0!2d-43.2345!3d-22.9767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU4JzM2LjAiUyA0M8KwMTQnMDYuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                                width="100%"
+                                height="200"
+                                style="border:0; border-radius: 8px;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OPORTUNIDADES DE COLABORAÇÃO ===== -->
+    <section id="collaboration">
+        <div class="container">
+            <h2 data-i18n="contact_collaboration_title">Oportunidades de Colaboração</h2>
+            <div class="collaboration-grid">
+                <p data-i18n="contact_collaboration_text_1">Estamos sempre abertos a novas colaborações com instituições de pesquisa, profissionais de saúde e organizações internacionais em contato para o estudo de ambientes de pesquisa.</p>
+                <p data-i18n="contact_collaboration_text_2">Somos um centro para discutir possibilidades de parceria empregatícia, acesso a dados, treinamentos e outras iniciativas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+                    <p data-i18n="footer_description">Referência em pesquisa de arboviroses na América do Sul</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_programs_title">Programas</h4>
+                    <ul>
+                        <li><a href="../programs/aria.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_resources_title">Recursos</h4>
+                    <ul>
+                        <li><a href="../resources/learn.html" data-i18n="footer_learn">Aprenda</a></li>
+                        <li><a href="../resources/tools.html" data-i18n="footer_tools">Ferramentas</a></li>
+                        <li><a href="../learn-more/events.html" data-i18n="footer_events">Eventos</a></li>
+                        <li><a href="../learn-more/news.html" data-i18n="footer_news">Notícias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_connect_title">Conecte-se</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter/X"><img src="../../assets/icons/x.svg" alt="X"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="../../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="YouTube"><img src="../../assets/icons/youtube.svg" alt="YouTube"></a>
+                        <a href="#" aria-label="GitHub"><img src="../../assets/icons/github.svg" alt="GitHub"></a>
+                    </div>
+                    <ul style="margin-top: 12px;">
+                        <li><a href="contact.html" data-i18n="footer_contact">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 ISARIC South America Hub. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dropdown.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tools_title">Ferramentas – ISARIC South America Hub</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components/dropdown.css">
+    <link rel="stylesheet" href="../../css/resources/tools.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html" data-i18n="menu_home">Home</a></li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_programs">Programas</span>
+                        <div class="dropdown-menu">
+                            <span class="dropdown-menu-title" data-i18n="menu_programs">Programas</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_ipop">IPOP</span>
+                                    <ul>
+                                        <li><a href="../programs/aria.html" data-i18n="menu_aria">ARIA</a></li>
+                                        <li><a href="../programs/pocus.html" data-i18n="menu_pocus">POCUS</a></li>
+                                        <li><a href="../programs/mosaic.html" data-i18n="menu_mosaic">MOSAIC</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_scalable">Scalable Analytics</span>
+                                    <ul>
+                                        <li><a href="../programs/arc-bridge.html" data-i18n="menu_arc_bridge">ARC-BRIDGE</a></li>
+                                        <li><a href="../programs/vertex.html" data-i18n="menu_vertex">VERTEX</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_community">Community</span>
+                                    <ul>
+                                        <li><a href="../programs/credo.html" data-i18n="menu_credo">CREDO</a></li>
+                                        <li><a href="../programs/fellowship.html" data-i18n="menu_fellowship">Fellowship</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_resources">Recursos</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_resources">Recursos</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="learn.html" data-i18n="menu_learn">Aprenda</a></li>
+                                        <li><a href="tools.html" data-i18n="menu_tools">Ferramentas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_learn_more">Saiba Mais</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_learn_more">Saiba Mais</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="../learn-more/events.html" data-i18n="menu_events">Eventos</a></li>
+                                        <li><a href="../learn-more/news.html" data-i18n="menu_news">Notícias</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_about">Sobre</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_about">Sobre</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="../about/team.html" data-i18n="menu_team">Equipe</a></li>
+                                        <li><a href="../about/publications.html" data-i18n="menu_publications">Publicações</a></li>
+                                        <li><a href="../about/contact.html" data-i18n="menu_contact">Contato</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" data-i18n="lang_pt">PT</button>
+                <button onclick="switchLanguage('en')" data-i18n="lang_en">EN</button>
+                <button onclick="switchLanguage('es')" data-i18n="lang_es">ES</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="container">
+            <h1 data-i18n="tools_title">Ferramentas</h1>
+            <p data-i18n="tools_subtitle">Ferramentas abertas desenvolvidas pelo ISARIC South America Hub</p>
+        </div>
+    </section>
+
+    <!-- ===== LISTA DE FERRAMENTAS ===== -->
+    <section id="tools-section">
+        <div class="container">
+            <div class="tools-grid">
+
+                <!-- Tool 1: ARIA Data Pipeline -->
+                <div class="tool-item">
+                    <div class="tool-header">
+                        <h2 data-i18n="tools_aria_title">ARIA Data Pipeline</h2>
+                    </div>
+                    <p class="tool-subtitle" data-i18n="tools_aria_subtitle">Pipelines automatizados para coleta, validação e integração de dados epidemiológicos</p>
+                    <div class="tool-details">
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_what_is">O que é</h4>
+                            <ul>
+                                <li data-i18n="tools_aria_what_1">Sistema API-first desenvolvido em Python para processamento de dados epidemiológicos</li>
+                                <li data-i18n="tools_aria_what_2">Integração com fontes de dados de saúde em tempo real</li>
+                                <li data-i18n="tools_aria_what_3">Pipeline escalável para grandes volumes de dados</li>
+                            </ul>
+                        </div>
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_how_it_works">Como funciona</h4>
+                            <ul>
+                                <li data-i18n="tools_aria_how_1">Processa dados de saúde em tempo real</li>
+                                <li data-i18n="tools_aria_how_2">Valida e padroniza dados de múltiplas fontes</li>
+                                <li data-i18n="tools_aria_how_3">Disponibiliza dados via API para análise</li>
+                            </ul>
+                        </div>
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_repository">Repositório</h4>
+                            <ul>
+                                <li><a href="#" data-i18n="tools_aria_repo">github.com/isarichub/aria-pipeline</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="tool-link" data-i18n="tools_access">Acessar ferramenta →</a>
+                </div>
+
+                <!-- Tool 2: CREDO Analytics Suite -->
+                <div class="tool-item">
+                    <div class="tool-header">
+                        <h2 data-i18n="tools_credo_title">CREDO Analytics Suite</h2>
+                    </div>
+                    <p class="tool-subtitle" data-i18n="tools_credo_subtitle">Ferramentas para análise estatística e visualização de dados clínicos</p>
+                    <div class="tool-details">
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_what_is">O que é</h4>
+                            <ul>
+                                <li data-i18n="tools_credo_what_1">Suite de análise estatística para dados clínicos</li>
+                                <li data-i18n="tools_credo_what_2">Visualização interativa de dados epidemiológicos</li>
+                                <li data-i18n="tools_credo_what_3">Ferramentas para análise de coorte</li>
+                            </ul>
+                        </div>
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_how_it_works">Como funciona</h4>
+                            <ul>
+                                <li data-i18n="tools_credo_how_1">Análise estatística descritiva e inferencial</li>
+                                <li data-i18n="tools_credo_how_2">Dashboards interativos para visualização</li>
+                                <li data-i18n="tools_credo_how_3">Exportação de relatórios em múltiplos formatos</li>
+                            </ul>
+                        </div>
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_repository">Repositório</h4>
+                            <ul>
+                                <li><a href="#" data-i18n="tools_credo_repo">github.com/isarichub/credo-analytics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="tool-link" data-i18n="tools_access">Acessar ferramenta →</a>
+                </div>
+
+                <!-- Tool 3: Predictive Models Framework -->
+                <div class="tool-item">
+                    <div class="tool-header">
+                        <h2 data-i18n="tools_predictive_title">Predictive Models Framework</h2>
+                    </div>
+                    <p class="tool-subtitle" data-i18n="tools_predictive_subtitle">Ferramentas para desenvolvimento e validação de modelos preditivos em epidemiologia</p>
+                    <div class="tool-details">
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_what_is">O que é</h4>
+                            <ul>
+                                <li data-i18n="tools_predictive_what_1">Framework para desenvolvimento de modelos preditivos</li>
+                                <li data-i18n="tools_predictive_what_2">Validação de modelos com dados históricos</li>
+                                <li data-i18n="tools_predictive_what_3">Integração com variáveis climáticas e de mobilidade</li>
+                            </ul>
+                        </div>
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_how_it_works">Como funciona</h4>
+                            <ul>
+                                <li data-i18n="tools_predictive_how_1">Treinamento de modelos com dados históricos</li>
+                                <li data-i18n="tools_predictive_how_2">Validação cruzada e métricas de desempenho</li>
+                                <li data-i18n="tools_predictive_how_3">Deploy de modelos via API</li>
+                            </ul>
+                        </div>
+                        <div class="tool-detail">
+                            <h4 data-i18n="tools_repository">Repositório</h4>
+                            <ul>
+                                <li><a href="#" data-i18n="tools_predictive_repo">github.com/isarichub/predictive-models</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="tool-link" data-i18n="tools_access">Acessar ferramenta →</a>
+                </div>
+
+            </div>
+
+            <!-- ===== CONTRIBUA ===== -->
+            <div id="tools-contribute">
+                <h2 data-i18n="tools_contribute_title">Contribua com nossos projetos</h2>
+                <p data-i18n="tools_contribute_text">Todas as ferramentas são open-source e aceitamos contribuições da comunidade científica.</p>
+                <a href="#" class="btn btn-primary" data-i18n="tools_contribute_btn">Ver no GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+                    <p data-i18n="footer_description">Referência em pesquisa de arboviroses na América do Sul</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_programs_title">Programas</h4>
+                    <ul>
+                        <li><a href="../programs/aria.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_resources_title">Recursos</h4>
+                    <ul>
+                        <li><a href="learn.html" data-i18n="footer_learn">Aprenda</a></li>
+                        <li><a href="tools.html" data-i18n="footer_tools">Ferramentas</a></li>
+                        <li><a href="../learn-more/events.html" data-i18n="footer_events">Eventos</a></li>
+                        <li><a href="../learn-more/news.html" data-i18n="footer_news">Notícias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_connect_title">Conecte-se</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter/X"><img src="../../assets/icons/x.svg" alt="X"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="../../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="YouTube"><img src="../../assets/icons/youtube.svg" alt="YouTube"></a>
+                        <a href="#" aria-label="GitHub"><img src="../../assets/icons/github.svg" alt="GitHub"></a>
+                    </div>
+                    <ul style="margin-top: 12px;">
+                        <li><a href="../about/contact.html" data-i18n="footer_contact">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 ISARIC South America Hub. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dropdown.js"></script>
+
+</body>
+</html>
