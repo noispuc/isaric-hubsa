@@ -1,0 +1,314 @@
+/* ============================================
+   RESET E BASE
+   ============================================ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1A1A1A;
+    background-color: #FFFFFF;
+}
+
+a {
+    color: #BA0225;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #8A001C;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   VARIÁVEIS (CORES)
+   ============================================ */
+:root {
+    --primary: #BA0225;
+    --primary-dark: #8A001C;
+    --secondary: #568784;
+    --tertiary: #D1964F;
+    --text-dark: #1A1A1A;
+    --text-light: #4A4A4A;
+    --bg-light: #F7F9FC;
+    --bg-bege: #F0E8D9;
+    --white: #FFFFFF;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+    --transition: 0.3s ease;
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    transition: all var(--transition);
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--white);
+}
+
+/* ============================================
+   HEADER / MENU
+   ============================================ */
+#main-header {
+    background: var(--white);
+    border-bottom: 1px solid #eee;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo img {
+    height: 48px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color var(--transition);
+}
+
+nav a:hover {
+    border-bottom-color: var(--primary);
+    color: var(--primary);
+}
+
+.idioma {
+    display: flex;
+    gap: 4px;
+}
+
+.idioma button {
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.idioma button:hover,
+.idioma button.ativo {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+#main-footer {
+    background: #1A1A1A;
+    color: #FFFFFF;
+    padding: 48px 0 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.footer-brand img {
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.footer-col h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-col a {
+    color: #aaa;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+/* Redes Sociais */
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.footer-social a:hover {
+    background: #BA0225;
+}
+
+.footer-social img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 16px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    #main-header .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .idioma {
+        justify-content: center;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
