@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="arcbridge_title">ARC-BRIDGE – ISARIC South America Hub</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components/dropdown.css">
+    <link rel="stylesheet" href="../../css/programs/arc-bridge.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html" data-i18n="menu_home">Home</a></li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_programs">Programas</span>
+                        <div class="dropdown-menu">
+                            <span class="dropdown-menu-title" data-i18n="menu_programs">Programas</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_ipop">IPOP</span>
+                                    <ul>
+                                        <li><a href="aria.html" data-i18n="menu_aria">ARIA</a></li>
+                                        <li><a href="pocus.html" data-i18n="menu_pocus">POCUS</a></li>
+                                        <li><a href="mosaic.html" data-i18n="menu_mosaic">MOSAIC</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_scalable">Scalable Analytics</span>
+                                    <ul>
+                                        <li><a href="arc-bridge.html" data-i18n="menu_arc_bridge">ARC-BRIDGE</a></li>
+                                        <li><a href="vertex.html" data-i18n="menu_vertex">VERTEX</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span class="dropdown-category" data-i18n="menu_community">Community</span>
+                                    <ul>
+                                        <li><a href="credo.html" data-i18n="menu_credo">CREDO</a></li>
+                                        <li><a href="fellowship.html" data-i18n="menu_fellowship">Fellowship</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_resources">Recursos</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_resources">Recursos</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="../resources/learn.html" data-i18n="menu_learn">Aprenda</a></li>
+                                        <li><a href="../resources/tools.html" data-i18n="menu_tools">Ferramentas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_learn_more">Saiba Mais</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_learn_more">Saiba Mais</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="../learn-more/events.html" data-i18n="menu_events">Eventos</a></li>
+                                        <li><a href="../learn-more/news.html" data-i18n="menu_news">Notícias</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-toggle" data-i18n="menu_about">Sobre</span>
+                        <div class="dropdown-menu dropdown-menu-small">
+                            <span class="dropdown-menu-title" data-i18n="menu_about">Sobre</span>
+                            <div class="dropdown-menu-grid">
+                                <div>
+                                    <ul>
+                                        <li><a href="../about/team.html" data-i18n="menu_team">Equipe</a></li>
+                                        <li><a href="../about/publications.html" data-i18n="menu_publications">Publicações</a></li>
+                                        <li><a href="../about/contact.html" data-i18n="menu_contact">Contato</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" data-i18n="lang_pt">PT</button>
+                <button onclick="switchLanguage('en')" data-i18n="lang_en">EN</button>
+                <button onclick="switchLanguage('es')" data-i18n="lang_es">ES</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <img src="../../assets/icons/arc-bridge-icon.svg" alt="ARC-BRIDGE">
+                </div>
+                <div class="hero-text">
+                    <h1 data-i18n="arcbridge_title">ARC-BRIDGE</h1>
+                    <p class="hero-subtitle" data-i18n="arcbridge_subtitle">Ferramentas para padronização e geração de formulários clínicos</p>
+                    <span class="status status-disponivel" data-i18n="arcbridge_status">🟢 Disponível</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTEÚDO ===== -->
+    <section id="arcbridge-content">
+        <div class="container">
+
+            <!-- ARC -->
+            <div class="content-block" id="arc">
+                <h2 data-i18n="arcbridge_arc_title">ARC – Analysis and Research Compendium</h2>
+                <p data-i18n="arcbridge_arc_text_1">O ARC (Analysis and Research Compendium) é uma biblioteca abrangente de perguntas harmonizadas, projetada para construir rapidamente formulários de relato de caso (CRFs) padronizados para surtos de doenças. Ele cobre uma ampla gama de informações relacionadas ao paciente, incluindo dados demográficos, comorbidades, sinais e sintomas, medicamentos, desfechos e muito mais.</p>
+                <p data-i18n="arcbridge_arc_text_2">Cada pergunta no ARC possui diretrizes específicas e parâmetros relevantes, como definições, opções de resposta, unidades, limites mínimos e máximos, tipos de dados e lógica de salto.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4 data-i18n="arcbridge_arc_feature_1">✓ Legível por máquinas</h4>
+                        <p data-i18n="arcbridge_arc_feature_1_desc">Disponível em formato CSV, facilitando a leitura e o processamento automatizado.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 data-i18n="arcbridge_arc_feature_2">✓ Acesso aberto</h4>
+                        <p data-i18n="arcbridge_arc_feature_2_desc">Livremente acessível para a comunidade científica.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 data-i18n="arcbridge_arc_feature_3">✓ Controle de versão</h4>
+                        <p data-i18n="arcbridge_arc_feature_3_desc">Mantido via GitHub, garantindo integridade, rastreabilidade e colaboração.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 data-i18n="arcbridge_arc_feature_4">✓ Integração com BRIDGE</h4>
+                        <p data-i18n="arcbridge_arc_feature_4_desc">O ARC é integrado ao BRIDGE, nossa ferramenta para geração de CRFs.</p>
+                    </div>
+                </div>
+
+                <h3 data-i18n="arcbridge_arc_components_title">Componentes do ARC</h3>
+                <ul class="components-list">
+                    <li><strong data-i18n="arcbridge_arc_component_1">arc.csv</strong> – <span data-i18n="arcbridge_arc_component_1_desc">Lista legível por máquinas de perguntas clínicas e de pesquisa.</span></li>
+                    <li><strong data-i18n="arcbridge_arc_component_2">Lists/</strong> – <span data-i18n="arcbridge_arc_component_2_desc">Coleção de listas de opções padronizadas (condições, dados demográficos, medicamentos).</span></li>
+                    <li><strong data-i18n="arcbridge_arc_component_3">Data Capture Schema</strong> – <span data-i18n="arcbridge_arc_component_3_desc">Estrutura de dados que define os momentos-chave na jornada do paciente.</span></li>
+                </ul>
+
+                <div class="links-container">
+                    <a href="https://github.com/ISARICResearch/ARC" target="_blank" class="btn" data-i18n="arcbridge_arc_github">🔗 Ver no GitHub</a>
+                </div>
+            </div>
+
+            <!-- BRIDGE -->
+            <div class="content-block" id="bridge">
+                <h2 data-i18n="arcbridge_bridge_title">BRIDGE</h2>
+                <p data-i18n="arcbridge_bridge_text_1">O BRIDGE é uma aplicação web desenvolvida pelo ISARIC que auxilia na criação de formulários de relato de caso (CRFs) com base no ARC. A ferramenta permite selecionar e personalizar perguntas clínicas, adaptando os CRFs ao contexto específico de cada surto.</p>
+                <p data-i18n="arcbridge_bridge_text_2">Com o BRIDGE, é possível gerar automaticamente dicionários de dados e arquivos XML para criação de bancos de dados REDCap, versões para impressão dos CRFs e guias de preenchimento.</p>
+
+                <h3 data-i18n="arcbridge_bridge_components_title">Componentes do BRIDGE</h3>
+                <ul class="components-list">
+                    <li><strong data-i18n="arcbridge_bridge_component_1">1. Barra de Ferramentas</strong> – <span data-i18n="arcbridge_bridge_component_1_desc">Acesso às configurações e templates.</span></li>
+                    <li><strong data-i18n="arcbridge_bridge_component_2">2. Árvore do ARC</strong> – <span data-i18n="arcbridge_bridge_component_2_desc">Apresenta o ARC como uma estrutura em árvore (versões, formulários, seções e perguntas).</span></li>
+                    <li><strong data-i18n="arcbridge_bridge_component_3">3. Painel de Representação do CRF</strong> – <span data-i18n="arcbridge_bridge_component_3_desc">Visualização do formulário gerado.</span></li>
+                </ul>
+
+                <div class="links-container">
+                    <a href="https://isaric-bridge.replit.app" target="_blank" class="btn btn-primary" data-i18n="arcbridge_bridge_access">🔗 Acessar ferramenta</a>
+                    <a href="https://github.com/ISARICResearch/BRIDGE" target="_blank" class="btn" data-i18n="arcbridge_bridge_github">🔗 Ver no GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+                    <p data-i18n="footer_description">Referência em pesquisa de arboviroses na América do Sul</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_programs_title">Programas</h4>
+                    <ul>
+                        <li><a href="aria.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_resources_title">Recursos</h4>
+                    <ul>
+                        <li><a href="../resources/learn.html" data-i18n="footer_learn">Aprenda</a></li>
+                        <li><a href="../resources/tools.html" data-i18n="footer_tools">Ferramentas</a></li>
+                        <li><a href="../learn-more/events.html" data-i18n="footer_events">Eventos</a></li>
+                        <li><a href="../learn-more/news.html" data-i18n="footer_news">Notícias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_connect_title">Conecte-se</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter/X"><img src="../../assets/icons/x.svg" alt="X"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="../../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="YouTube"><img src="../../assets/icons/youtube.svg" alt="YouTube"></a>
+                        <a href="#" aria-label="GitHub"><img src="../../assets/icons/github.svg" alt="GitHub"></a>
+                    </div>
+                    <ul style="margin-top: 12px;">
+                        <li><a href="../about/contact.html" data-i18n="footer_contact">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 ISARIC South America Hub. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dropdown.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* ============================================
+   POCUS – ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* ----- HERO ----- */
+#hero {
+    background: #BA0225;
+    padding: 40px 0;
+    text-align: left;
+    border-bottom: none;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.hero-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #CCCCCC;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-ativo {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+/* ----- CONTEÚDO ----- */
+#pocus-content {
+    padding: 48px 0;
+    background: #FFFFFF;
+}
+
+.content-block {
+    margin-bottom: 48px;
+}
+
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 16px;
+    border-bottom: 3px solid #BA0225;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.content-block p {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .hero-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    #hero {
+        padding: 30px 0;
+    }
+
+    .content-block h2 {
+        font-size: 1.3rem;
+    }
+}
