@@ -8,17 +8,69 @@ O site apresenta os programas de pesquisa, projetos em andamento, ferramentas an
 
 ## 📁 Estrutura do Projeto
 ```
+/
 ├── index.html # Página inicial (Home)
-├── pages/ # Páginas internas do site
-├── css/ # Arquivos de estilo (CSS)
-├── js/ # Scripts JavaScript
-├── assets/ # Recursos estáticos
+├── pages/
+│ ├── programs/ # Páginas de projetos (IPOP, Scalable, Community)
+│ │ ├── aria.html
+│ │ ├── pocus.html
+│ │ ├── mosaic.html
+│ │ ├── arc-bridge.html
+│ │ ├── vertex.html
+│ │ ├── credo.html
+│ │ └── fellowship.html
+│ ├── resources/ # Páginas de recursos
+│ │ ├── learn.html # Aprenda
+│ │ └── tools.html # Ferramentas
+│ ├── learn-more/ # Páginas "Saiba Mais"
+│ │ ├── events.html # Eventos
+│ │ └── news.html # Notícias
+│ └── about/ # Páginas institucionais
+│ ├── team.html # Equipe
+│ ├── publications.html # Publicações
+│ └── contact.html # Contato
+├── css/
+│ ├── style.css # Estilos globais (reset, header, footer, variáveis)
+│ ├── home.css # Estilos exclusivos da Home
+│ ├── components/
+│ │ └── dropdown.css # Estilos do menu dropdown
+│ ├── programs/ # Estilos dos projetos
+│ │ ├── aria.css
+│ │ ├── pocus.css
+│ │ ├── mosaic.css
+│ │ ├── arc-bridge.css
+│ │ ├── vertex.css
+│ │ ├── credo.css
+│ │ └── fellowship.css
+│ ├── resources/
+│ │ ├── learn.css
+│ │ └── tools.css
+│ ├── learn-more/
+│ │ ├── events.css
+│ │ └── news.css
+│ └── about/
+│ ├── team.css
+│ ├── publications.css
+│ └── contact.css
+├── js/
+│ ├── main.js # Funções globais (menu, idioma, rodapé)
+│ ├── dropdown.js # Suporte touch para dropdown (mobile)
+│ ├── news.js # Componente 1+4 de notícias (Home)
+│ ├── publications.js # Busca e filtros (Publicações)
+│ └── events.js # Filtros (Eventos)
+├── assets/
 │ ├── images/ # Fotos e banners
-│ └── icons/ # Ícones dos programas e projetos
+│ └── icons/ # Ícones dos programas e projetos (SVG)
 ├── admin/ # CMS (Decap CMS) – painel de controle
-├── content/ # Conteúdo editável via CMS
-├── .gitignore # Arquivos ignorados pelo Git
-└── README.md # Documentação do projeto
+│ ├── index.html
+│ └── config.yml
+├── content/
+│ └── translations/ # Arquivos de tradução
+│ ├── pt.json # Português
+│ ├── en.json # Inglês
+│ └── es.json # Espanhol
+├── .gitignore
+└── README.md
 ```
 
 ---
