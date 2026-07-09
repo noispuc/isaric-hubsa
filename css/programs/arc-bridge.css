@@ -203,3 +203,28 @@
         text-align: center;
     }
 }
+
+/* ============================================
+   IMAGEM DE CANTO SOBREPOSTA AO HERO
+   ============================================ */
+.corner-image {
+    float: right;
+    width: 320px;
+    max-width: 45%;
+    margin: -80px 0 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .corner-image {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: -40px auto 20px auto;
+        border-radius: 12px 12px 0 0;
+    }
+}
