@@ -252,3 +252,71 @@
         border-radius: 12px 12px 0 0;
     }
 }
+
+/* ============================================
+   BANNER DE COLABORAÇÃO (ARIA)
+   ============================================ */
+.collaboration-banner {
+    background: #F0E8D9;  /* Cor de fundo bege, para combinar com a identidade visual */
+    border-left: 6px solid #BA0225;  /* Destaque com a cor primária */
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin: 0 0 32px 0;  /* Espaçamento antes do conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.collaboration-banner p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #1A1A1A;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+.collaboration-banner strong {
+    font-weight: 700;
+}
+
+.btn-banner {
+    display: inline-block;
+    background: #BA0225;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-banner:hover {
+    background: #8A001C;
+    color: #FFFFFF;
+}
+
+/* Responsividade para o banner */
+@media (max-width: 768px) {
+    .collaboration-banner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .collaboration-banner p {
+        justify-content: center;
+    }
+
+    .btn-banner {
+        width: 100%;
+        text-align: center;
+    }
+}
