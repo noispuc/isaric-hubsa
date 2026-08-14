@@ -13,7 +13,7 @@
     <header id="main-header">
         <div class="container">
             <div class="logo">
-                <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+                <img src="../../assets/images/isaric.png" alt="ISARIC South America Hub">
             </div>
             <nav>
                 <ul>
@@ -48,20 +48,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown">
-                        <span class="dropdown-toggle" data-i18n="menu_resources">Recursos</span>
-                        <div class="dropdown-menu dropdown-menu-small">
-                            <span class="dropdown-menu-title" data-i18n="menu_resources">Recursos</span>
-                            <div class="dropdown-menu-grid">
-                                <div>
-                                    <ul>
-                                        <li><a href="../resources/learn.html" data-i18n="menu_learn">Aprenda</a></li>
-                                        <li><a href="../resources/tools.html" data-i18n="menu_tools">Ferramentas</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    
                     <li class="dropdown">
                         <span class="dropdown-toggle" data-i18n="menu_learn_more">Saiba Mais</span>
                         <div class="dropdown-menu dropdown-menu-small">
@@ -117,7 +104,7 @@
                 <!-- Coluna 1: Formulário -->
                 <div class="contact-form">
                     <h2 data-i18n="contact_form_title">Envie uma Mensagem</h2>
-                    <form id="contact-form" onsubmit="event.preventDefault(); submitForm();">
+                    <form id="contact-form" action="https://formsubmit.co/arbovirus@isaric.org" method="POST">
                         <div class="form-group">
                             <label for="nome" data-i18n="contact_name">Nome</label>
                             <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
@@ -153,20 +140,12 @@
 
                     <div class="info-item">
                         <h4 data-i18n="contact_email">E-mail</h4>
-                        <p>contato@isaric.org</p>
+                        <p>arbovirus@isaric.org</p>
                         <span class="info-detail" data-i18n="contact_email_detail">Respondemos em até 48 horas</span>
                     </div>
 
                     <div class="info-item">
-                        <h4 data-i18n="contact_phone">Telefone</h4>
-                        <p>+55 21 9999-9999</p>
-                        <span class="info-detail" data-i18n="contact_phone_detail">Segunda a sexta, 9h às 17h (horário de Brasília)</span>
-                    </div>
-
-                    <div class="info-item">
                         <h4 data-i18n="contact_address">Endereço</h4>
-                        <p>Ed. Dr. Beltrão, 1200</p>
-                        <p>R. Marquês de São Vicente, 225 - Gávea</p>
                         <p>Rio de Janeiro - RJ</p>
                     </div>
 
@@ -208,37 +187,18 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="../../assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+                    <img src="../../assets/images/isaric.png" alt="ISARIC South America Hub">
                     <p data-i18n="footer_description">Referência em pesquisa de arboviroses na América do Sul</p>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="footer_programs_title">Programas</h4>
                     <ul>
-                        <li><a href="../programs/aria.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
+                        <li><a href="pages/programs/aria.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4 data-i18n="footer_resources_title">Recursos</h4>
-                    <ul>
-                        <li><a href="../resources/learn.html" data-i18n="footer_learn">Aprenda</a></li>
-                        <li><a href="../resources/tools.html" data-i18n="footer_tools">Ferramentas</a></li>
-                        <li><a href="../learn-more/events.html" data-i18n="footer_events">Eventos</a></li>
-                        <li><a href="../learn-more/news.html" data-i18n="footer_news">Notícias</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="footer_connect_title">Conecte-se</h4>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Twitter/X"><img src="../../assets/icons/x.svg" alt="X"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="../../assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                        <a href="#" aria-label="YouTube"><img src="../../assets/icons/youtube.svg" alt="YouTube"></a>
-                        <a href="#" aria-label="GitHub"><img src="../../assets/icons/github.svg" alt="GitHub"></a>
-                    </div>
-                    <ul style="margin-top: 12px;">
-                        <li><a href="contact.html" data-i18n="footer_contact">Fale Conosco</a></li>
-                    </ul>
-                </div>
+                
             </div>
+            <!-- Rodapé inferior -->
             <div class="footer-bottom">
                 <p data-i18n="footer_copyright">&copy; 2026 ISARIC South America Hub. Todos os direitos reservados.</p>
             </div>

@@ -15,12 +15,12 @@
 <header id="main-header">
     <div class="container">
         <div class="logo">
-            <img src="./assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+            <img src="./assets/images/isaric.png" alt="ISARIC South America Hub">
         </div>
         <nav>
             <ul>
                 <!-- Home -->
-                <li><a href="/index.html" data-i18n="menu_home">Home</a></li>
+                <li><a href="./index.html" data-i18n="menu_home">Home</a></li>
 
                 <!-- Programs (dropdown) -->
                 <li class="dropdown">
@@ -58,20 +58,7 @@
                 </li>
 
                 <!-- Resources (dropdown) - com tamanho menor -->
-                <li class="dropdown">
-                    <span class="dropdown-toggle" data-i18n="menu_resources">Recursos</span>
-                    <div class="dropdown-menu dropdown-menu-small">
-                        <span class="dropdown-menu-title" data-i18n="menu_resources">Recursos</span>
-                        <div class="dropdown-menu-grid">
-                            <div>
-                                <ul>
-                                    <li><a href="pages/resources/learn.html" data-i18n="menu_learn">Aprenda</a></li>
-                                    <li><a href="pages/resources/tools.html" data-i18n="menu_tools">Ferramentas</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                <!-- Seção foi removida até informação do conteúdo -->
 
                 <!-- Learn More (dropdown) - com tamanho menor -->
                 <li class="dropdown">
@@ -131,19 +118,35 @@
                 <a href="pages/learn-more/news.html" data-i18n="news_view_all">Ver todas →</a>
             </div>
             <div class="noticias-grid">
-                <!-- Notícia Principal (1) -->
+                <!-- Notícia Principal (1) – Paper (Agosto 2026) -->
                 <div class="noticia-principal">
-                    <img src="./assets/images/nois.jpeg" alt="CREDO 2026">
-                    <h3 data-i18n="news_credo_title">CREDO 2026 - Workshop em Salvador, BA</h3>
-                    <p data-i18n="news_credo_text">O workshop CREDO 2026 reunirá pesquisadores de toda a América do Sul em Salvador para discutir avanços em pesquisa de arbovírus e compartilhar metodologias inovadoras.</p>
-                    <a href="pages/learn-more/news.html" data-i18n="news_read_more">Leia mais →</a>
+                    <img src="assets/news/news_paper2026.png" alt="Paper modelos preditivos">
+                    <h3 data-i18n="news_paper_title">Estudo brasileiro publica protocolo para modelos preditivos de hospitalização e mortalidade por dengue</h3>
+                    <p data-i18n="news_paper_excerpt">Foi publicado no repositório medRxiv o preprint do estudo que apresenta um protocolo detalhado para o desenvolvimento e validação de modelos de risco voltados à triagem clínica e à vigilância epidemiológica da dengue no Brasil.</p>
+                    <a href="pages/learn-more/newspages/paper-2026.html" data-i18n="news_read_more">Leia mais →</a>
                 </div>
-                <!-- Thumbnails (4) - grid 2x2 -->
+                <!-- Thumbnails (4) – grid 2x2 -->
                 <div class="noticias-thumbnails">
-                    <div class="thumbnail" data-i18n="news_thumb_1">Notícia 2</div>
-                    <div class="thumbnail" data-i18n="news_thumb_2">Notícia 3</div>
-                    <div class="thumbnail" data-i18n="news_thumb_3">Notícia 4</div>
-                    <div class="thumbnail" data-i18n="news_thumb_4">Notícia 5</div>
+                    <!-- Thumbnail 1 – IFORS (Julho 2026) -->
+                    <div class="thumbnail" onclick="location.href='pages/learn-more/newspages/ifors-2026.html'" data-link="pages/learn-more/newspages/ifors-2026.html">
+                        <img src="assets/news/news_ifors2026.png" alt="IFORS 2026">
+                        <span data-i18n="news_ifors_title">Pesquisa brasileira sobre fenotipagem de doenças é apresentada no IFORS 2026</span>
+                    </div>
+                    <!-- Thumbnail 2 – CREDO (Abril 2026) -->
+                    <div class="thumbnail" onclick="location.href='pages/learn-more/newspages/credo-2026.html'" data-link="pages/learn-more/newspages/credo-2026.html">
+                        <img src="assets/news/news_credo2026.png" alt="CREDO 2026">
+                        <span data-i18n="news_credo_title">Workshop do CREDO 2026 reúne pesquisadores em Salvador</span>
+                    </div>
+                    <!-- Thumbnail 3 – Fellowship (Fevereiro 2026) -->
+                    <div class="thumbnail" onclick="location.href='pages/learn-more/newspages/fellowship-2026.html'" data-link="pages/learn-more/newspages/fellowship-2026.html">
+                        <img src="assets/news/news_fellow2026.png" alt="Fellowship Program">
+                        <span data-i18n="news_fellow_title">Programa de Fellowship ISARIC encerra inscrições e reforça formação de novos líderes</span>
+                    </div>
+                    <!-- Thumbnail 4 – ARIA (Janeiro 2026) -->
+                    <div class="thumbnail" onclick="location.href='pages/learn-more/newspages/aria-2026.html'" data-link="pages/learn-more/newspages/aria-2026.html">
+                        <img src="assets/news/news_aria2026.png" alt="ARIA">
+                        <span data-i18n="news_aria_title">Programa internacional ARIA abre inscrições para pesquisadores interessados em colaborar</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,18 +170,18 @@
                     </p>
                     <a href="pages/programs/aria.html" data-i18n="projects_learn_more">Saiba mais →</a>
                 </div>
-                <!-- Card 2: CREDO -->
+                <!-- Card 2: Community -->
                 <div class="card">
-                    <h3 data-i18n="projects_credo_title">Community</h3>
-                    <p><strong data-i18n="projects_credo_desc">CREDO 2025 (Maio) e 2026 (Abril) – Treinamento em pesquisa durante surtos</strong></p>
-                    <p data-i18n="projects_credo_text">Acesso ao material e apresentação das atividades do CREDO realizado no Rio de Janeiro (2025) e Salvador (2026).</p>
-                    <a href="pages/programs/credo.html" data-i18n="projects_view_material">Ver material →</a>
+                    <h3 data-i18n="projects_community_title">Community</h3>
+                    <p><strong data-i18n="projects_community_desc">Fortalecendo a pesquisa colaborativa</strong></p>
+                    <p data-i18n="projects_community_text">Capacitação e integração de pesquisadores, promovendo o intercâmbio de conhecimento e o fortalecimento da ciência.</p>
+                    <a href="pages/programs/credo.html" data-i18n="projects_learn_more">Saiba mais →</a>
                 </div>
-                <!-- Card 3: Scalable Analytics / ARC -->
+                <!-- Card 3: Analytics -->
                 <div class="card">
-                    <h3 data-i18n="projects_scalable_title">Analytics</h3>
-                    <p><strong data-i18n="projects_scalable_desc">ARC – Modelos preditivos para arboviroses</strong></p>
-                    <p data-i18n="projects_scalable_text">Conjunto de modelos preditivos para estimar risco de transmissão de arboviroses com base em variáveis climáticas e de mobilidade.</p>
+                    <h3 data-i18n="projects_analytics_title">Analytics</h3>
+                    <p><strong data-i18n="projects_analytics_desc">Ferramentas para análise de dados</strong></p>
+                    <p data-i18n="projects_analytics_text">Conjunto de ferramentas para colaborar com a análise de dados e aplicação de modelos analíticos.</p>
                     <a href="pages/programs/arc-bridge.html" data-i18n="projects_learn_more">Saiba mais →</a>
                 </div>
                 <!-- Card 4: Todos os Projetos -->
@@ -193,85 +196,44 @@
     </section>
 
     <!-- ===== CALENDÁRIO + MAPA ===== -->
+    <!-- ===== CALENDÁRIO + MAPA ===== -->
     <section id="eventos-mapa">
         <div class="container">
             <!-- Calendário (lado esquerdo) -->
             <div class="calendario">
                 <h3 data-i18n="events_title">Próximos Eventos</h3>
-                <ul>
-                    <li><span data-i18n="events_date_1">15 JAN 2026</span> <span data-i18n="events_desc_1">Workshop CREDO 2026 – Salvador, Brasil</span></li>
-                    <li><span data-i18n="events_date_2">16 JAN 2026</span> <span data-i18n="events_desc_2">Workshop: Scalable Analytics – Curitiba</span></li>
-                    <li><span data-i18n="events_date_3">20 JAN 2026</span> <span data-i18n="events_desc_3">Treinamento ARIA – Rio de Janeiro, Brasil</span></li>
-                    <li><span data-i18n="events_date_4">05 SET 2026</span> <span data-i18n="events_desc_4">Simpósio de Arboviroses – Lima, Peru</span></li>
-                </ul>
+                <p style="color: #888; font-style: italic; padding: 16px 0;">📅 Em breve</p>
             </div>
             <!-- Mapa (lado direito) -->
             <div class="mapa">
                 <h3 data-i18n="map_title">Nossa Rede de Pesquisa</h3>
-                <p data-i18n="map_subtitle">Centros de excelência em toda a América do Sul</p>
+                <p data-i18n="map_subtitle">Centros de pesquisa em toda a América do Sul</p>
                 <div id="mapa-container">
-                    <!-- Leaflet ou Google Maps será inserido aqui -->
+                    <p style="color: #aaa; font-style: italic; text-align: center; width: 100%;">🚧 Em construção</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ===== NEWSLETTER ===== -->
-    <section id="newsletter">
-        <div class="container">
-            <h3 data-i18n="newsletter_title">Receba Nossas Atualizações</h3>
-            <p data-i18n="newsletter_text">Inscreva-se em nossa newsletter para receber as últimas notícias, publicações e eventos.</p>
-            <form onsubmit="event.preventDefault(); subscribeNewsletter();">
-                <input type="email" placeholder="Seu e-mail" required data-i18n-placeholder="newsletter_email_placeholder">
-                <button type="submit" class="btn-subscribe" data-i18n="newsletter_subscribe">Inscrever</button>
-            </form>
-        </div>
-    </section>
+    <!-- A seção #newsletter foi completamente removida -->
 
     <!-- ===== RODAPÉ ===== -->
     <footer id="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Coluna 1: Logo + descrição -->
                 <div class="footer-brand">
-                    <img src="./assets/images/isaric-hubsa.png" alt="ISARIC South America Hub">
+                    <img src="assets/images/isaric.png" alt="ISARIC South America Hub">
                     <p data-i18n="footer_description">Referência em pesquisa de arboviroses na América do Sul</p>
                 </div>
-
-                <!-- Coluna 2: Programas -->
                 <div class="footer-col">
                     <h4 data-i18n="footer_programs_title">Programas</h4>
                     <ul>
                         <li><a href="pages/programs/aria.html" data-i18n="footer_all_programs">Todos os Programas</a></li>
                     </ul>
                 </div>
-
-                <!-- Coluna 3: Recursos -->
-                <div class="footer-col">
-                    <h4 data-i18n="footer_resources_title">Recursos</h4>
-                    <ul>
-                        <li><a href="pages/resources/learn.html" data-i18n="footer_learn">Aprenda</a></li>
-                        <li><a href="pages/resources/tools.html" data-i18n="footer_tools">Tools</a></li>
-                        <li><a href="pages/learn-more/events.html" data-i18n="footer_events">Eventos</a></li>
-                        <li><a href="pages/learn-more/news.html" data-i18n="footer_news">Notícias</a></li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 4: Redes Sociais -->
-                <div class="footer-col">
-                    <h4 data-i18n="footer_connect_title">Conecte-se</h4>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Twitter/X"><img src="./assets/icons/x.svg" alt="X"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="./assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                        <a href="#" aria-label="YouTube"><img src="./assets/icons/youtube.svg" alt="YouTube"></a>
-                        <a href="#" aria-label="GitHub"><img src="./assets/icons/github.svg" alt="GitHub"></a>
-                    </div>
-                    <ul style="margin-top: 12px;">
-                        <li><a href="pages/about/contact.html" data-i18n="footer_contact">Fale Conosco</a></li>
-                    </ul>
-                </div>
+                
             </div>
-
             <!-- Rodapé inferior -->
             <div class="footer-bottom">
                 <p data-i18n="footer_copyright">&copy; 2026 ISARIC South America Hub. Todos os direitos reservados.</p>
