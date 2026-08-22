@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tools-title"></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/tools.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/isaric-top.png" alt="ISARIC South America Hub" style="height: 40px; width: auto;">
+                <div class="logo-text">
+                    <strong id="logo-strong"></strong>
+                    <span id="logo-span"></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" id="menu-home"></a></li>
+                    <li><a href="clinical.html" id="menu-clinical"></a></li>
+                    <li><a href="training.html" id="menu-training"></a></li>
+                    <li><a href="tools.html" id="menu-tools" class="active"></a></li>
+                    <li><a href="publications.html" id="menu-publications"></a></li>
+                    <li><a href="news.html" id="menu-news"></a></li>
+                    <li><a href="dashboard.html" id="menu-dashboard"></a></li>
+                    <li><a href="team.html" id="menu-team"></a></li>
+                    <li><a href="contact.html" id="menu-contact"></a></li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" id="lang-pt"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('en')" id="lang-en" class="active"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('es')" id="lang-es"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="../assets/images/tools-hero.png" alt="Tools" id="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <span class="dot"></span>
+                    <span id="hero-badge"></span>
+                </span>
+                <h1 id="hero-title"></h1>
+                <p id="hero-description"></p>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 56" fill="none" preserveAspectRatio="none">
+                <path d="M0 56V28C240 0 480 56 720 36 960 16 1200 46 1440 28V56H0Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORY SUBMENU ===== -->
+    <div id="tools-submenu">
+        <div class="container">
+            <div class="submenu-wrapper" id="submenu-wrapper">
+                <!-- Renderizado pelo tools.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TOOLS CONTENT ===== -->
+    <section id="tools-section">
+        <div class="container">
+            <div class="tools-layout">
+                <!-- Grid de ferramentas (esquerda) -->
+                <div class="tools-grid" id="tools-grid">
+                    <!-- ARC -->
+                    <div class="tool-card" data-tool="arc" data-category="Data">
+                        <div class="tool-icon" style="color: #1A6B6B;">📚</div>
+                        <div class="tool-name" id="tool-arc-name"></div>
+                        <div class="tool-tagline" id="tool-arc-tagline"></div>
+                        <span class="tool-category-badge" id="tool-arc-category" style="color: #1A6B6B;"></span>
+                    </div>
+                    <!-- BRIDGE -->
+                    <div class="tool-card" data-tool="bridge" data-category="Data">
+                        <div class="tool-icon" style="color: #D1964F;">🌉</div>
+                        <div class="tool-name" id="tool-bridge-name"></div>
+                        <div class="tool-tagline" id="tool-bridge-tagline"></div>
+                        <span class="tool-category-badge" id="tool-bridge-category" style="color: #D1964F;"></span>
+                    </div>
+                    <!-- VERTEX -->
+                    <div class="tool-card" data-tool="vertex" data-category="Analytics">
+                        <div class="tool-icon" style="color: #BA0225;">📊</div>
+                        <div class="tool-name" id="tool-vertex-name"></div>
+                        <div class="tool-tagline" id="tool-vertex-tagline"></div>
+                        <span class="tool-category-badge" id="tool-vertex-category" style="color: #BA0225;"></span>
+                    </div>
+                    <!-- RAPID -->
+                    <div class="tool-card" data-tool="rapid" data-category="Analytics">
+                        <div class="tool-icon" style="color: #7C3AED;">⚡</div>
+                        <div class="tool-name" id="tool-rapid-name"></div>
+                        <div class="tool-tagline" id="tool-rapid-tagline"></div>
+                        <span class="tool-category-badge" id="tool-rapid-category" style="color: #7C3AED;"></span>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- DETALHE ARC                                     -->
+                <!-- ============================================ -->
+                <div class="tool-detail-content" id="detail-arc">
+                    
+                    <div class="tool-detail-header">
+                        <div class="tool-detail-icon" style="color: #1A6B6B;">📚</div>
+                        <div class="tool-detail-info">
+                            <div class="tool-detail-name">
+                                <h2 id="tool-arc-detail-name"></h2>
+                                <span class="tool-detail-category" id="tool-arc-category" style="color: #1A6B6B;"></span>
+                            </div>
+                            <p class="tool-detail-tagline" id="tool-arc-tagline"></p>
+                        </div>
+                    </div>
+                    <div class="tool-detail-image">
+                        <img id="tool-arc-image" src="../assets/images/arcschema.png" alt="ARC" class="tool-detail-img">
+                    </div>
+                    <div class="tool-detail-stats">
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-arc-stat-1-value"></span>
+                            <span class="tool-stat-label" id="tool-arc-stat-1-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-arc-stat-2-value"></span>
+                            <span class="tool-stat-label" id="tool-arc-stat-2-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-arc-stat-3-value"></span>
+                            <span class="tool-stat-label" id="tool-arc-stat-3-label"></span>
+                        </div>
+                    </div>
+                    <div class="tool-detail-description" id="tool-arc-description"></div>
+                    <div class="tool-detail-features">
+                        <span class="features-title">Key Features</span>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #1A6B6B;">◆</span>
+                                <span id="tool-arc-feature-1"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #1A6B6B;">◆</span>
+                                <span id="tool-arc-feature-2"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #1A6B6B;">◆</span>
+                                <span id="tool-arc-feature-3"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #1A6B6B;">◆</span>
+                                <span id="tool-arc-feature-4"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #1A6B6B;">◆</span>
+                                <span id="tool-arc-feature-5"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #1A6B6B;">◆</span>
+                                <span id="tool-arc-feature-6"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-detail-access">
+                        <div>
+                            <span class="access-label">Access</span>
+                            <span class="access-value" id="tool-arc-access"></span>
+                        </div>
+                        <div class="tool-detail-buttons">
+                            <a href="https://github.com/ISARICResearch/ARC" target="_blank" class="btn-tool-access" id="tool-arc-btn-access" style="background: #1A6B6B; border-color: #1A6B6B;"></a>
+                            <a href="https://isaric-arc.readthedocs.io/en/latest/index.html" target="_blank" class="btn-tool-docs" id="tool-arc-btn-docs" style="border-color: #1A6B6B; color: #1A6B6B;"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- DETALHE BRIDGE                                 -->
+                <!-- ============================================ -->
+                <div class="tool-detail-content" id="detail-bridge" style="display:none;">
+                    
+                    <div class="tool-detail-header">
+                        <div class="tool-detail-icon" style="color: #D1964F;">🌉</div>
+                        <div class="tool-detail-info">
+                            <div class="tool-detail-name">
+                                <h2 id="tool-bridge-detail-name"></h2>
+                                <span class="tool-detail-category" id="tool-bridge-category" style="color: #D1964F;"></span>
+                            </div>
+                            <p class="tool-detail-tagline" id="tool-bridge-tagline"></p>
+                        </div>
+                    </div>
+
+                    <div class="tool-detail-image">
+                        <img id="tool-bridge-image" src="../assets/images/bridge.png" alt="BRIDGE" class="tool-detail-img">
+                    </div>
+
+                    <div class="tool-detail-stats">
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-bridge-stat-1-value"></span>
+                            <span class="tool-stat-label" id="tool-bridge-stat-1-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-bridge-stat-2-value"></span>
+                            <span class="tool-stat-label" id="tool-bridge-stat-2-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-bridge-stat-3-value"></span>
+                            <span class="tool-stat-label" id="tool-bridge-stat-3-label"></span>
+                        </div>
+                    </div>
+                    <div class="tool-detail-description" id="tool-bridge-description"></div>
+                    <div class="tool-detail-features">
+                        <span class="features-title">Key Features</span>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #D1964F;">◆</span>
+                                <span id="tool-bridge-feature-1"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #D1964F;">◆</span>
+                                <span id="tool-bridge-feature-2"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #D1964F;">◆</span>
+                                <span id="tool-bridge-feature-3"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #D1964F;">◆</span>
+                                <span id="tool-bridge-feature-4"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #D1964F;">◆</span>
+                                <span id="tool-bridge-feature-5"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #D1964F;">◆</span>
+                                <span id="tool-bridge-feature-6"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-detail-access">
+                        <div>
+                            <span class="access-label">Access</span>
+                            <span class="access-value" id="tool-bridge-access"></span>
+                        </div>
+                        <div class="tool-detail-buttons">
+                            <a href="https://isaric-bridge.replit.app" target="_blank" class="btn-tool-access" id="tool-bridge-btn-access" style="background: #D1964F; border-color: #D1964F;"></a>
+                            <a href="https://github.com/ISARICResearch/DataPlatform/tree/main/BRIDGE" target="_blank" class="btn-tool-docs" id="tool-bridge-btn-docs" style="border-color: #D1964F; color: #D1964F;"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- DETALHE VERTEX                                 -->
+                <!-- ============================================ -->
+                <div class="tool-detail-content" id="detail-vertex" style="display:none;">
+                    
+                    <div class="tool-detail-header">
+                        <div class="tool-detail-icon" style="color: #BA0225;">📊</div>
+                        <div class="tool-detail-info">
+                            <div class="tool-detail-name">
+                                <h2 id="tool-vertex-detail-name"></h2>
+                                <span class="tool-detail-category" id="tool-vertex-category" style="color: #BA0225;"></span>
+                            </div>
+                            <p class="tool-detail-tagline" id="tool-vertex-tagline"></p>
+                        </div>
+                    </div>
+
+                    <div class="tool-detail-image">
+                        <img id="tool-vertex-image" src="../assets/images/vertex.png" alt="VERTEX" class="tool-detail-img">
+                    </div>
+
+                    <div class="tool-detail-stats">
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-vertex-stat-1-value"></span>
+                            <span class="tool-stat-label" id="tool-vertex-stat-1-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-vertex-stat-2-value"></span>
+                            <span class="tool-stat-label" id="tool-vertex-stat-2-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-vertex-stat-3-value"></span>
+                            <span class="tool-stat-label" id="tool-vertex-stat-3-label"></span>
+                        </div>
+                    </div>
+                    <div class="tool-detail-description" id="tool-vertex-description"></div>
+                    <div class="tool-detail-features">
+                        <span class="features-title">Key Features</span>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #BA0225;">◆</span>
+                                <span id="tool-vertex-feature-1"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #BA0225;">◆</span>
+                                <span id="tool-vertex-feature-2"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #BA0225;">◆</span>
+                                <span id="tool-vertex-feature-3"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #BA0225;">◆</span>
+                                <span id="tool-vertex-feature-4"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #BA0225;">◆</span>
+                                <span id="tool-vertex-feature-5"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #BA0225;">◆</span>
+                                <span id="tool-vertex-feature-6"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-detail-access">
+                        <div>
+                            <span class="access-label">Access</span>
+                            <span class="access-value" id="tool-vertex-access"></span>
+                        </div>
+                        <div class="tool-detail-buttons">
+                            <a href="https://github.com/ISARICResearch/VERTEX" target="_blank" class="btn-tool-access" id="tool-vertex-btn-access" style="background: #BA0225; border-color: #BA0225;"></a>
+                            <a href="https://isaric-vertex.readthedocs.io/en/latest/index.html" target="_blank" class="btn-tool-docs" id="tool-vertex-btn-docs" style="border-color: #BA0225; color: #BA0225;"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- DETALHE RAPID                                  -->
+                <!-- ============================================ -->
+                <div class="tool-detail-content" id="detail-rapid" style="display:none;">
+                    
+                    <div class="tool-detail-header">
+                        <div class="tool-detail-icon" style="color: #7C3AED;">⚡</div>
+                        <div class="tool-detail-info">
+                            <div class="tool-detail-name">
+                                <h2 id="tool-rapid-detail-name"></h2>
+                                <span class="tool-detail-category" id="tool-rapid-category" style="color: #7C3AED;"></span>
+                            </div>
+                            <p class="tool-detail-tagline" id="tool-rapid-tagline"></p>
+                        </div>
+                    </div>
+
+                    <div class="tool-detail-image">
+                        <img id="tool-rapid-image" src="../assets/images/rapid.png" alt="RAPID" class="tool-detail-img">
+                    </div>
+
+                    <div class="tool-detail-stats">
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-rapid-stat-1-value"></span>
+                            <span class="tool-stat-label" id="tool-rapid-stat-1-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-rapid-stat-2-value"></span>
+                            <span class="tool-stat-label" id="tool-rapid-stat-2-label"></span>
+                        </div>
+                        <div class="tool-stat">
+                            <span class="tool-stat-value" id="tool-rapid-stat-3-value"></span>
+                            <span class="tool-stat-label" id="tool-rapid-stat-3-label"></span>
+                        </div>
+                    </div>
+                    <div class="tool-detail-description" id="tool-rapid-description"></div>
+                    <div class="tool-detail-features">
+                        <span class="features-title">Key Features</span>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #7C3AED;">◆</span>
+                                <span id="tool-rapid-feature-1"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #7C3AED;">◆</span>
+                                <span id="tool-rapid-feature-2"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #7C3AED;">◆</span>
+                                <span id="tool-rapid-feature-3"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #7C3AED;">◆</span>
+                                <span id="tool-rapid-feature-4"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #7C3AED;">◆</span>
+                                <span id="tool-rapid-feature-5"></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-marker" style="color: #7C3AED;">◆</span>
+                                <span id="tool-rapid-feature-6"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Access - SEM BOTÕES -->
+                    <div class="tool-detail-access">
+                        <div>
+                            <span class="access-label">Access</span>
+                            <span class="access-value" id="tool-rapid-access"></span>
+                        </div>
+                        <div class="tool-detail-buttons" style="display: none;">
+                            <!-- Botões removidos -->
+                        </div>
+                        <!-- Mensagem "Em breve" -->
+                        <div style="width: 100%; text-align: center; padding: 12px 0 4px 0;">
+                            <span style="font-family: var(--font-inter); font-size: 0.85rem; font-weight: 600; color: #7C3AED; background: rgba(124, 58, 237, 0.08); padding: 6px 20px; border-radius: 8px;">
+                                Em breve
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/images/isaric-footer.png" alt="ISARIC" style="height: 40px; width: auto;">
+                    </div>
+                    <p id="footer-description"></p>
+                    <a href="mailto:contact@isaric-sa.org.br" class="footer-email" id="footer-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M2 7l10 7 10-7" />
+                        </svg>
+                        contact@isaric-sa.org.br
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" id="footer-linkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 id="footer-links-title"></h4>
+                    <ul>
+                        <li><a href="../index.html" id="footer-home"></a></li>
+                        <li><a href="../pages/clinical.html" id="footer-clinical"></a></li>
+                        <li><a href="../pages/news.html" id="footer-news"></a></li>
+                        <li><a href="../pages/training.html" id="footer-training"></a></li>
+                        <li><a href="../pages/publications.html" id="footer-publications"></a></li>
+                        <li><a href="../pages/contact.html" id="footer-contact"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright"></p>
+                <div class="footer-bottom-links">
+                    <a href="#" id="footer-privacy"></a>
+                    <a href="#" id="footer-terms"></a>
+                    <a href="#" id="footer-accessibility"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/content-loader.js"></script>
+    <script src="../js/tools.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="training-title"></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/training.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/isaric-top.png" alt="ISARIC South America Hub" style="height: 40px; width: auto;">
+                <div class="logo-text">
+                    <strong id="logo-strong"></strong>
+                    <span id="logo-span"></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" id="menu-home"></a></li>
+                    <li><a href="clinical.html" id="menu-clinical"></a></li>
+                    <li><a href="training.html" id="menu-training" class="active"></a></li>
+                    <li><a href="tools.html" id="menu-tools"></a></li>
+                    <li><a href="publications.html" id="menu-publications"></a></li>
+                    <li><a href="news.html" id="menu-news"></a></li>
+                    <li><a href="dashboard.html" id="menu-dashboard"></a></li>
+                    <li><a href="team.html" id="menu-team"></a></li>
+                    <li><a href="contact.html" id="menu-contact"></a></li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" id="lang-pt"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('en')" id="lang-en" class="active"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('es')" id="lang-es"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="../assets/images/training-hero.png" alt="Training" id="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <span class="dot"></span>
+                    <span id="hero-badge"></span>
+                </span>
+                <h1 id="hero-title"></h1>
+                <p id="hero-description"></p>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 56" fill="none" preserveAspectRatio="none">
+                <path d="M0 56V28C240 0 480 56 720 36 960 16 1200 46 1440 28V56H0Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== STATS BANNER ===== -->
+    <section id="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value" id="stats-learners"></span>
+                    <span class="stat-label" id="stats-learners-label"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="stats-countries"></span>
+                    <span class="stat-label" id="stats-countries-label"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="stats-modules"></span>
+                    <span class="stat-label" id="stats-modules-label"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="stats-completed"></span>
+                    <span class="stat-label" id="stats-completed-label"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROGRAMMES ===== -->
+    <section id="programmes">
+        <div class="container">
+            <div class="programmes-header">
+                <span class="section-tag" id="programmes-tag"></span>
+                <h2 id="programmes-title"></h2>
+                <p id="programmes-subtitle"></p>
+            </div>
+
+            <!-- Programme Tabs -->
+            <div class="programme-tabs" id="programme-tabs">
+                <button class="tab-btn active" data-program="credo">
+                    <span class="tab-icon">📚</span>
+                    <span class="tab-text" id="tab-credo"></span>
+                </button>
+                <button class="tab-btn" data-program="fellowship">
+                    <span class="tab-icon">🎓</span>
+                    <span class="tab-text" id="tab-fellowship"></span>
+                </button>
+            </div>
+
+            <!-- CREDO -->
+            <div class="programme-detail active" id="detail-credo">
+                <div class="programme-header" style="background: #BA0225;">
+                    <div class="programme-icon">📚</div>
+                    <div class="programme-info">
+                        <div class="programme-name-tag">
+                            <h3 id="programme-credo-name"></h3>
+                            <span class="programme-tag" id="programme-credo-tag"></span>
+                        </div>
+                        <p class="programme-fullname" id="programme-credo-fullname"></p>
+                    </div>
+                    <div class="programme-cost">
+                        <span class="cost-label" id="cost-label">Cost</span>
+                        <span class="cost-value" id="programme-credo-cost"></span>
+                    </div>
+                </div>
+                <div class="programme-body">
+                    <div class="programme-description">
+                        <p id="programme-credo-description"></p>
+                        <div class="programme-who">
+                            <span class="who-label" id="who-label">Who is this for?</span>
+                            <p id="programme-credo-who"></p>
+                        </div>
+                        <div class="programme-apply">
+                            <span class="apply-label" id="apply-label">How to apply</span>
+                            <p id="programme-credo-apply"></p>
+                        </div>
+                    </div>
+                    <div class="programme-highlights">
+                        <span class="highlights-label" id="highlights-label">Programme Highlights</span>
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📚</span>
+                                <span class="highlight-text" id="programme-credo-highlight-1"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🌐</span>
+                                <span class="highlight-text" id="programme-credo-highlight-2"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">⏱️</span>
+                                <span class="highlight-text" id="programme-credo-highlight-3"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🎓</span>
+                                <span class="highlight-text" id="programme-credo-highlight-4"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📱</span>
+                                <span class="highlight-text" id="programme-credo-highlight-5"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🔗</span>
+                                <span class="highlight-text" id="programme-credo-highlight-6"></span>
+                            </div>
+                        </div>
+                        <a href="https://isaric.org/capacity/clinical-research-during-outbreaks-credo/" target="_blank"class="btn-apply" id="programme-credo-btn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fellowship -->
+            <div class="programme-detail" id="detail-fellowship" style="display:none;">
+                <div class="programme-header" style="background: #1A6B6B;">
+                    <div class="programme-icon">🎓</div>
+                    <div class="programme-info">
+                        <div class="programme-name-tag">
+                            <h3 id="programme-fellowship-name"></h3>
+                            <span class="programme-tag" id="programme-fellowship-tag"></span>
+                        </div>
+                        <p class="programme-fullname" id="programme-fellowship-fullname"></p>
+                    </div>
+                    <div class="programme-cost">
+                        <span class="cost-label">Cost</span>
+                        <span class="cost-value" id="programme-fellowship-cost"></span>
+                    </div>
+                </div>
+                <div class="programme-body">
+                    <div class="programme-description">
+                        <p id="programme-fellowship-description"></p>
+                        <div class="programme-who">
+                            <span class="who-label">Who is this for?</span>
+                            <p id="programme-fellowship-who"></p>
+                        </div>
+                        <div class="programme-apply">
+                            <span class="apply-label">How to apply</span>
+                            <p id="programme-fellowship-apply"></p>
+                        </div>
+                    </div>
+                    <div class="programme-highlights">
+                        <span class="highlights-label">Programme Highlights</span>
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🏥</span>
+                                <span class="highlight-text" id="programme-fellowship-highlight-1"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">👨‍🔬</span>
+                                <span class="highlight-text" id="programme-fellowship-highlight-2"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📊</span>
+                                <span class="highlight-text" id="programme-fellowship-highlight-3"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✈️</span>
+                                <span class="highlight-text" id="programme-fellowship-highlight-4"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📝</span>
+                                <span class="highlight-text" id="programme-fellowship-highlight-5"></span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🌍</span>
+                                <span class="highlight-text" id="programme-fellowship-highlight-6"></span>
+                            </div>
+                        </div>
+                        <a href="https://isaric.org/capacity/scientific-leadership/" target="_blank" class="btn-apply" id="programme-fellowship-btn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section id="timeline">
+        <div class="container">
+            <div class="timeline-header">
+                <span class="section-tag" id="timeline-tag"></span>
+                <h2 id="timeline-title"></h2>
+            </div>
+            <div class="timeline-grid">
+                <!-- 2026 - item atual -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="timeline-year" id="timeline-2026"></span>
+                            <span class="timeline-attendees" id="timeline-2026-attendees"></span>
+                        </div>
+                        <h4 id="timeline-2026-city"></h4>
+                        <p class="timeline-highlight" id="timeline-2026-highlight"></p>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="timeline-year" id="timeline-2025"></span>
+                            <span class="timeline-attendees" id="timeline-2025-attendees"></span>
+                        </div>
+                        <h4 id="timeline-2025-city"></h4>
+                        <p class="timeline-highlight" id="timeline-2025-highlight"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/images/isaric-footer.png" alt="ISARIC" style="height: 40px; width: auto;">
+                    </div>
+                    <p id="footer-description"></p>
+                    <a href="mailto:contact@isaric-sa.org.br" class="footer-email" id="footer-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M2 7l10 7 10-7" />
+                        </svg>
+                        contact@isaric-sa.org.br
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" id="footer-linkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 id="footer-links-title"></h4>
+                    <ul>
+                        <li><a href="../index.html" id="footer-home"></a></li>
+                        <li><a href="../pages/clinical.html" id="footer-clinical"></a></li>
+                        <li><a href="../pages/news.html" id="footer-news"></a></li>
+                        <li><a href="../pages/training.html" id="footer-training"></a></li>
+                        <li><a href="../pages/publications.html" id="footer-publications"></a></li>
+                        <li><a href="../pages/contact.html" id="footer-contact"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright"></p>
+                <div class="footer-bottom-links">
+                    <a href="#" id="footer-privacy"></a>
+                    <a href="#" id="footer-terms"></a>
+                    <a href="#" id="footer-accessibility"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/content-loader.js"></script>
+    <script src="../js/training.js"></script>
+
+</body>
+</html>

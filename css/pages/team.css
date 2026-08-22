@@ -1,0 +1,441 @@
+/* ============================================
+   TEAM – ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* ----- HERO (padrão) ----- */
+#hero {
+    position: relative;
+    min-height: 36vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(105deg, rgba(186,2,37,0.92) 0%, rgba(186,2,37,0.75) 40%, rgba(10,10,10,0.80) 100%);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 30px 24px 50px;
+}
+
+.hero-content {
+    max-width: 700px;
+    text-align: left;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-family: var(--font-inter);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #D1964F;
+    background: rgba(209,150,79,0.2);
+    border: 1px solid rgba(209,150,79,0.45);
+    margin-bottom: 12px;
+}
+
+.hero-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D1964F;
+}
+
+#hero h1 {
+    font-family: var(--font-inter);
+    font-size: 3.0rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+#hero p {
+    font-family: var(--font-lato);
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+}
+
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.hero-wave svg {
+    display: block;
+    width: 100%;
+}
+
+/* ----- STATS BANNER ----- */
+#stats-banner {
+    background: #F5F0EB;
+    border-bottom: 1px solid #E5DDD5;
+    padding: 24px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.stat-item .stat-value {
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #BA0225;
+    display: block;
+    line-height: 1.2;
+}
+
+.stat-item .stat-label {
+    font-family: var(--font-lato);
+    font-size: 0.75rem;
+    color: #4A4A4A;
+    display: block;
+    margin-top: 2px;
+}
+
+/* ----- TEAM SECTION ----- */
+#team-section {
+    padding: 40px 0 64px;
+    background: #FFFFFF;
+}
+
+/* ----- FILTERS ----- */
+.filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.filter-pill {
+    padding: 6px 20px;
+    border-radius: 20px;
+    border: 1px solid #E5DDD5;
+    background: #F5F0EB;
+    color: #4A4A4A;
+    font-family: var(--font-inter);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+    background: #E8E0D8;
+    transform: translateY(-1px);
+}
+
+.filter-pill.active {
+    background: #BA0225;
+    color: #FFFFFF;
+    border-color: #BA0225;
+    box-shadow: 0 2px 8px rgba(186, 2, 37, 0.20);
+}
+
+/* ----- TEAM GRID ----- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.team-card {
+    background: #FDFAF7;
+    border: 1px solid #F0EAE4;
+    border-radius: 16px;
+    padding: 24px 20px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: #E5DDD5;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    display: block;
+    background: #F5F0EB;
+    border: 3px solid #F0EAE4;
+    transition: border-color 0.3s ease;
+}
+
+.team-card:hover .team-photo {
+    border-color: #BA0225;
+}
+
+.team-card h3 {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 4px 0;
+}
+
+.team-role {
+    font-family: var(--font-lato);
+    font-size: 0.75rem;
+    color: #6A6A6A;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    min-height: 36px;
+}
+
+.team-bio {
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    color: #4A4A4A;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+}
+
+.team-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.team-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #F5F0EB;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.team-links a:hover {
+    background: #BA0225;
+    border-color: #BA0225;
+    transform: translateY(-2px);
+}
+
+.team-links a img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: grayscale(1);
+    transition: filter 0.2s ease;
+}
+
+.team-links a:hover img {
+    filter: grayscale(0) brightness(10);
+}
+
+.no-results {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    color: #4A4A4A;
+    text-align: center;
+    padding: 40px 0;
+    grid-column: 1 / -1;
+}
+
+/* ----- JOIN NETWORK ----- */
+#join-network {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #BA0225 0%, #8f011c 100%);
+}
+
+.join-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.join-tag {
+    font-family: var(--font-inter);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #D1964F;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.join-content h2 {
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.join-content p {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.btn-join {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #BA0225;
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-join:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(255,255,255,0.2);
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    #hero {
+        min-height: 40vh;
+        padding-top: 40px;
+    }
+
+    #hero .container {
+        padding: 24px 16px 40px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .hero-badge {
+        font-size: 0.6rem;
+        padding: 4px 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .stat-item .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+    }
+
+    .team-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .filter-pills {
+        gap: 6px;
+    }
+
+    .filter-pill {
+        padding: 4px 14px;
+        font-size: 0.65rem;
+    }
+
+    .join-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .team-card {
+        padding: 16px 12px;
+    }
+
+    .team-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .team-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .team-role {
+        font-size: 0.65rem;
+        min-height: 28px;
+    }
+
+    .team-bio {
+        font-size: 0.75rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-item .stat-value {
+        font-size: 1.2rem;
+    }
+
+    .stat-item .stat-label {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

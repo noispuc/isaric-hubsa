@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="news-title"></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/news.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/isaric-top.png" alt="ISARIC South America Hub" style="height: 40px; width: auto;">
+                <div class="logo-text">
+                    <strong id="logo-strong"></strong>
+                    <span id="logo-span"></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" id="menu-home"></a></li>
+                    <li><a href="clinical.html" id="menu-clinical"></a></li>
+                    <li><a href="training.html" id="menu-training"></a></li>
+                    <li><a href="tools.html" id="menu-tools"></a></li>
+                    <li><a href="publications.html" id="menu-publications"></a></li>
+                    <li><a href="news.html" id="menu-news" class="active"></a></li>
+                    <li><a href="dashboard.html" id="menu-dashboard"></a></li>
+                    <li><a href="team.html" id="menu-team"></a></li>
+                    <li><a href="contact.html" id="menu-contact"></a></li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" id="lang-pt"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('en')" id="lang-en" class="active"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('es')" id="lang-es"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="../assets/images/news-hero.png" alt="News" id="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <span class="dot"></span>
+                    <span id="hero-badge"></span>
+                </span>
+                <h1 id="hero-title"></h1>
+                <p id="hero-description"></p>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 56" fill="none" preserveAspectRatio="none">
+                <path d="M0 56V28C240 0 480 56 720 36 960 16 1200 46 1440 28V56H0Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== NEWS SECTION ===== -->
+    <section id="news-section">
+        <div class="container">
+            <div class="news-layout">
+                <!-- ===== MAIN CONTENT ===== -->
+                <div class="news-main">
+                    <!-- Filtros -->
+                    <div class="filter-pills" id="filter-pills">
+                        <!-- Gerado pelo JS -->
+                    </div>
+
+                    <!-- Featured Article -->
+                    <div class="featured-article" id="featured-article">
+                        <!-- Gerado pelo JS -->
+                    </div>
+
+                    <!-- Article List -->
+                    <div class="article-list" id="article-list">
+                        <!-- Gerado pelo JS -->
+                    </div>
+                </div>
+
+                <!-- ===== SIDEBAR ===== -->
+                <aside class="news-sidebar">
+
+                    <!-- Newsletter -->
+                    <div class="newsletter-box">
+                        <span class="newsletter-tag" id="newsletter-title"></span>
+                        <h3 id="newsletter-subtitle"></h3>
+                        <p class="newsletter-desc" id="newsletter-description"></p>
+                        <form id="newsletter-form">
+                            <input type="email" id="newsletter-email" placeholder=" " required>
+                            <button type="submit" id="newsletter-subscribe"></button>
+                        </form>
+                        <div class="newsletter-success" id="newsletter-success" style="display:none;">
+                            <span>✓</span>
+                            <p id="newsletter-success-text"></p>
+                        </div>
+                    </div>
+                    <!-- Categories -->
+                    <div class="categories-box">
+                        <h4 id="browse-by-category"></h4>
+                        <div class="categories-list" id="categories-list">
+                            <!-- Gerado pelo JS -->
+                        </div>
+                    </div>
+
+                    <!-- Topics -->
+                    <div class="topics-box">
+                        <h4 id="topics"></h4>
+                        <div class="topics-cloud" id="topics-cloud">
+                            <span class="topic-tag">Dengue</span>
+                            <span class="topic-tag">Zika</span>
+                            <span class="topic-tag">Chikungunya</span>
+                            <span class="topic-tag">Yellow Fever</span>
+                            <span class="topic-tag">Surveillance</span>
+                            <span class="topic-tag">Training</span>
+                            <span class="topic-tag">Fellowship</span>
+                            <span class="topic-tag">PAHO</span>
+                            <span class="topic-tag">Data</span>
+                            <span class="topic-tag">Outbreak</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== MODAL DE NOTÍCIA COMPLETA ===== -->
+    <div class="news-modal" id="news-modal" style="display:none;">
+        <div class="news-modal-overlay" id="news-modal-overlay"></div>
+        <div class="news-modal-content">
+            <button class="news-modal-close" id="news-modal-close">✕</button>
+            <button class="news-modal-back" id="news-modal-back">← Voltar para notícias</button>
+            <div class="news-modal-body" id="news-modal-body">
+                <!-- Conteúdo carregado pelo JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/images/isaric-footer.png" alt="ISARIC" style="height: 40px; width: auto;">
+                    </div>
+                    <p id="footer-description"></p>
+                    <a href="mailto:contact@isaric-sa.org.br" class="footer-email" id="footer-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M2 7l10 7 10-7" />
+                        </svg>
+                        contact@isaric-sa.org.br
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" id="footer-linkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 id="footer-links-title"></h4>
+                    <ul>
+                        <li><a href="../index.html" id="footer-home"></a></li>
+                        <li><a href="../pages/clinical.html" id="footer-clinical"></a></li>
+                        <li><a href="../pages/news.html" id="footer-news"></a></li>
+                        <li><a href="../pages/training.html" id="footer-training"></a></li>
+                        <li><a href="../pages/publications.html" id="footer-publications"></a></li>
+                        <li><a href="../pages/contact.html" id="footer-contact"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright"></p>
+                <div class="footer-bottom-links">
+                    <a href="#" id="footer-privacy"></a>
+                    <a href="#" id="footer-terms"></a>
+                    <a href="#" id="footer-accessibility"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/content-loader.js"></script>
+    <script src="../js/news.js"></script>
+    <script src="js/index.js"></script>     <!-- ← DEPOIS -->
+
+</body>
+</html>

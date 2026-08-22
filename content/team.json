@@ -1,0 +1,635 @@
+{
+  "pt": {
+    "team-title": "Equipe – ISARIC South America Hub",
+    "logo-strong": "ISARIC",
+    "logo-span": "South America Hub",
+    "menu-home": "Home",
+    "menu-clinical": "Pesquisa Clínica",
+    "menu-training": "Capacitação",
+    "menu-tools": "Ferramentas",
+    "menu-publications": "Publicações",
+    "menu-news": "Notícias",
+    "menu-dashboard": "Painel",
+    "menu-team": "Equipe",
+    "menu-contact": "Contato",
+    "lang-pt": "PT",
+    "lang-en": "EN",
+    "lang-es": "ES",
+    "hero-badge": "Nossa Equipe",
+    "hero-title": "Equipe",
+    "hero-description": "Conheça os pesquisadores, clínicos, cientistas de dados e educadores que impulsionam a rede ISARIC South America em 12 países.",
+    "stats-researchers": "600+",
+    "stats-researchers-label": "Pesquisadores na Rede",
+    "stats-countries": "12",
+    "stats-countries-label": "Países",
+    "stats-institutions": "85+",
+    "stats-institutions-label": "Instituições",
+    "stats-groups": "4",
+    "stats-groups-label": "Grupos Científicos",
+    "filter-all": "Todos",
+    "filter-leadership": "Liderança",
+    "filter-clinical": "Clínica",
+    "filter-data": "Dados e Análise",
+    "filter-training": "Capacitação",
+    "join-tag": "JUNTE-SE À REDE",
+    "join-title": "Faça parte do ISARIC South America",
+    "join-description": "Recebemos novos pesquisadores, colaboradores de dados e parceiros institucionais.",
+    "join-btn": "Entre em Contato",
+    "footer-description": "Construindo infraestrutura de pesquisa clínica para arboviroses na América do Sul. Parte da Rede Global ISARIC.",
+    "footer-email": "contact@isaric-sa.org.br",
+    "footer-links-title": "Links Rápidos",
+    "footer-home": "Home",
+    "footer-clinical": "Pesquisa Clínica",
+    "footer-training": "Capacitação",
+    "footer-tools": "Ferramentas",
+    "footer-publications": "Publicações",
+    "footer-news": "Notícias",
+    "footer-dashboard": "Painel",
+    "footer-team": "Equipe",
+    "footer-contact": "Contato",
+    "footer-copyright": "© 2026 ISARIC South America Hub. Todos os direitos reservados.",
+    "members": [
+      {
+        "id": 1,
+        "name": "Fernando Bozza",
+        "role": "D.Sc./Ph.D. Medicina, Pesquisador (FIOCRUZ/NOVA Medical School/IDOR), M.D.",
+        "bio": "Líder do ISARIC HUB América do Sul",
+        "group": ["Leadership"],
+        "image": "fernando_bozza.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/4150524692179865" },
+          { "type": "other", "url": "https://www.chrc.pt/pt/chrc/pessoas/fernando-augusto-bozza" }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Leonardo L. S. Bastos",
+        "role": "D.Sc./Ph.D. Engenharia de Produção, Prof. DEI (PUC-Rio)",
+        "bio": "Coordenador Ciência de Dados",
+        "group": ["Leadership", "Data & Analytics"],
+        "image": "leonardo_bastos.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3058855079996406" },
+          { "type": "other", "url": "https://www.ind.puc-rio.br/equipe/leonardo-bastos/" }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Giogio Garcia Cristofani",
+        "role": "M.Sc. Relações Internacionais, Pesquisador (FIOCRUZ)",
+        "bio": "Coordenador Engajamento Comunitário e Capacitação",
+        "group": ["Leadership", "Training"],
+        "image": "giogio_cristofani.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/7884040622253661" }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Josephine Bourner",
+        "role": "D.Phil./Ph.D. Medicina Clínica, Universidade de Oxford",
+        "bio": "Coordenadora Clinical Research",
+        "group": ["Leadership", "Clinical"],
+        "image": "josie_bourner.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/josephine-bourner-phd-3719704a/" }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Rute Sousa",
+        "role": "D.Sc./Ph.D. Psicologia Clínica, Universidade Nova de Lisboa",
+        "bio": "Coordenadora HUB América do Sul",
+        "group": ["Leadership"],
+        "image": "rute_sousa.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/rutedinissousa/" }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Igor Tona Peres",
+        "role": "D.Sc./Ph.D. Engenharia de Produção, Prof. DEI (PUC-Rio)",
+        "bio": "Pesquisador Ciência de Dados",
+        "group": ["Data & Analytics"],
+        "image": "igor_peres.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3920767393039395" },
+          { "type": "other", "url": "https://www.ind.puc-rio.br/equipe/igor-tona-peres/" }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Carlos Lima",
+        "role": "M.Sc. Engenharia de Produção, Pesquisador (UFPE)",
+        "bio": "Gestor de Projetos / PO",
+        "group": ["Data & Analytics"],
+        "image": "carlos_lima.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/6652468960979337" }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Luiz Eduardo Raffaini",
+        "role": "Estagiário, Engenharia da Computação (PUC-Rio)",
+        "bio": "Pesquisador Ciência de Dados",
+        "group": ["Data & Analytics"],
+        "image": "luiz_raffaini.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/9776369966493387" }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "David Benech",
+        "role": "Iniciação Científica, Ciência da Computação (PUC-Rio)",
+        "bio": "Pesquisador Ciência de Dados",
+        "group": ["Data & Analytics"],
+        "image": "david_benech.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3703357858779031" }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Felipe Delpino",
+        "role": "D.Sc./Ph.D. Ciências (UFPel)",
+        "bio": "Pesquisador Ciência de Dados",
+        "group": ["Data & Analytics"],
+        "image": "felipe_delpino.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/1147125101172719" }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Tomoe Gusberti",
+        "role": "D.Sc./Ph.D. Engenharia Industrial, UFRGS",
+        "bio": "Pesquisador Ciência de Dados",
+        "group": ["Data & Analytics"],
+        "image": "tomoe_gusberti.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3996550537304557" },
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/tomoegusberti/" }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Priscilla S. Filgueiras",
+        "role": "M.Sc. Patologia (UFMG)",
+        "bio": "Pesquisador Clinical Research / Gestora de Dados",
+        "group": ["Clinical"],
+        "image": "priscilla_filgueiras.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/priscillasf/" }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Silvio Hamacher",
+        "role": "D.Sc./Ph.D. Engenharia de Produção, Prof. Titular DEI (PUC-Rio)",
+        "bio": "Pesquisador Associado",
+        "group": ["Data & Analytics"],
+        "image": "silvio_hamacher.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/7644241125976321" },
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/silvio-hamacher-94101772/" }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Sarah Freire",
+        "role": "Estagiária, Ciência, Tecnologia e Inovação (Ilum / PUC-Rio)",
+        "bio": "Pesquisador Ciência de Dados",
+        "group": ["Data & Analytics"],
+        "image": "sarah_freire.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/sarah-freiree/" }
+        ]
+      }
+    ]
+  },
+  "en": {
+    "team-title": "Team – ISARIC South America Hub",
+    "logo-strong": "ISARIC",
+    "logo-span": "South America Hub",
+    "menu-home": "Home",
+    "menu-clinical": "Clinical Research",
+    "menu-training": "Training",
+    "menu-tools": "Tools",
+    "menu-publications": "Publications",
+    "menu-news": "News",
+    "menu-dashboard": "Dashboard",
+    "menu-team": "Team",
+    "menu-contact": "Contact Us",
+    "lang-pt": "PT",
+    "lang-en": "EN",
+    "lang-es": "ES",
+    "hero-badge": "Our Team",
+    "hero-title": "Team",
+    "hero-description": "Meet the investigators, clinicians, data scientists, and educators who power the ISARIC South America network across 12 countries.",
+    "stats-researchers": "600+",
+    "stats-researchers-label": "Network Researchers",
+    "stats-countries": "12",
+    "stats-countries-label": "Countries",
+    "stats-institutions": "85+",
+    "stats-institutions-label": "Institutions",
+    "stats-groups": "4",
+    "stats-groups-label": "Scientific Groups",
+    "filter-all": "All",
+    "filter-leadership": "Leadership",
+    "filter-clinical": "Clinical",
+    "filter-data": "Data & Analytics",
+    "filter-training": "Training",
+    "join-tag": "JOIN THE NETWORK",
+    "join-title": "Become part of ISARIC South America",
+    "join-description": "We welcome new site investigators, data collaborators, and institutional partners.",
+    "join-btn": "Contact Us to Join",
+    "footer-description": "Building clinical research infrastructure for arboviral diseases in South America. Part of the ISARIC Global Network.",
+    "footer-email": "contact@isaric-sa.org.br",
+    "footer-links-title": "Quick Links",
+    "footer-home": "Home",
+    "footer-clinical": "Clinical Research",
+    "footer-training": "Training",
+    "footer-tools": "Tools",
+    "footer-publications": "Publications",
+    "footer-news": "News",
+    "footer-dashboard": "Dashboard",
+    "footer-team": "Team",
+    "footer-contact": "Contact Us",
+    "footer-copyright": "© 2026 ISARIC South America Hub. All rights reserved.",
+    "members": [
+      {
+        "id": 1,
+        "name": "Fernando Bozza",
+        "role": "D.Sc./Ph.D. Medicine, Researcher (FIOCRUZ/NOVA Medical School/IDOR), M.D.",
+        "bio": "ISARIC South America Hub Leader",
+        "group": ["Leadership"],
+        "image": "fernando_bozza.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/4150524692179865" },
+          { "type": "other", "url": "https://www.chrc.pt/pt/chrc/pessoas/fernando-augusto-bozza" }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Leonardo L. S. Bastos",
+        "role": "D.Sc./Ph.D. Production Engineering, Prof. DEI (PUC-Rio)",
+        "bio": "Data Science Coordinator",
+        "group": ["Leadership","Data & Analytics"],
+        "image": "leonardo_bastos.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3058855079996406" },
+          { "type": "other", "url": "https://www.ind.puc-rio.br/equipe/leonardo-bastos/" }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Giogio Garcia Cristofani",
+        "role": "M.Sc. International Relations, Researcher (FIOCRUZ)",
+        "bio": "Community Engagement and Training Coordinator",
+        "group": ["Leadership","Training"],
+        "image": "giogio_cristofani.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/7884040622253661" }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Josephine Bourner",
+        "role": "D.Phil./Ph.D. Clinical Medicine, University of Oxford",
+        "bio": "Clinical Research Coordinator",
+        "group": ["Leadership", "Clinical"],
+        "image": "josie_bourner.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/josephine-bourner-phd-3719704a/" }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Rute Sousa",
+        "role": "D.Sc./Ph.D. Clinical Psychology, Universidade Nova de Lisboa",
+        "bio": "South America Hub Coordinator",
+        "group": ["Leadership"],
+        "image": "rute_sousa.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/rutedinissousa/" }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Igor Tona Peres",
+        "role": "D.Sc./Ph.D. Production Engineering, Prof. DEI (PUC-Rio)",
+        "bio": "Data Science Researcher",
+        "group": ["Data & Analytics"],
+        "image": "igor_peres.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3920767393039395" },
+          { "type": "other", "url": "https://www.ind.puc-rio.br/equipe/igor-tona-peres/" }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Carlos Lima",
+        "role": "M.Sc. Production Engineering, Researcher (UFPE)",
+        "bio": "Project Manager / PO",
+        "group": ["Data & Analytics"],
+        "image": "carlos_lima.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/6652468960979337" }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Luiz Eduardo Raffaini",
+        "role": "Intern, Computer Engineering (PUC-Rio)",
+        "bio": "Data Science Researcher",
+        "group": ["Data & Analytics"],
+        "image": "luiz_raffaini.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/9776369966493387" }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "David Benech",
+        "role": "Undergraduate Research, Computer Science (PUC-Rio)",
+        "bio": "Data Science Researcher",
+        "group": ["Data & Analytics"],
+        "image": "david_benech.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3703357858779031" }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Felipe Delpino",
+        "role": "D.Sc./Ph.D. Sciences (UFPel)",
+        "bio": "Data Science Researcher",
+        "group": ["Data & Analytics"],
+        "image": "felipe_delpino.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/1147125101172719" }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Tomoe Gusberti",
+        "role": "D.Sc./Ph.D. Industrial Engineering, UFRGS",
+        "bio": "Data Science Researcher",
+        "group": ["Data & Analytics"],
+        "image": "tomoe_gusberti.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3996550537304557" },
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/tomoegusberti/" }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Priscilla S. Filgueiras",
+        "role": "M.Sc. Pathology (UFMG)",
+        "bio": "Clinical Research / Data Manager",
+        "group": ["Clinical"],
+        "image": "priscilla_filgueiras.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/priscillasf/" }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Silvio Hamacher",
+        "role": "D.Sc./Ph.D. Production Engineering, Full Professor DEI (PUC-Rio)",
+        "bio": "Associate Researcher",
+        "group": ["Data & Analytics"],
+        "image": "silvio_hamacher.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/7644241125976321" },
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/silvio-hamacher-94101772/" }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Sarah Freire",
+        "role": "Intern, Science, Technology and Innovation (Ilum / PUC-Rio)",
+        "bio": "Data Science Researcher",
+        "group": ["Data & Analytics"],
+        "image": "sarah_freire.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/sarah-freiree/" }
+        ]
+      }
+    ]
+  },
+  "es": {
+    "team-title": "Equipo – ISARIC South America Hub",
+    "logo-strong": "ISARIC",
+    "logo-span": "South America Hub",
+    "menu-home": "Home",
+    "menu-clinical": "Investigación Clínica",
+    "menu-training": "Capacitación",
+    "menu-tools": "Herramientas",
+    "menu-publications": "Publicaciones",
+    "menu-news": "Noticias",
+    "menu-dashboard": "Panel",
+    "menu-team": "Equipo",
+    "menu-contact": "Contacto",
+    "lang-pt": "PT",
+    "lang-en": "EN",
+    "lang-es": "ES",
+    "hero-badge": "Nuestro Equipo",
+    "hero-title": "Equipo",
+    "hero-description": "Conozca a los investigadores, clínicos, científicos de datos y educadores que impulsan la red ISARIC South America en 12 países.",
+    "stats-researchers": "600+",
+    "stats-researchers-label": "Investigadores en la Red",
+    "stats-countries": "12",
+    "stats-countries-label": "Países",
+    "stats-institutions": "85+",
+    "stats-institutions-label": "Instituciones",
+    "stats-groups": "4",
+    "stats-groups-label": "Grupos Científicos",
+    "filter-all": "Todos",
+    "filter-leadership": "Liderazgo",
+    "filter-clinical": "Clínica",
+    "filter-data": "Datos y Análisis",
+    "filter-training": "Capacitación",
+    "join-tag": "ÚNETE A LA RED",
+    "join-title": "Forma parte de ISARIC South America",
+    "join-description": "Recibimos nuevos investigadores, colaboradores de datos y socios institucionales.",
+    "join-btn": "Contáctenos",
+    "footer-description": "Construyendo infraestructura de investigación clínica para arbovirosis en América del Sur. Parte de la Red Global ISARIC.",
+    "footer-email": "contact@isaric-sa.org.br",
+    "footer-links-title": "Enlaces Rápidos",
+    "footer-home": "Home",
+    "footer-clinical": "Investigación Clínica",
+    "footer-training": "Capacitación",
+    "footer-tools": "Herramientas",
+    "footer-publications": "Publicaciones",
+    "footer-news": "Noticias",
+    "footer-dashboard": "Panel",
+    "footer-team": "Equipo",
+    "footer-contact": "Contacto",
+    "footer-copyright": "© 2026 ISARIC South America Hub. Todos los derechos reservados.",
+    "members": [
+      {
+        "id": 1,
+        "name": "Fernando Bozza",
+        "role": "D.Sc./Ph.D. Medicina, Investigador (FIOCRUZ/NOVA Medical School/IDOR), M.D.",
+        "bio": "Líder del ISARIC HUB América del Sur",
+        "group": ["Leadership"],
+        "image": "fernando_bozza.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/4150524692179865" },
+          { "type": "other", "url": "https://www.chrc.pt/pt/chrc/pessoas/fernando-augusto-bozza" }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Leonardo L. S. Bastos",
+        "role": "D.Sc./Ph.D. Ingeniería de Producción, Prof. DEI (PUC-Rio)",
+        "bio": "Coordinador de Ciencia de Datos",
+        "group": ["Leadership","Data & Analytics"],
+        "image": "leonardo_bastos.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3058855079996406" },
+          { "type": "other", "url": "https://www.ind.puc-rio.br/equipe/leonardo-bastos/" }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Giogio Garcia Cristofani",
+        "role": "M.Sc. Relaciones Internacionales, Investigador (FIOCRUZ)",
+        "bio": "Coordinador de Participación Comunitaria y Capacitación",
+        "group": ["Leadership", "Training"],
+        "image": "giogio_cristofani.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/7884040622253661" }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Josephine Bourner",
+        "role": "D.Phil./Ph.D. Medicina Clínica, Universidad de Oxford",
+        "bio": "Coordinadora de Investigación Clínica",
+        "group": ["Leadership","Clinical"],
+        "image": "josie_bourner.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/josephine-bourner-phd-3719704a/" }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Rute Sousa",
+        "role": "D.Sc./Ph.D. Psicología Clínica, Universidade Nova de Lisboa",
+        "bio": "Coordinadora del HUB América del Sur",
+        "group": ["Leadership"],
+        "image": "rute_sousa.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/rutedinissousa/" }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Igor Tona Peres",
+        "role": "D.Sc./Ph.D. Ingeniería de Producción, Prof. DEI (PUC-Rio)",
+        "bio": "Investigador de Ciencia de Datos",
+        "group": ["Data & Analytics"],
+        "image": "igor_peres.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3920767393039395" },
+          { "type": "other", "url": "https://www.ind.puc-rio.br/equipe/igor-tona-peres/" }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Carlos Lima",
+        "role": "M.Sc. Ingeniería de Producción, Investigador (UFPE)",
+        "bio": "Gestor de Proyectos / PO",
+        "group": ["Data & Analytics"],
+        "image": "carlos_lima.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/6652468960979337" }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Luiz Eduardo Raffaini",
+        "role": "Pasante, Ingeniería de Computación (PUC-Rio)",
+        "bio": "Investigador de Ciencia de Datos",
+        "group": ["Data & Analytics"],
+        "image": "luiz_raffaini.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/9776369966493387" }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "David Benech",
+        "role": "Investigación de Pregrado, Ciencias de la Computación (PUC-Rio)",
+        "bio": "Investigador de Ciencia de Datos",
+        "group": ["Data & Analytics"],
+        "image": "david_benech.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3703357858779031" }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Felipe Delpino",
+        "role": "D.Sc./Ph.D. Ciencias (UFPel)",
+        "bio": "Investigador de Ciencia de Datos",
+        "group": ["Data & Analytics"],
+        "image": "felipe_delpino.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/1147125101172719" }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Tomoe Gusberti",
+        "role": "D.Sc./Ph.D. Ingeniería Industrial, UFRGS",
+        "bio": "Investigador de Ciencia de Datos",
+        "group": ["Data & Analytics"],
+        "image": "tomoe_gusberti.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/3996550537304557" },
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/tomoegusberti/" }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Priscilla S. Filgueiras",
+        "role": "M.Sc. Patología (UFMG)",
+        "bio": "Investigador de Investigación Clínica / Gestora de Datos",
+        "group": ["Clinical"],
+        "image": "priscilla_filgueiras.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/priscillasf/" }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Silvio Hamacher",
+        "role": "D.Sc./Ph.D. Ingeniería de Producción, Prof. Titular DEI (PUC-Rio)",
+        "bio": "Investigador Asociado",
+        "group": ["Data & Analytics"],
+        "image": "silvio_hamacher.png",
+        "links": [
+          { "type": "lattes", "url": "http://lattes.cnpq.br/7644241125976321" },
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/silvio-hamacher-94101772/" }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Sarah Freire",
+        "role": "Pasante, Ciencia, Tecnología e Innovación (Ilum / PUC-Rio)",
+        "bio": "Investigador de Ciencia de Datos",
+        "group": ["Data & Analytics"],
+        "image": "sarah_freire.png",
+        "links": [
+          { "type": "linkedin", "url": "https://www.linkedin.com/in/sarah-freiree/" }
+        ]
+      }
+    ]
+  }
+}

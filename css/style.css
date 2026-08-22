@@ -1,9 +1,44 @@
 /* ============================================
-   RESET E BASE
+   IMPORTS E BASE
    ============================================ */
-*,
-*::before,
-*::after {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    /* Cores ISARIC */
+    --isaric-red: #BA0225;
+    --isaric-red-dark: #8f011c;
+    --isaric-teal: #1A6B6B;
+    --isaric-teal-light: #2a8f8f;
+    --isaric-gold: #D1964F;
+    --isaric-beige: #F5F0EB;
+    --isaric-dark: #1A1A1A;
+    --isaric-muted: #4A4A4A;
+    --isaric-white: #FFFFFF;
+    --isaric-gray: #888888;
+    --isaric-border: #E8E3DD;
+
+    /* Fontes */
+    --font-inter: 'Inter', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+
+    /* Sombras */
+    --shadow-sm: 0 1px 6px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.07);
+    --shadow-lg: 0 20px 40px rgba(0,0,0,0.10);
+    --shadow-xl: 0 12px 28px rgba(0,0,0,0.10);
+
+    /* Bordas */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    /* Transições */
+    --transition: 0.3s ease;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,25 +49,22 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-    font-size: 16px;
+    font-family: var(--font-lato);
+    color: var(--isaric-dark);
+    background: var(--isaric-white);
     line-height: 1.6;
-    color: #1A1A1A;
-    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    color: var(--isaric-dark);
 }
 
 a {
-    color: #BA0225;
     text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #8A001C;
-}
-
-ul {
-    list-style: none;
+    color: inherit;
 }
 
 img {
@@ -41,443 +73,342 @@ img {
     display: block;
 }
 
-/* ============================================
-   VARIÁVEIS (CORES)
-   ============================================ */
-:root {
-    --primary: #BA0225;
-    --primary-dark: #8A001C;
-    --secondary: #568784;
-    --tertiary: #D1964F;
-    --text-dark: #1A1A1A;
-    --text-light: #4A4A4A;
-    --bg-light: #F7F9FC;
-    --bg-bege: #F0E8D9;
-    --white: #FFFFFF;
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    --radius: 12px;
-    --transition: 0.3s ease;
+ul {
+    list-style: none;
 }
 
-/* ============================================
-   CONTAINER
-   ============================================ */
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
 /* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(186, 2, 37, 0.25); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--isaric-red); }
+
+/* ============================================
    BOTÕES
    ============================================ */
-.btn {
+.btn-primary {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 14px 32px;
+    background: var(--isaric-red);
+    color: var(--isaric-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-inter);
     font-weight: 600;
-    font-size: 0.95rem;
-    border-radius: 8px;
-    border: 2px solid var(--primary);
-    background: transparent;
-    color: var(--primary);
+    font-size: 1rem;
     cursor: pointer;
     transition: all var(--transition);
     text-align: center;
 }
 
-.btn:hover {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: var(--white);
-    border-color: var(--primary);
-}
-
 .btn-primary:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    color: var(--white);
+    background: var(--isaric-red-dark);
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(186, 2, 37, 0.25);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--isaric-white);
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--isaric-white);
 }
 
 /* ============================================
-   HEADER / MENU 
+   HEADER / NAV
    ============================================ */
 #main-header {
-    background: var(--white);
-    border-bottom: 1px solid #eee;
-    padding: 12px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 #main-header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
 
 .logo img {
-    height: 48px;
+    height: 40px;
     width: auto;
+    display: block;
+    padding: 2px;
 }
 
-/* ----- Navegação principal ----- */
+.logo-text {
+    font-family: var(--font-inter);
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--isaric-dark);
+    line-height: 1.1;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.55rem;
+    color: var(--isaric-muted);
+    line-height: 1.1;
+}
+
 nav ul {
     display: flex;
-    gap: 0;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Itens do menu */
-nav ul li {
-    position: relative;
-    list-style: none;
-}
-
-/* Botões do menu principal */
-nav ul li a,
-nav ul li .dropdown-toggle {
-    display: inline-block;
-    padding: 8px 16px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-/* Hover do menu principal - fundo vermelho, texto branco */
-nav ul li a:hover,
-nav ul li .dropdown-toggle:hover,
-nav ul li:hover .dropdown-toggle {
-    background: var(--primary);
-    color: var(--white);
-}
-
-/* Mantém o destaque quando o dropdown está aberto */
-.dropdown.open .dropdown-toggle {
-    background: var(--primary);
-    color: var(--white);
-}
-
-/* ----- Dropdown (alinhado à esquerda do botão) ----- */
-/* ----- Dropdown (alinhado à esquerda do botão) ----- */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--white);
-    border: 1px solid #eee;
-    border-radius: var(--radius);
-    padding: 32px 40px;
-    min-width: 600px;
-    max-width: 800px;
-    box-shadow: var(--shadow);
-    z-index: 1001;
-    text-align: left;  /* ← garante alinhamento à esquerda */
-}
-
-/* Mostra o dropdown no hover (desktop) */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Grid de colunas dentro do dropdown */
-.dropdown-menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    text-align: left;  /* ← garante alinhamento à esquerda */
-}
-
-/* Título do dropdown (ex: "Programs" dentro do card) */
-.dropdown-menu-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 16px;
-    display: block;
-    grid-column: 1 / -1;
-    cursor: default;
-    text-align: left;  /* ← alinhado à esquerda */
-}
-
-/* Título da coluna (categoria) com linha vermelha */
-.dropdown-category {
+nav ul li a {
+    font-family: var(--font-inter);
     font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 12px;
-    display: block;
-    cursor: default;
-    letter-spacing: 0.3px;
-    position: relative;
-    padding-bottom: 8px;
-    text-align: left;  /* ← alinhado à esquerda */
-}
-
-/* Linha vermelha fina abaixo da categoria (estilo PMI) */
-.dropdown-category::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: var(--primary);
-}
-
-/* Links dentro do dropdown */
-.dropdown-menu a {
-    display: inline-block;
-    padding: 4px 0;
-    font-size: 0.9rem;
-    color: var(--text-light);
+    font-weight: 500;
+    color: var(--isaric-muted);
+    transition: color var(--transition);
+    padding-bottom: 2px;
     border-bottom: 2px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
-    width: auto;
-    text-align: left;  /* ← alinhado à esquerda */
 }
 
-/* Hover dos subitens - apenas texto vermelho + sublinhado vermelho */
-.dropdown-menu a:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-    background: transparent;
-}
-
-/* Espaçamento entre os itens da lista */
-.dropdown-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: flex-start;  /* ← alinha os itens à esquerda */
-    padding: 0;
-    margin: 0;
-}
-
-/* Tamanho dinâmico do dropdown para menus menores */
-.dropdown-menu-small {
-    min-width: auto;
-    padding: 24px 32px;
-}
-
-.dropdown-menu-small .dropdown-menu-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--isaric-red);
+    border-bottom-color: var(--isaric-red);
 }
 
 .idioma {
     display: flex;
-    gap: 4px;
+    align-items: center;
+    gap: 2px;
+    margin-left: 8px;
 }
 
 .idioma button {
     background: none;
     border: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    padding: 4px 10px;
+    font-family: var(--font-inter);
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--isaric-muted);
+    padding: 2px 6px;
     border-radius: 4px;
     cursor: pointer;
     transition: all var(--transition);
 }
 
 .idioma button:hover,
-.idioma button.ativo {
-    background: var(--primary);
-    color: var(--white);
+.idioma button.active {
+    color: var(--isaric-red);
+    background: rgba(186, 2, 37, 0.06);
+    font-weight: 700;
+}
+
+.idioma .divider {
+    color: #DDD;
+    font-size: 0.6rem;
 }
 
 /* ============================================
-   RODAPÉ
+   FOOTER
    ============================================ */
 #main-footer {
-    background: #1A1A1A;
-    color: #FFFFFF;
-    padding: 48px 0 24px;
+    background: var(--isaric-dark);
+    padding: 56px 0 40px;
+    color: var(--isaric-white);
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 40px;
 }
 
+/* Logo */
 .footer-brand img {
     height: 48px;
-    margin-bottom: 12px;
+    width: auto;          /* ← IMPEDE ESTICAR */
+    display: block;
+    margin-bottom: 12px;  /* ← ESPAÇO ENTRE LOGO E TEXTO */
 }
 
 .footer-brand p {
-    font-size: 0.9rem;
-    color: #aaa;
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    color: #888;
     line-height: 1.6;
-    max-width: 300px;
+    max-width: 320px;
+    margin-bottom: 16px;
 }
 
-.footer-col h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #fff;
-}
-
-.footer-col ul {
+.footer-email {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 8px;
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    color: var(--isaric-gold);
+    margin-bottom: 8px;
+    text-decoration: none;
 }
 
-.footer-col a {
-    color: #aaa;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
+.footer-email svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
 }
 
-.footer-col a:hover {
-    color: #fff;
-}
-
-/* Redes Sociais */
 .footer-social {
     display: flex;
     gap: 12px;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 .footer-social a {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #333;
-    border-radius: 50%;
-    transition: background 0.2s ease;
+    gap: 8px;
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    color: #0077B5;
+    text-decoration: none;
+    transition: color var(--transition);
 }
 
 .footer-social a:hover {
-    background: #BA0225;
+    color: #00A0DC;
 }
 
-.footer-social img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
+.footer-col h4 {
+    font-family: var(--font-inter);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--isaric-gold);
+    margin-bottom: 16px;
+}
+
+.footer-col ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+}
+
+.footer-col ul li a {
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    color: #888;
+    transition: color var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--isaric-white);
 }
 
 .footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 20px;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #777;
+    border-top: 1px solid #2A2A2A;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-bottom p {
+    font-family: var(--font-lato);
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom-links a {
+    font-family: var(--font-lato);
+    font-size: 0.7rem;
+    color: #555;
+    transition: color var(--transition);
+}
+
+.footer-bottom-links a:hover {
+    color: var(--isaric-white);
 }
 
 /* ============================================
    RESPONSIVIDADE
    ============================================ */
-@media (max-width: 992px) {
-    .dropdown-menu {
-        min-width: 400px;
-        padding: 24px;
-    }
-
-    .dropdown-menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 14px;
     }
 }
 
 @media (max-width: 768px) {
-    #main-header .container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
-    .logo {
-        text-align: center;
-    }
-
     nav ul {
-        justify-content: center;
-        gap: 4px;
+        gap: 10px;
         flex-wrap: wrap;
-    }
-
-    .idioma {
         justify-content: center;
     }
 
-    .container {
-        padding: 0 16px;
-    }
-
-    /* Dropdown em mobile */
-    .dropdown-menu {
-        position: static;
-        transform: none;
-        border: none;
-        box-shadow: none;
-        padding: 16px 0;
-        min-width: auto;
-        max-width: 100%;
-        background: #f9f9f9;
-        border-radius: 0;
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none;
-    }
-
-    .dropdown.open .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-menu-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
+    nav ul li a {
+        font-size: 0.7rem;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
-        text-align: center;
+        gap: 32px;
     }
 
-    .footer-brand p {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .dropdown-menu-grid {
+    .footer-col ul {
         grid-template-columns: 1fr;
-        gap: 16px;
     }
 
-    nav ul li a,
-    nav ul li .dropdown-toggle {
-        padding: 6px 10px;
-        font-size: 0.8rem;
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
     }
 }

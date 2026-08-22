@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="contact-title"></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/contact.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/isaric-top.png" alt="ISARIC South America Hub" style="height: 40px; width: auto;">
+                <div class="logo-text">
+                    <strong id="logo-strong"></strong>
+                    <span id="logo-span"></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" id="menu-home"></a></li>
+                    <li><a href="clinical.html" id="menu-clinical"></a></li>
+                    <li><a href="training.html" id="menu-training"></a></li>
+                    <li><a href="tools.html" id="menu-tools"></a></li>
+                    <li><a href="publications.html" id="menu-publications"></a></li>
+                    <li><a href="news.html" id="menu-news"></a></li>
+                    <li><a href="dashboard.html" id="menu-dashboard"></a></li>
+                    <li><a href="team.html" id="menu-team"></a></li>
+                    <li><a href="contact.html" id="menu-contact" class="active"></a></li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" id="lang-pt"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('en')" id="lang-en" class="active"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('es')" id="lang-es"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="../assets/images/contact-hero.png" alt="Contact Us" id="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <span class="dot"></span>
+                    <span id="hero-badge"></span>
+                </span>
+                <h1 id="hero-title"></h1>
+                <p id="hero-description"></p>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 56" fill="none" preserveAspectRatio="none">
+                <path d="M0 56V28C240 0 480 56 720 36 960 16 1200 46 1440 28V56H0Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Coluna 1: Formulário -->
+                <div class="contact-form">
+                    <h2 id="contact-form-title"></h2>
+                    <form id="contact-form" action="https://formsubmit.co/contact@isaric-sa.org.br" method="POST">
+                        <input type="hidden" name="_subject" value="Novo contato do site ISARIC SA">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div class="form-group">
+                            <label for="nome" id="contact-label-name"></label>
+                            <input type="text" id="nome" name="nome" placeholder=" " required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" id="contact-label-email"></label>
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                        </div>
+                        <div class="form-group">
+                            <label for="instituicao" id="contact-label-institution"></label>
+                            <input type="text" id="instituicao" name="instituicao" placeholder=" ">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto" id="contact-label-subject"></label>
+                            <input type="text" id="assunto" name="assunto" placeholder=" ">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem" id="contact-label-message"></label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder=" " required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" id="contact-send"></button>
+                    </form>
+                    <div class="form-success" id="form-success" style="display:none;">
+                        <span>✓</span>
+                        <p id="contact-success-message"></p>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Informações de Contato -->
+                <div class="contact-info">
+                    <h2 id="contact-info-title"></h2>
+
+                    <div class="info-item">
+                        <h4 id="contact-info-email-label"></h4>
+                        <p>contact@isaric-sa.org.br</p>
+                        <span class="info-detail" id="contact-info-email-detail"></span>
+                    </div>
+
+                    <div class="info-item">
+                        <h4 id="contact-info-address-label"></h4>
+                        <p id="contact-info-address"></p>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="info-map">
+                        <h4 id="contact-info-map-label"></h4>
+                        <div id="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0!2d-43.2735!3d-22.8750!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e58a085b7af%3A0x4d11e9f23af9b3c4!2sAv.%20Brasil%2C%204365%20-%20Manguinhos%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021040-900!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                                width="100%"
+                                height="220"
+                                style="border:0; border-radius: 12px;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/dir//Av.+Brasil,+4365+-+Manguinhos,+Rio+de+Janeiro+-+RJ,+21040-900" target="_blank" rel="noopener noreferrer" class="map-link" id="contact-map-link"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/images/isaric-footer.png" alt="ISARIC" style="height: 40px; width: auto;">
+                    </div>
+                    <p id="footer-description"></p>
+                    <a href="mailto:contact@isaric-sa.org.br" class="footer-email" id="footer-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M2 7l10 7 10-7" />
+                        </svg>
+                        contact@isaric-sa.org.br
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" id="footer-linkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 id="footer-links-title"></h4>
+                    <ul>
+                        <li><a href="../index.html" id="footer-home"></a></li>
+                        <li><a href="../pages/clinical.html" id="footer-clinical"></a></li>
+                        <li><a href="../pages/news.html" id="footer-news"></a></li>
+                        <li><a href="../pages/training.html" id="footer-training"></a></li>
+                        <li><a href="../pages/publications.html" id="footer-publications"></a></li>
+                        <li><a href="../pages/contact.html" id="footer-contact"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright"></p>
+                <div class="footer-bottom-links">
+                    <a href="#" id="footer-privacy"></a>
+                    <a href="#" id="footer-terms"></a>
+                    <a href="#" id="footer-accessibility"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/content-loader.js"></script>
+    <script src="../js/contact.js"></script>
+
+</body>
+</html>

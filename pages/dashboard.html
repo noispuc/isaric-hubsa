@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dashboard-title"></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/dashboard.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/isaric-top.png" alt="ISARIC South America Hub" style="height: 40px; width: auto;">
+                <div class="logo-text">
+                    <strong id="logo-strong"></strong>
+                    <span id="logo-span"></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" id="menu-home"></a></li>
+                    <li><a href="clinical.html" id="menu-clinical"></a></li>
+                    <li><a href="training.html" id="menu-training"></a></li>
+                    <li><a href="tools.html" id="menu-tools"></a></li>
+                    <li><a href="publications.html" id="menu-publications"></a></li>
+                    <li><a href="news.html" id="menu-news"></a></li>
+                    <li><a href="dashboard.html" id="menu-dashboard" class="active"></a></li>
+                    <li><a href="team.html" id="menu-team"></a></li>
+                    <li><a href="contact.html" id="menu-contact"></a></li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" id="lang-pt"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('en')" id="lang-en" class="active"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('es')" id="lang-es"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="../assets/images/dashboard-hero.png" alt="Dashboard" id="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <span class="dot"></span>
+                    <span id="hero-badge"></span>
+                </span>
+                <h1 id="hero-title"></h1>
+                <p id="hero-description"></p>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 56" fill="none" preserveAspectRatio="none">
+                <path d="M0 56V28C240 0 480 56 720 36 960 16 1200 46 1440 28V56H0Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== DASHBOARD SECTION ===== -->
+    <section id="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <span class="external-tag" id="external-platforms-tag"></span>
+                <p class="dashboard-subtitle" id="dashboard-subtitle"></p>
+                <span class="all-online" id="all-dashboards-online"></span>
+            </div>
+            <div class="dashboard-grid" id="dashboard-grid">
+                <!-- Renderizado pelo JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/images/isaric-footer.png" alt="ISARIC" style="height: 40px; width: auto;">
+                    </div>
+                    <p id="footer-description"></p>
+                    <a href="mailto:contact@isaric-sa.org.br" class="footer-email" id="footer-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M2 7l10 7 10-7" />
+                        </svg>
+                        contact@isaric-sa.org.br
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" id="footer-linkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 id="footer-links-title"></h4>
+                    <ul>
+                        <li><a href="../index.html" id="footer-home"></a></li>
+                        <li><a href="../pages/clinical.html" id="footer-clinical"></a></li>
+                        <li><a href="../pages/news.html" id="footer-news"></a></li>
+                        <li><a href="../pages/training.html" id="footer-training"></a></li>
+                        <li><a href="../pages/publications.html" id="footer-publications"></a></li>
+                        <li><a href="../pages/contact.html" id="footer-contact"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright"></p>
+                <div class="footer-bottom-links">
+                    <a href="#" id="footer-privacy"></a>
+                    <a href="#" id="footer-terms"></a>
+                    <a href="#" id="footer-accessibility"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/content-loader.js"></script>
+    <script src="../js/dashboard.js"></script>
+
+</body>
+</html>

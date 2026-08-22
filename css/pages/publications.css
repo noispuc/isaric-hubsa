@@ -1,0 +1,724 @@
+/* ============================================
+   PUBLICATIONS – ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* ----- HERO (padrão para páginas internas) ----- */
+#hero {
+    position: relative;
+    min-height: 36vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(105deg, rgba(186,2,37,0.92) 0%, rgba(186,2,37,0.75) 40%, rgba(10,10,10,0.80) 100%);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 30px 24px 50px;
+}
+
+.hero-content {
+    max-width: 700px;
+    text-align: left;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-family: var(--font-inter);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #D1964F;
+    background: rgba(209,150,79,0.2);
+    border: 1px solid rgba(209,150,79,0.45);
+    margin-bottom: 12px;
+}
+
+.hero-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D1964F;
+}
+
+#hero h1 {
+    font-family: var(--font-inter);
+    font-size: 3.0rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+#hero p {
+    font-family: var(--font-lato);
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+}
+
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.hero-wave svg {
+    display: block;
+    width: 100%;
+}
+
+/* ----- STATS BANNER ----- */
+#stats-banner {
+    background: #F5F0EB;
+    border-bottom: 1px solid #E5DDD5;
+    padding: 24px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.stat-item .stat-value {
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #BA0225;
+    display: block;
+    line-height: 1.2;
+}
+
+.stat-item .stat-label {
+    font-family: var(--font-lato);
+    font-size: 0.75rem;
+    color: #4A4A4A;
+    display: block;
+    margin-top: 2px;
+}
+
+/* ----- PUBLICATIONS SECTION ----- */
+#publications-section {
+    padding: 40px 0 64px;
+    background: #FFFFFF;
+}
+
+/* ----- FILTROS ----- */
+.filters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 48px;
+    margin-bottom: 24px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-label {
+    font-family: var(--font-inter);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #4A4A4A;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.filter-btn {
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid #E5DDD5;
+    background: #F5F0EB;
+    color: #4A4A4A;
+    font-family: var(--font-inter);
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #E8E0D8;
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: #BA0225;
+    color: #FFFFFF;
+    border-color: #BA0225;
+    box-shadow: 0 2px 8px rgba(186, 2, 37, 0.20);
+}
+
+/* Filter por disease - cores específicas */
+.filter-group[data-filter="disease"] .filter-btn[data-value="Dengue"].active {
+    background: #BA0225;
+    border-color: #BA0225;
+}
+
+.filter-group[data-filter="disease"] .filter-btn[data-value="Zika"].active {
+    background: #1A6B6B;
+    border-color: #1A6B6B;
+}
+
+.filter-group[data-filter="disease"] .filter-btn[data-value="Chikungunya"].active {
+    background: #D1964F;
+    border-color: #D1964F;
+}
+
+.filter-group[data-filter="disease"] .filter-btn[data-value="Yellow Fever"].active {
+    background: #059669;
+    border-color: #059669;
+}
+
+.filter-group[data-filter="disease"] .filter-btn[data-value="Multi-pathogen"].active {
+    background: #7C3AED;
+    border-color: #7C3AED;
+}
+
+/* Filter por year - cor específica */
+.filter-group[data-filter="year"] .filter-btn.active {
+    background: #1A6B6B;
+    border-color: #1A6B6B;
+}
+
+/* ----- RESULTS COUNT ----- */
+.results-count {
+    font-family: var(--font-lato);
+    font-size: 0.8rem;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F0EAE4;
+}
+
+/* ----- PUBLICATIONS LIST ----- */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ----- PUBLICATION CARD ----- */
+.publication-card {
+    padding: 24px 28px;
+    border-radius: 16px;
+    background: #FDFAF7;
+    border: 1px solid #F0EAE4;
+    transition: all 0.25s ease;
+    cursor: default;
+}
+
+.publication-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.publication-card.featured {
+    border: 2px solid rgba(186, 2, 37, 0.25);
+    background: #FFF8F9;
+}
+
+.publication-card.featured:hover {
+    box-shadow: 0 4px 24px rgba(186, 2, 37, 0.10);
+}
+
+/* Tags */
+.pub-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.pub-tags span {
+    font-family: var(--font-inter);
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 2px 12px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.tag-featured {
+    background: rgba(209, 150, 79, 0.15);
+    color: #D1964F;
+}
+
+.tag-disease {
+    background: rgba(0, 0, 0, 0.06);
+    color: #4A4A4A;
+}
+
+.tag-type {
+    background: #F5F0EB;
+    color: #4A4A4A;
+}
+
+.tag-openaccess {
+    background: rgba(5, 150, 105, 0.15);
+    color: #059669;
+}
+
+/* Título */
+.pub-title {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.4;
+    margin: 0 0 6px 0;
+    transition: color 0.2s ease;
+}
+
+.publication-card:hover .pub-title {
+    color: #BA0225;
+}
+
+/* Autores */
+.pub-authors {
+    font-family: var(--font-lato);
+    font-size: 0.8rem;
+    color: #4A4A4A;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+}
+
+/* Meta informações */
+.pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #F0EAE4;
+}
+
+.pub-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.pub-info span {
+    font-family: var(--font-lato);
+    font-size: 0.75rem;
+    color: #4A4A4A;
+}
+
+.pub-journal {
+    font-weight: 600;
+    color: #BA0225 !important;
+}
+
+.pub-impact {
+    font-weight: 600;
+}
+
+.pub-citations {
+    color: #6A6A6A;
+}
+
+/* Ações (View / Cite) */
+.pub-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-view,
+.btn-cite {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-family: var(--font-inter);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.btn-view {
+    background: #BA0225;
+    color: #FFFFFF;
+}
+
+.btn-view:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 12px rgba(186, 2, 37, 0.25);
+}
+
+.btn-cite {
+    border: 1px solid #E5DDD5;
+    color: #4A4A4A;
+}
+
+.btn-cite:hover {
+    background: #F5F0EB;
+    transform: translateY(-1px);
+}
+
+/* ----- NO RESULTS ----- */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.no-results p {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    color: #4A4A4A;
+    margin-bottom: 16px;
+}
+
+.clear-filters-btn {
+    padding: 8px 24px;
+    border-radius: 8px;
+    border: none;
+    background: #BA0225;
+    color: #FFFFFF;
+    font-family: var(--font-inter);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+    opacity: 0.85;
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.publication-card {
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+.publication-card:nth-child(2) { animation-delay: 0.05s; }
+.publication-card:nth-child(3) { animation-delay: 0.10s; }
+.publication-card:nth-child(4) { animation-delay: 0.15s; }
+.publication-card:nth-child(5) { animation-delay: 0.20s; }
+.publication-card:nth-child(6) { animation-delay: 0.25s; }
+.publication-card:nth-child(7) { animation-delay: 0.30s; }
+.publication-card:nth-child(8) { animation-delay: 0.35s; }
+
+
+/* ----- SEARCH BAR ----- */
+.search-wrapper {
+    position: relative;
+    margin-bottom: 24px;
+    max-width: 500px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 48px 12px 16px;
+    border-radius: 12px;
+    border: 1px solid #E5DDD5;
+    background: #F5F0EB;
+    font-family: var(--font-lato);
+    font-size: 0.9rem;
+    color: #1A1A1A;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #BA0225;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(186, 2, 37, 0.1);
+}
+
+.search-input::placeholder {
+    color: #A0A0A0;
+}
+
+.search-btn {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    color: #4A4A4A;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.search-btn:hover {
+    color: #BA0225;
+}
+
+/* ----- PAGINATION ----- */
+.pagination-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #F0EAE4;
+}
+
+.pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #E5DDD5;
+    background: #FFFFFF;
+    color: #4A4A4A;
+    font-family: var(--font-inter);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #F5F0EB;
+    border-color: #BA0225;
+    color: #BA0225;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 4px;
+}
+
+.pagination-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #4A4A4A;
+    font-family: var(--font-inter);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination-num:hover {
+    background: #F5F0EB;
+}
+
+.pagination-num.active {
+    background: #BA0225;
+    color: #FFFFFF;
+    border-color: #BA0225;
+}
+
+.pagination-dots {
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    color: #4A4A4A;
+    font-family: var(--font-inter);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .pagination-wrapper {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .pagination-btn {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+    
+    .pagination-num {
+        width: 32px;
+        height: 32px;
+        font-size: 0.7rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 1024px) {
+    .filters-wrapper {
+        gap: 24px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        min-height: 40vh;
+        padding-top: 40px;
+    }
+
+    #hero .container {
+        padding: 24px 16px 40px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .hero-badge {
+        font-size: 0.6rem;
+        padding: 4px 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .stat-item .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .filters-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .filter-buttons {
+        gap: 4px;
+    }
+
+    .filter-btn {
+        font-size: 0.65rem;
+        padding: 4px 10px;
+    }
+
+    .publication-card {
+        padding: 16px 18px;
+    }
+
+    .pub-title {
+        font-size: 0.9rem;
+    }
+
+    .pub-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pub-info {
+        gap: 8px;
+    }
+
+    .pub-actions {
+        width: 100%;
+    }
+
+    .btn-view,
+    .btn-cite {
+        flex: 1;
+        justify-content: center;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-item .stat-value {
+        font-size: 1.2rem;
+    }
+
+    .stat-item .stat-label {
+        font-size: 0.6rem;
+    }
+
+    .pub-tags span {
+        font-size: 0.55rem;
+        padding: 2px 8px;
+    }
+
+    .pub-title {
+        font-size: 0.85rem;
+    }
+
+    .pub-authors {
+        font-size: 0.7rem;
+    }
+
+    .pub-info span {
+        font-size: 0.65rem;
+    }
+
+    .btn-view,
+    .btn-cite {
+        font-size: 0.65rem;
+        padding: 6px 12px;
+    }
+}

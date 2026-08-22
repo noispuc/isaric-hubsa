@@ -1,121 +1,125 @@
 # ISARIC South America Hub
 
-Site institucional do ISARIC South America Hub, referência em pesquisa de arboviroses na América do Sul (dengue, zika, chikungunya e febre amarela).
+Institutional website of the ISARIC South America Hub, a reference in arbovirus research in South America (dengue, zika, chikungunya, and yellow fever).
 
-O site apresenta os programas de pesquisa, projetos em andamento, ferramentas analíticas, publicações, notícias e informações de contato do hub.
+The website presents research programs, ongoing projects, analytical tools, publications, news, and hub contact information.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 ```
 /
-├── index.html # Página inicial (Home)
-├── pages/
-│ ├── programs/ # Páginas de projetos (IPOP, Scalable, Community)
-│ │ ├── aria.html
-│ │ ├── pocus.html
-│ │ ├── mosaic.html
-│ │ ├── arc-bridge.html
-│ │ ├── vertex.html
-│ │ ├── credo.html
-│ │ └── fellowship.html
-│ ├── resources/ # Páginas de recursos
-│ │ ├── learn.html # Aprenda
-│ │ └── tools.html # Ferramentas
-│ ├── learn-more/ # Páginas "Saiba Mais"
-│ │ ├── events.html # Eventos
-│ │ └── news.html # Notícias
-│ └── about/ # Páginas institucionais
-│ ├── team.html # Equipe
-│ ├── publications.html # Publicações
-│ └── contact.html # Contato
-├── css/
-│ ├── style.css # Estilos globais (reset, header, footer, variáveis)
-│ ├── home.css # Estilos exclusivos da Home
-│ ├── components/
-│ │ └── dropdown.css # Estilos do menu dropdown
-│ ├── programs/ # Estilos dos projetos
-│ │ ├── aria.css
-│ │ ├── pocus.css
-│ │ ├── mosaic.css
-│ │ ├── arc-bridge.css
-│ │ ├── vertex.css
-│ │ ├── credo.css
-│ │ └── fellowship.css
-│ ├── resources/
-│ │ ├── learn.css
-│ │ └── tools.css
-│ ├── learn-more/
-│ │ ├── events.css
-│ │ └── news.css
-│ └── about/
-│ ├── team.css
-│ ├── publications.css
-│ └── contact.css
-├── js/
-│ ├── main.js # Funções globais (menu, idioma, rodapé)
-│ ├── dropdown.js # Suporte touch para dropdown (mobile)
-│ ├── news.js # Componente 1+4 de notícias (Home)
-│ ├── publications.js # Busca e filtros (Publicações)
-│ └── events.js # Filtros (Eventos)
-├── assets/
-│ ├── images/ # Fotos e banners
-│ └── icons/ # Ícones dos programas e projetos (SVG)
-├── admin/ # CMS (Decap CMS) – painel de controle
-│ ├── index.html
-│ └── config.yml
-├── content/
-│ └── translations/ # Arquivos de tradução
-│ ├── pt.json # Português
-│ ├── en.json # Inglês
-│ └── es.json # Espanhol
 ├── .gitignore
-└── README.md
+├── index.html
+├── license
+├── README.md
+│   
+├───adm
+│   └─── config.yml
+│       
+├───assets
+│   ├─── icons
+│   ├─── images
+│   ├─── news
+│   └─── people
+│           
+├───content
+│   ├─── clinical.json
+│   ├─── common.json
+│   ├─── contact.json
+│   ├─── dashboard.json
+│   ├─── team.json
+│   ├─── tools.json
+│   ├─── training.json
+│   │   
+│   └───newspages
+│           └─── *.md (news content)
+├───css
+│   ├─── home.css
+│   ├─── style.css
+│   └─── pages
+│        ├─── clinical.css
+│        ├─── contact.css
+│        ├─── dashboard.css
+│        ├─── news.css
+│        ├─── publications.css
+│        ├─── team.css
+│        ├─── tools.css
+│        └─── training.css
+│      
+├───js
+│    ├─── main.js
+│    ├─── map.js
+│    ├─── news.js
+│    └─── publications.js
+│           
+└───pages
+    ├─── clinical.html
+    ├─── contact.html
+    ├─── dashboard.html
+    ├─── news.html
+    ├─── publications.html
+    ├─── team.html
+    ├─── tools.html
+    ├─── training.html
+    └─── newspages
+        ├─── aria-2026.html
+        ├─── credo-2026.html
+        ├─── fellowship-2026.html
+        ├─── ifors-2026.html
+        └─── paper-2026.html
 ```
 
 ---
 
-## 🌐 Idiomas
+## 🌐 Languages
 
-O site detecta automaticamente o idioma do navegador do usuário e exibe o conteúdo em:
+The website automatically detects the user's browser language and displays content in:
 
-- **Português (PT)**
-- **Inglês (EN)**
-- **Espanhol (ES)**
+- **Portuguese (PT)**
+- **English (EN)**
+- **Spanish (ES)**
 
-Os conteúdos (notícias, textos) são armazenados em arquivos JSON com campos para cada idioma. O fallback é o inglês (`en`) caso o idioma do navegador não seja suportado.
-
----
-
-## 🚀 Tecnologias
-
-- **HTML5** – Estrutura das páginas
-- **CSS3** – Estilização (um único arquivo)
-- **JavaScript** – Interações e carregamento dinâmico de conteúdo
-- **GitHub Pages** – Hospedagem estática
-- **Decap CMS** – Editor visual para notícias (em breve)
+Content (news, texts) is stored in JSON files with fields for each language. The fallback language is English (`en`) if the browser language is not supported.
 
 ---
 
-## 📄 Páginas
+## 🚀 Technologies
 
-| Página | Descrição |
-|--------|-----------|
-| **Home** | Hero, últimas notícias (1+4), projetos em destaque, calendário, mapa, newsletter |
-| **Programas** | Cards com IPOP, CREDO, Scalable Analytics – cada um com abas internas para projetos |
-| **Aprenda** | Protocolos, guias, frameworks |
-| **Tools** | Grid de ferramentas analíticas (RAPID, VERTEX, ARC-BRIDGE, SANAR) |
-| **Equipe** | Coordenação e pesquisadores associados |
-| **Publicações** | Lista de papers com busca e filtros |
-| **Notícias** | Lista completa de notícias |
-| **Contato** | E-mail, telefone, endereço, mapa |
+- **HTML5** – Page structure
+- **CSS3** – Styling (separate files per page)
+- **JavaScript** – Interactions and dynamic content loading
+- **GitHub Pages** – Static hosting
+- **Decap CMS** – Visual editor for news
 
 ---
 
-## 👥 Equipe de Desenvolvimento
-- Design: Equipe ISARIC South America Hub
-- Desenvolvimento: [Seu nome / equipe técnica]
-- Conteúdo: Pesquisadores do hub
+## 📄 Pages
 
-📝 Licença
-Este projeto está licenciado pela ISARIC South America HUB na licença ???.
+| Page | Description |
+|------|-------------|
+| **Home** | Hero, latest news (1+4), hub introduction, newsletter |
+| **Clinical Research** | Tabs: ARIA, MOSAIC, POCUS, Chikungunya |
+| **Training** | Tabs: CREDO, Fellowship |
+| **Tools** | Tools, protocols, publications |
+| **Dashboard** | VERTEX Dashboard + Command Tower (2-column grid) |
+| **Publications** | Papers list with search and filters |
+| **News** | Complete news list |
+| **Team** | Coordination and associated researchers |
+| **Contact Us** | Address, email, and contact form |
+
+---
+
+## 👥 Development Team
+
+- **Design:** ISARIC South America Hub Team
+- **Development:** Carlos Lima | Luiz Raffaini | David Benech
+- **Content:** Josephine Bourner | Leonardo Bastos
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+© 2026-2028 ISARIC South America Hub

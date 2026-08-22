@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="clinical-title"></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/clinical.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/isaric-top.png" alt="ISARIC South America Hub" style="height: 40px; width: auto;">
+                <div class="logo-text">
+                    <strong id="logo-strong"></strong>
+                    <span id="logo-span"></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" id="menu-home"></a></li>
+                    <li><a href="clinical.html" id="menu-clinical" class="active"></a></li>
+                    <li><a href="training.html" id="menu-training"></a></li>
+                    <li><a href="tools.html" id="menu-tools"></a></li>
+                    <li><a href="publications.html" id="menu-publications"></a></li>
+                    <li><a href="news.html" id="menu-news"></a></li>
+                    <li><a href="dashboard.html" id="menu-dashboard"></a></li>
+                    <li><a href="team.html" id="menu-team"></a></li>
+                    <li><a href="contact.html" id="menu-contact"></a></li>
+                </ul>
+            </nav>
+            <div class="idioma">
+                <button onclick="switchLanguage('pt')" id="lang-pt"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('en')" id="lang-en" class="active"></button>
+                <span class="divider">|</span>
+                <button onclick="switchLanguage('es')" id="lang-es"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="../assets/images/clinical-hero.png" alt="Clinical Research" id="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <span class="dot"></span>
+                    <span id="hero-badge"></span>
+                </span>
+                <h1 id="hero-title"></h1>
+                <p id="hero-description"></p>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 56" fill="none" preserveAspectRatio="none">
+                <path d="M0 56V28C240 0 480 56 720 36 960 16 1200 46 1440 28V56H0Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <section id="clinical-content">
+        <div class="container">
+            <div class="clinical-grid">
+                <!-- Sidebar: Projects -->
+                <aside id="projects-sidebar">
+    <h3 id="sidebar-title"></h3>
+                <div class="project-list">
+                    <div class="project-item active" data-project="aria">
+                        <img src="../assets/icons/aria.png" alt="ARIA" class="project-icon">
+                        <div class="project-info">
+                            <span class="project-name" id="project-aria-name"></span>
+                            <span class="project-status" id="project-aria-status"></span>
+                        </div>
+                    </div>
+                    <div class="project-item" data-project="pocus">
+                        <img src="../assets/icons/pocus.png" alt="POCUS" class="project-icon">
+                        <div class="project-info">
+                            <span class="project-name" id="project-pocus-name"></span>
+                            <span class="project-status" id="project-pocus-status"></span>
+                        </div>
+                    </div>
+                    <div class="project-item" data-project="mosaic">
+                        <img src="../assets/icons/mosaic.png" alt="MOSAIC" class="project-icon">
+                        <div class="project-info">
+                            <span class="project-name" id="project-mosaic-name"></span>
+                            <span class="project-status" id="project-mosaic-status"></span>
+                        </div>
+                    </div>
+                    <div class="project-item" data-project="chikungunya">
+                        <img src="../assets/icons/chikungunya.png" alt="Chikungunya" class="project-icon">
+                        <div class="project-info">
+                            <span class="project-name" id="project-chikungunya-name"></span>
+                            <span class="project-status" id="project-chikungunya-status"></span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+                <!-- Content Area -->
+                <main id="project-content">
+                    <!-- ARIA -->
+                    <div class="project-detail active" id="detail-aria">
+                        <h2 id="aria-title"></h2>
+                        <p class="project-subtitle" id="aria-subtitle"></p>
+
+                        <!-- ===== BANNER DE COLABORAÇÃO ===== -->
+                        <div class="collaboration-banner">
+                            <p class="banner-text">
+                                🤝 <strong id="collab-text"></strong>
+                            </p>
+                            <a href="https://redcap.link/registrationARIA_form" target="_blank" class="btn-banner" id="collab-btn"></a>
+                        </div>
+
+                        <!-- About ARIA -->
+                        <h3 id="aria-about-title"></h3>
+                        <p id="aria-about-text-1"></p>
+                        <p id="aria-about-text-2"></p>
+
+                        <!-- Approach -->
+                        <h3 id="aria-approach-title"></h3>
+                        <p id="aria-approach-text"></p>
+
+                        <!-- TIERS -->
+                        <div class="tiers-grid">
+                            <div class="tier-card tier-1">
+                                <h3 id="aria-tier-1"></h3>
+                                <p id="aria-tier-1-desc"></p>
+                            </div>
+                            <div class="tier-card tier-2">
+                                <h3 id="aria-tier-2"></h3>
+                                <p id="aria-tier-2-desc"></p>
+                            </div>
+                            <div class="tier-card tier-3">
+                                <h3 id="aria-tier-3"></h3>
+                                <p id="aria-tier-3-desc"></p>
+                            </div>
+                        </div>
+                        <p id="aria-approach-conclusion"></p>
+
+                        <!-- Objectives -->
+                        <h3 id="aria-objectives-title"></h3>
+                        <p id="aria-objectives-text"></p>
+                        <ul class="objectives-list">
+                            <li id="aria-obj-1"></li>
+                            <li id="aria-obj-2"></li>
+                            <li id="aria-obj-3"></li>
+                            <li id="aria-obj-4"></li>
+                            <li id="aria-obj-5"></li>
+                            <li id="aria-obj-6"></li>
+                        </ul>
+                        <p id="aria-objectives-conclusion"></p>
+
+                        <!-- Participation -->
+                        <h3 id="aria-participation-title"></h3>
+                        <p id="aria-participation-text"></p>
+                        <ul class="participation-list">
+                            <li id="aria-participation-1"></li>
+                            <li id="aria-participation-2"></li>
+                            <li id="aria-participation-3"></li>
+                        </ul>
+                        <p id="aria-participation-conclusion"></p>
+
+                        <!-- Importance -->
+                        <h3 id="aria-importance-title"></h3>
+                        <p id="aria-importance-text"></p>
+
+                        <!-- Join ARIA -->
+                        <h3 id="aria-join-title"></h3>
+                        <p id="aria-join-text"></p>
+                        <p id="aria-join-benefits-title"></p>
+                        <ul class="benefits-list">
+                            <li id="aria-benefit-1"></li>
+                            <li id="aria-benefit-2"></li>
+                            <li id="aria-benefit-3"></li>
+                            <li id="aria-benefit-4"></li>
+                            <li id="aria-benefit-5"></li>
+                            <li id="aria-benefit-6"></li>
+                        </ul>
+
+                        <!-- JOIN CTA -->
+                        <div class="join-cta">
+                            <p id="aria-join-contact"></p>
+                            <a href="mailto:arbovirus@isaric.org" class="btn" id="aria-join-email"></a>
+                        </div>
+                    </div>
+
+                    <!-- POCUS -->
+                    <div class="project-detail" id="detail-pocus" style="display:none;">
+                        <h2 id="pocus-title"></h2>
+                        <p class="project-subtitle" id="pocus-subtitle"></p>
+                        <h3 id="pocus-about-title"></h3>
+                        <p id="pocus-about-text"></p>
+                    </div>
+
+                    <!-- MOSAIC -->
+                    <div class="project-detail" id="detail-mosaic" style="display:none;">
+                        <h2 id="mosaic-title"></h2>
+                        <p class="project-subtitle" id="mosaic-subtitle"></p>
+                        <h3 id="mosaic-about-title"></h3>
+                        <p id="mosaic-about-text"></p>
+                    </div>
+
+                    <!-- Chikungunya -->
+                    <div class="project-detail" id="detail-chikungunya" style="display:none;">
+                        <h2 id="chikungunya-title"></h2>
+                        <p class="project-subtitle" id="chikungunya-subtitle"></p>
+                        <p id="chikungunya-about-text"></p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/images/isaric-footer.png" alt="ISARIC" style="height: 40px; width: auto;">
+                    </div>
+                    <p id="footer-description"></p>
+                    <a href="mailto:contact@isaric-sa.org.br" class="footer-email" id="footer-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M2 7l10 7 10-7" />
+                        </svg>
+                        contact@isaric-sa.org.br
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" id="footer-linkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 id="footer-links-title"></h4>
+                    <ul>
+                        <li><a href="../index.html" id="footer-home"></a></li>
+                        <li><a href="../pages/clinical.html" id="footer-clinical"></a></li>
+                        <li><a href="../pages/news.html" id="footer-news"></a></li>
+                        <li><a href="../pages/training.html" id="footer-training"></a></li>
+                        <li><a href="../pages/publications.html" id="footer-publications"></a></li>
+                        <li><a href="../pages/contact.html" id="footer-contact"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright"></p>
+                <div class="footer-bottom-links">
+                    <a href="#" id="footer-privacy"></a>
+                    <a href="#" id="footer-terms"></a>
+                    <a href="#" id="footer-accessibility"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/content-loader.js"></script>
+    <script src="../js/clinical.js"></script>
+
+</body>
+</html>
