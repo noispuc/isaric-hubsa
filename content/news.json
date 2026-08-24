@@ -49,12 +49,13 @@
     "footer-team": "Equipe",
     "footer-contact": "Contato",
     "footer-copyright": "© 2026 ISARIC South America Hub. Todos os direitos reservados.",
+    "_comment": "Os arquivos estão com extensão .txt porque o GitHub Pages não carrega arquivos .md. Quando migrar para outro servidor que suporte .md, renomeie para .md - Exemplo: 2026-08-analytics-paper_predictive_models.md",
     "news-files": [
-      "2026-08-analytics-paper_predictive_models.md",
-      "2026-07-analytics-ifors_phenotyping_clustering.md",
-      "2026-04-credo-workshop_salvador.md",
-      "2026-02-fellowship-program_applications.md",
-      "2026-01-aria-open_submissions.md"
+      "2026-08-analytics-paper_predictive_models.txt",
+      "2026-07-analytics-ifors_phenotyping_clustering.txt",
+      "2026-04-credo-workshop_salvador.txt",
+      "2026-02-fellowship-program_applications.txt",
+      "2026-01-aria-open_submissions.txt"
     ]
   },
   "en": {
