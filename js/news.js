@@ -53,7 +53,8 @@
     // 5. EXTRAIR METADADOS DO NOME DO ARQUIVO
     // ============================================
     function parseFilename(filename) {
-        const parts = filename.replace('.md', '').split('-');
+        // const parts = filename.replace('.md', '').split('-');
+        const parts = filename.replace(/\.[^/.]+$/, '').split('-');
         const year = parts[0];
         const month = parts[1];
         const rest = parts.slice(2).join('-').replace(/_/g, ' ');
@@ -163,7 +164,8 @@
                     let title = metadata[`title_${lang}`] || metadata.title || fileMeta.slug;
                     let excerpt = metadata[`excerpt_${lang}`] || metadata.excerpt || '';
                     let readTime = metadata[`readTime_${lang}`] || metadata.readTime || '3 min read';
-                    let image = metadata.image || `${file.replace('.md', '.png')}`;
+                    let image = metadata.image || `${file.replace(/\.[^/.]+$/, '')}.png`;
+                    // let image = metadata.image || `${file.replace('.md', '.png')}`;
                     let date = metadata.date || `${fileMeta.year}-${fileMeta.month}-01`;
                     let category = metadata.category || fileMeta.category;
                     let featured = metadata.featured === 'true';
