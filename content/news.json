@@ -108,12 +108,13 @@
     "footer-team": "Team",
     "footer-contact": "Contact Us",
     "footer-copyright": "© 2026 ISARIC South America Hub. All rights reserved.",
+    "_comment": "Os arquivos estão com extensão .html porque o GitHub Pages não carrega arquivos .md. Quando migrar para outro servidor que suporte .md, renomeie para .md - Exemplo: 2026-08-analytics-paper_predictive_models.md",
     "news-files": [
-      "2026-08-analytics-paper_predictive_models.md",
-      "2026-07-analytics-ifors_phenotyping_clustering.md",
-      "2026-04-credo-workshop_salvador.md",
-      "2026-02-fellowship-program_applications.md",
-      "2026-01-aria-open_submissions.md"
+      "2026-08-analytics-paper_predictive_models.html",
+      "2026-07-analytics-ifors_phenotyping_clustering.html",
+      "2026-04-credo-workshop_salvador.html",
+      "2026-02-fellowship-program_applications.html",
+      "2026-01-aria-open_submissions.html"
     ]
   },
   "es": {
@@ -166,12 +167,13 @@
     "footer-team": "Equipo",
     "footer-contact": "Contacto",
     "footer-copyright": "© 2026 ISARIC South America Hub. Todos los derechos reservados.",
+    "_comment": "Os arquivos estão com extensão .html porque o GitHub Pages não carrega arquivos .md. Quando migrar para outro servidor que suporte .md, renomeie para .md - Exemplo: 2026-08-analytics-paper_predictive_models.md",
     "news-files": [
-      "2026-08-analytics-paper_predictive_models.md",
-      "2026-07-analytics-ifors_phenotyping_clustering.md",
-      "2026-04-credo-workshop_salvador.md",
-      "2026-02-fellowship-program_applications.md",
-      "2026-01-aria-open_submissions.md"
+      "2026-08-analytics-paper_predictive_models.html",
+      "2026-07-analytics-ifors_phenotyping_clustering.html",
+      "2026-04-credo-workshop_salvador.html",
+      "2026-02-fellowship-program_applications.html",
+      "2026-01-aria-open_submissions.html"
     ]
   }
 }
