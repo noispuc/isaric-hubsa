@@ -54,76 +54,49 @@
     "footer-copyright": "© 2026 ISARIC South America Hub. Todos os direitos reservados.",
     "publications-list": [
       {
-        "doi": "10.20944/preprints202606.0491.v1",
+        "doi": "10.64898/2026.08.03.26359583",  
         "disease": "Dengue",
-        "type": "Original Research",
+        "type": "Meta-analysis",
         "open": true,
         "highlight": true,
-        "impact": 14.8,
-        "citations": 48
+        "impact": "NA",
+        "citations": 0
       },
       {
-        "doi": "10.1371/journal.pone.0291480",
-        "disease": "Multi-pathogen",
-        "type": "Methods",
-        "open": true,
-        "highlight": false,
-        "impact": 3.7,
-        "citations": 22
-      },
-      {
-        "doi": "10.1038/s41467-025-55914-2",
-        "disease": "Zika",
-        "type": "Original Research",
-        "open": true,
-        "highlight": false,
-        "impact": 16.6,
-        "citations": 134
-      },
-      {
-        "doi": "10.1016/S1473-3099(25)00419-X",
+        "doi": "10.1016/j.ijid.2025.108023",
         "disease": "Dengue",
-        "type": "Original Research",
-        "open": false,
+        "type": "Cohort study",
+        "open": true,
         "highlight": false,
-        "impact": 25.1,
-        "citations": 89
+        "impact": "NA",
+        "citations": 0
+      },
+      {
+        "doi": "10.1016/j.ijid.2026.108879",
+        "disease": "Dengue",
+        "type": "Meta-analysis",
+        "open": true,
+        "highlight": false,
+        "impact": "NA",
+        "citations": 0
+      },
+      {
+        "doi": "10.1016/j.ijid.2026.109050",  
+        "disease": "Dengue",
+        "type": "Cohort study",
+        "open": true,
+        "highlight": false,
+        "impact": "NA",
+        "citations": 0
       },
       {
         "doi": "10.1093/infdis/jiae025",
         "disease": "Multi-pathogen",
         "type": "Review",
-        "open": false,
-        "highlight": false,
-        "impact": 6.4,
-        "citations": 56
-      },
-      {
-        "doi": "10.1371/journal.pntd.0012104",
-        "disease": "Dengue",
-        "type": "Original Research",
         "open": true,
         "highlight": false,
-        "impact": 4.6,
-        "citations": 33
-      },
-      {
-        "doi": "10.1186/s12916-024-03489-0",
-        "disease": "Chikungunya",
-        "type": "Original Research",
-        "open": true,
-        "highlight": false,
-        "impact": 9.3,
-        "citations": 78
-      },
-      {
-        "doi": "10.1056/NEJMc2408815",
-        "disease": "Chikungunya",
-        "type": "Correspondence",
-        "open": false,
-        "highlight": false,
-        "impact": 96.2,
-        "citations": 201
+        "impact": "NA",
+        "citations": 0
       }
     ]
   },
@@ -182,76 +155,49 @@
     "footer-copyright": "© 2026 ISARIC South America Hub. All rights reserved.",
     "publications-list": [
       {
-        "doi": "10.20944/preprints202606.0491.v1",
+        "doi": "10.64898/2026.08.03.26359583",  
         "disease": "Dengue",
-        "type": "Original Research",
+        "type": "Meta-analysis",
         "open": true,
         "highlight": true,
-        "impact": 14.8,
-        "citations": 48
+        "impact": "NA",
+        "citations": 0
       },
       {
-        "doi": "10.1371/journal.pone.0291480",
-        "disease": "Multi-pathogen",
-        "type": "Methods",
-        "open": true,
-        "highlight": false,
-        "impact": 3.7,
-        "citations": 22
-      },
-      {
-        "doi": "10.1038/s41467-025-55914-2",
-        "disease": "Zika",
-        "type": "Original Research",
-        "open": true,
-        "highlight": false,
-        "impact": 16.6,
-        "citations": 134
-      },
-      {
-        "doi": "10.1016/S1473-3099(25)00419-X",
+        "doi": "10.1016/j.ijid.2025.108023",
         "disease": "Dengue",
-        "type": "Original Research",
-        "open": false,
+        "type": "Cohort study",
+        "open": true,
         "highlight": false,
-        "impact": 25.1,
-        "citations": 89
+        "impact": "NA",
+        "citations": 0
+      },
+      {
+        "doi": "10.1016/j.ijid.2026.108879",
+        "disease": "Dengue",
+        "type": "Meta-analysis",
+        "open": true,
+        "highlight": false,
+        "impact": "NA",
+        "citations": 0
+      },
+      {
+        "doi": "10.1016/j.ijid.2026.109050",  
+        "disease": "Dengue",
+        "type": "Cohort study",
+        "open": true,
+        "highlight": false,
+        "impact": "NA",
+        "citations": 0
       },
       {
         "doi": "10.1093/infdis/jiae025",
         "disease": "Multi-pathogen",
         "type": "Review",
-        "open": false,
-        "highlight": false,
-        "impact": 6.4,
-        "citations": 56
-      },
-      {
-        "doi": "10.1371/journal.pntd.0012104",
-        "disease": "Dengue",
-        "type": "Original Research",
         "open": true,
         "highlight": false,
-        "impact": 4.6,
-        "citations": 33
-      },
-      {
-        "doi": "10.1186/s12916-024-03489-0",
-        "disease": "Chikungunya",
-        "type": "Original Research",
-        "open": true,
-        "highlight": false,
-        "impact": 9.3,
-        "citations": 78
-      },
-      {
-        "doi": "10.1056/NEJMc2408815",
-        "disease": "Chikungunya",
-        "type": "Correspondence",
-        "open": false,
-        "highlight": false,
-        "impact": 96.2,
-        "citations": 201
+        "impact": "NA",
+        "citations": 0
       }
     ]
   },
@@ -310,76 +256,49 @@
     "footer-copyright": "© 2026 ISARIC South America Hub. Todos los derechos reservados.",
     "publications-list": [
       {
-        "doi": "10.20944/preprints202606.0491.v1",
+        "doi": "10.64898/2026.08.03.26359583",  
         "disease": "Dengue",
-        "type": "Original Research",
+        "type": "Meta-analysis",
         "open": true,
         "highlight": true,
-        "impact": 14.8,
-        "citations": 48
+        "impact": "NA",
+        "citations": 0
       },
       {
-        "doi": "10.1371/journal.pone.0291480",
-        "disease": "Multi-pathogen",
-        "type": "Methods",
-        "open": true,
-        "highlight": false,
-        "impact": 3.7,
-        "citations": 22
-      },
-      {
-        "doi": "10.1038/s41467-025-55914-2",
-        "disease": "Zika",
-        "type": "Original Research",
-        "open": true,
-        "highlight": false,
-        "impact": 16.6,
-        "citations": 134
-      },
-      {
-        "doi": "10.1016/S1473-3099(25)00419-X",
+        "doi": "10.1016/j.ijid.2025.108023",
         "disease": "Dengue",
-        "type": "Original Research",
-        "open": false,
+        "type": "Cohort study",
+        "open": true,
         "highlight": false,
-        "impact": 25.1,
-        "citations": 89
+        "impact": "NA",
+        "citations": 0
+      },
+      {
+        "doi": "10.1016/j.ijid.2026.108879",
+        "disease": "Dengue",
+        "type": "Meta-analysis",
+        "open": true,
+        "highlight": false,
+        "impact": "NA",
+        "citations": 0
+      },
+      {
+        "doi": "10.1016/j.ijid.2026.109050",  
+        "disease": "Dengue",
+        "type": "Cohort study",
+        "open": true,
+        "highlight": false,
+        "impact": "NA",
+        "citations": 0
       },
       {
         "doi": "10.1093/infdis/jiae025",
         "disease": "Multi-pathogen",
         "type": "Review",
-        "open": false,
-        "highlight": false,
-        "impact": 6.4,
-        "citations": 56
-      },
-      {
-        "doi": "10.1371/journal.pntd.0012104",
-        "disease": "Dengue",
-        "type": "Original Research",
         "open": true,
         "highlight": false,
-        "impact": 4.6,
-        "citations": 33
-      },
-      {
-        "doi": "10.1186/s12916-024-03489-0",
-        "disease": "Chikungunya",
-        "type": "Original Research",
-        "open": true,
-        "highlight": false,
-        "impact": 9.3,
-        "citations": 78
-      },
-      {
-        "doi": "10.1056/NEJMc2408815",
-        "disease": "Chikungunya",
-        "type": "Correspondence",
-        "open": false,
-        "highlight": false,
-        "impact": 96.2,
-        "citations": 201
+        "impact": "NA",
+        "citations": 0
       }
     ]
   }
