@@ -4,34 +4,6 @@
     console.log('🏠 index.js carregado');
 
     // ============================================
-    // 0. CONFIGURAÇÃO DE BASE PATH - DETECÇÃO AUTOMÁTICA
-    // ============================================
-    function getBasePath() {
-        // Obtém o caminho completo da página
-        const pathname = window.location.pathname;
-        
-        // Se estiver no GitHub Pages (contém github.io)
-        if (window.location.hostname.includes('github.io')) {
-            // Pega o nome do repositório
-            const parts = pathname.split('/').filter(p => p !== '');
-            if (parts.length > 0) {
-                // Se o primeiro segmento não tem ponto (não é um arquivo)
-                if (!parts[0].includes('.')) {
-                    return '/' + parts[0] + '/';
-                }
-            }
-            return '/';
-        }
-        
-        // Local (LiveServer, etc)
-        return '';
-    }
-
-    const BASE_PATH = getBasePath();
-    console.log('📍 Base Path:', BASE_PATH || '(root)');
-    console.log('📍 Pathname:', window.location.pathname);
-
-    // ============================================
     // 1. CORES POR CATEGORIA
     // ============================================
     const CATEGORY_COLORS = {
@@ -165,7 +137,7 @@
         try {
             const lang = localStorage.getItem('preferred_lang') || 'pt';
             
-            const jsonUrl = `${BASE_PATH}content/news.json`;
+            const jsonUrl = 'content/news.json';
             console.log('📡 Buscando news.json em:', jsonUrl);
             
             const response = await fetch(jsonUrl);
@@ -176,7 +148,7 @@
             }
             
             const data = await response.json();
-            console.log('✅ news.json carregado:', data);
+            console.log('✅ news.json carregado');
             
             const langData = data[lang] || data.pt;
 
@@ -186,14 +158,13 @@
             }
 
             const fileList = langData['news-files'];
-            console.log('📄 Arquivos encontrados:', fileList);
+            console.log('📄 Arquivos encontrados:', fileList.length);
             
             const newsItems = [];
 
             for (const file of fileList) {
                 try {
-                    const fileUrl = `${BASE_PATH}content/newspages/${file}`;
-                    console.log('📂 Tentando carregar:', fileUrl);
+                    const fileUrl = `content/newspages/${file}`;
                     
                     const contentResponse = await fetch(fileUrl);
                     if (!contentResponse.ok) {
@@ -237,7 +208,7 @@
                         }
                     }
                     
-                    const imagePath = `${BASE_PATH}assets/news/${image}`;
+                    const imagePath = `assets/news/${image}`;
                     const hasImage = await imageExists(imagePath);
                     
                     newsItems.push({
@@ -246,7 +217,7 @@
                         category: category,
                         title: title || `Notícia ${fileMeta.slug}`,
                         excerpt: excerpt || 'Leia mais sobre esta notícia...',
-                        image: hasImage ? imagePath : `${BASE_PATH}assets/news/default.png`,
+                        image: hasImage ? imagePath : 'assets/news/default.png',
                         imageAlt: title || 'Notícia',
                         readTime: readTime,
                         filename: file,
@@ -269,7 +240,7 @@
             
             if (latestNews.length > 0) {
                 renderHomeNews(latestNews);
-                console.log(`✅ ${latestNews.length} notícias carregadas na home`);
+                console.log(`✅ ${latestNews.length} notícias renderizadas na home`);
             } else {
                 console.warn('⚠️ Nenhuma notícia carregada');
                 const section = document.getElementById('latest-news');
@@ -306,7 +277,7 @@
             featuredImg.src = featured.image;
             featuredImg.alt = featured.imageAlt || 'Notícia em destaque';
             featuredImg.onerror = function() {
-                this.src = `${BASE_PATH}assets/news/default.png`;
+                this.src = 'assets/news/default.png';
             };
             featuredImg.style.display = 'block';
         }
@@ -397,7 +368,7 @@
                 img.src = news.image;
                 img.alt = news.imageAlt || 'Notícia';
                 img.onerror = function() {
-                    this.src = `${BASE_PATH}assets/news/default.png`;
+                    this.src = 'assets/news/default.png';
                 };
                 img.style.display = 'block';
             }
@@ -448,7 +419,7 @@
         
         if (!modal || !body) {
             console.warn('⚠️ Modal não encontrado, redirecionando para página de notícias');
-            window.location.href = `${BASE_PATH}pages/news.html`;
+            window.location.href = 'pages/news.html';
             return;
         }
 
@@ -456,8 +427,7 @@
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
 
-        const url = `${BASE_PATH}content/newspages/${filename}`;
-        console.log('📂 Abrindo modal com:', url);
+        const url = `content/newspages/${filename}`;
 
         fetch(url)
             .then(response => {
@@ -656,8 +626,6 @@
     // ============================================
     function initHome() {
         console.log('🏠 Inicializando home...');
-        console.log('📍 Ambiente:', window.location.hostname);
-        console.log('📍 Base Path:', BASE_PATH || '(root)');
 
         initHomeModal();
 
