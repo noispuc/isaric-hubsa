@@ -150,7 +150,12 @@
 
             for (const file of fileList) {
                 try {
-                    const contentResponse = await fetch(`../content/newspages/${file}`);
+                    const contentResponse = await fetch(`../content/newspages/${file}`, {
+                        mode: 'no-cors',
+                        headers: {
+                            'Accept': 'text/plain, text/markdown, */*'
+                        }
+                    });
                     if (!contentResponse.ok) {
                         console.warn(`Arquivo não encontrado: ${file}`);
                         continue;
@@ -432,7 +437,12 @@
 
         console.log('📂 Buscando:', url);
 
-        fetch(url)
+        fetch(url, {
+                mode: 'no-cors',
+                headers: {
+                    'Accept': 'text/plain, text/markdown, */*'
+                }
+            })
             .then(response => {
                 if (!response.ok) throw new Error('Notícia não encontrada');
                 return response.text();
