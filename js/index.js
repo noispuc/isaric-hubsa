@@ -4,27 +4,32 @@
     console.log('🏠 index.js carregado');
 
     // ============================================
-    // 0. CONFIGURAÇÃO DE BASE PATH
+    // 0. CONFIGURAÇÃO DE BASE PATH - DETECÇÃO AUTOMÁTICA
     // ============================================
     function getBasePath() {
-        // Se estiver no GitHub Pages
+        // Obtém o caminho completo da página
+        const pathname = window.location.pathname;
+        
+        // Se estiver no GitHub Pages (contém github.io)
         if (window.location.hostname.includes('github.io')) {
-            const pathParts = window.location.pathname.split('/');
-            const cleanParts = pathParts.filter(p => p !== '');
-            if (cleanParts.length > 0) {
-                // Se tem um repositório nomeado
-                if (cleanParts.length >= 1 && !cleanParts[0].includes('.')) {
-                    return '/' + cleanParts[0] + '/';
+            // Pega o nome do repositório
+            const parts = pathname.split('/').filter(p => p !== '');
+            if (parts.length > 0) {
+                // Se o primeiro segmento não tem ponto (não é um arquivo)
+                if (!parts[0].includes('.')) {
+                    return '/' + parts[0] + '/';
                 }
             }
             return '/';
         }
-        // LiveServer ou local - retorna vazio para caminhos relativos
+        
+        // Local (LiveServer, etc)
         return '';
     }
 
     const BASE_PATH = getBasePath();
     console.log('📍 Base Path:', BASE_PATH || '(root)');
+    console.log('📍 Pathname:', window.location.pathname);
 
     // ============================================
     // 1. CORES POR CATEGORIA
@@ -160,34 +165,45 @@
         try {
             const lang = localStorage.getItem('preferred_lang') || 'pt';
             
-            // Usa BASE_PATH para todos os fetches
-            const response = await fetch(`${BASE_PATH}content/news.json`);
+            const jsonUrl = `${BASE_PATH}content/news.json`;
+            console.log('📡 Buscando news.json em:', jsonUrl);
+            
+            const response = await fetch(jsonUrl);
             
             if (!response.ok) {
-                console.warn('Não foi possível carregar as notícias para a home');
+                console.warn('❌ Não foi possível carregar news.json');
                 return;
             }
             
             const data = await response.json();
+            console.log('✅ news.json carregado:', data);
+            
             const langData = data[lang] || data.pt;
 
             if (!langData || !langData['news-files']) {
-                console.warn('Lista de arquivos não encontrada');
+                console.warn('❌ Lista de arquivos não encontrada');
                 return;
             }
 
             const fileList = langData['news-files'];
+            console.log('📄 Arquivos encontrados:', fileList);
+            
             const newsItems = [];
 
             for (const file of fileList) {
                 try {
-                    const contentResponse = await fetch(`${BASE_PATH}content/newspages/${file}`);
+                    const fileUrl = `${BASE_PATH}content/newspages/${file}`;
+                    console.log('📂 Tentando carregar:', fileUrl);
+                    
+                    const contentResponse = await fetch(fileUrl);
                     if (!contentResponse.ok) {
-                        console.warn(`Arquivo não encontrado: ${file}`);
+                        console.warn(`❌ Arquivo não encontrado: ${file}`);
                         continue;
                     }
                     
                     const content = await contentResponse.text();
+                    console.log(`✅ Carregado: ${file}`);
+                    
                     const fileMeta = parseFilename(file);
                     const { metadata } = extractMetadata(content);
                     
@@ -221,7 +237,6 @@
                         }
                     }
                     
-                    // CORRIGIDO: Não adiciona BASE_PATH duplicado
                     const imagePath = `${BASE_PATH}assets/news/${image}`;
                     const hasImage = await imageExists(imagePath);
                     
@@ -248,19 +263,21 @@
             newsItems.sort((a, b) => b.dateSort.localeCompare(a.dateSort));
             allNews = newsItems;
             
+            console.log(`📊 Total de notícias carregadas: ${allNews.length}`);
+            
             const latestNews = newsItems.slice(0, 5);
             
             if (latestNews.length > 0) {
                 renderHomeNews(latestNews);
                 console.log(`✅ ${latestNews.length} notícias carregadas na home`);
             } else {
-                console.warn('Nenhuma notícia carregada');
+                console.warn('⚠️ Nenhuma notícia carregada');
                 const section = document.getElementById('latest-news');
                 if (section) section.style.display = 'none';
             }
 
         } catch (error) {
-            console.error('Erro ao carregar notícias na home:', error);
+            console.error('❌ Erro ao carregar notícias na home:', error);
         }
     }
 
@@ -269,7 +286,7 @@
     // ============================================
     function renderHomeNews(newsItems) {
         if (!newsItems || newsItems.length === 0) {
-            console.warn('Nenhuma notícia para exibir na home');
+            console.warn('⚠️ Nenhuma notícia para exibir na home');
             const section = document.getElementById('latest-news');
             if (section) section.style.display = 'none';
             return;
@@ -430,7 +447,7 @@
         const body = document.getElementById('news-modal-body');
         
         if (!modal || !body) {
-            console.warn('Modal não encontrado, redirecionando para página de notícias');
+            console.warn('⚠️ Modal não encontrado, redirecionando para página de notícias');
             window.location.href = `${BASE_PATH}pages/news.html`;
             return;
         }
@@ -440,6 +457,7 @@
         document.body.style.overflow = 'hidden';
 
         const url = `${BASE_PATH}content/newspages/${filename}`;
+        console.log('📂 Abrindo modal com:', url);
 
         fetch(url)
             .then(response => {
@@ -586,7 +604,7 @@
                 `;
             })
             .catch(error => {
-                console.error('Erro ao carregar notícia:', error);
+                console.error('❌ Erro ao carregar notícia:', error);
                 body.innerHTML = `<p style="color: #BA0225; text-align: center; padding: 40px 0;">Erro ao carregar a notícia. Tente novamente.</p>`;
             });
     }
