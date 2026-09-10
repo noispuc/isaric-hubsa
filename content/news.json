@@ -49,7 +49,7 @@
     "footer-team": "Equipe",
     "footer-contact": "Contato",
     "footer-copyright": "© 2026 ISARIC South America Hub. Todos os direitos reservados.",
-    "_comment": "Os arquivos estão com extensão .html porque o GitHub Pages não carrega arquivos .md. Quando migrar para outro servidor que suporte .md, renomeie para .md - Exemplo: 2026-08-analytics-paper_predictive_models.md",
+    "_comment": "Arquivos .md são servidos corretamente pelo GitHub Pages graças ao .nojekyll na raiz do projeto.",
     "news-files": [
       "2026-08-analytics-paper_predictive_models.md",
       "2026-07-analytics-ifors_phenotyping_clustering.md",
@@ -108,7 +108,7 @@
     "footer-team": "Team",
     "footer-contact": "Contact Us",
     "footer-copyright": "© 2026 ISARIC South America Hub. All rights reserved.",
-    "_comment": "Os arquivos estão com extensão .html porque o GitHub Pages não carrega arquivos .md. Quando migrar para outro servidor que suporte .md, renomeie para .md - Exemplo: 2026-08-analytics-paper_predictive_models.md",
+    "_comment": "Arquivos .md são servidos corretamente pelo GitHub Pages graças ao .nojekyll na raiz do projeto.",
     "news-files": [
       "2026-08-analytics-paper_predictive_models.md",
       "2026-07-analytics-ifors_phenotyping_clustering.md",
@@ -167,7 +167,7 @@
     "footer-team": "Equipo",
     "footer-contact": "Contacto",
     "footer-copyright": "© 2026 ISARIC South America Hub. Todos los derechos reservados.",
-    "_comment": "Os arquivos estão com extensão .html porque o GitHub Pages não carrega arquivos .md. Quando migrar para outro servidor que suporte .md, renomeie para .md - Exemplo: 2026-08-analytics-paper_predictive_models.md",
+    "_comment": "Arquivos .md são servidos corretamente pelo GitHub Pages graças ao .nojekyll na raiz do projeto.",
     "news-files": [
       "2026-08-analytics-paper_predictive_models.md",
       "2026-07-analytics-ifors_phenotyping_clustering.md",

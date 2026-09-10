@@ -4,239 +4,34 @@
     console.log('🏠 index.js carregado');
 
     // ============================================
-    // 1. CORES POR CATEGORIA
-    // ============================================
-    const CATEGORY_COLORS = {
-        'Research': '#BA0225',
-        'Training': '#1A6B6B',
-        'Partnership': '#D1964F',
-        'Data': '#1A6B6B',
-        'Event': '#4A4A4A',
-        'Announcement': '#7C3AED'
-    };
-
-    // ============================================
-    // 2. ESTADO GLOBAL
+    // 1. ESTADO GLOBAL
     // ============================================
     let allNews = [];
     let modalInitialized = false;
 
     // ============================================
-    // 3. FUNÇÕES AUXILIARES
-    // ============================================
-    function getText(id) {
-        const el = document.getElementById(id);
-        return el ? el.textContent.trim() : '';
-    }
-
-    function formatDate(dateStr) {
-        const months = {
-            '01': 'January', '02': 'February', '03': 'March', '04': 'April',
-            '05': 'May', '06': 'June', '07': 'July', '08': 'August',
-            '09': 'September', '10': 'October', '11': 'November', '12': 'December'
-        };
-        const parts = dateStr.split('-');
-        if (parts.length === 3) {
-            const year = parts[0];
-            const month = months[parts[1]] || parts[1];
-            const day = parts[2];
-            return `${month} ${parseInt(day)}, ${year}`;
-        }
-        return dateStr;
-    }
-
-    function parseFilename(filename) {
-        const parts = filename.replace(/\.[^/.]+$/, '').split('-');
-        const year = parts[0];
-        const month = parts[1];
-        const rest = parts.slice(2).join('-').replace(/_/g, ' ');
-        
-        let category = 'Research';
-        const filenameLower = filename.toLowerCase();
-        if (filenameLower.includes('credo') || filenameLower.includes('fellowship') || 
-            filenameLower.includes('workshop') || filenameLower.includes('ifors')) {
-            category = 'Training';
-        } else if (filenameLower.includes('paho') || filenameLower.includes('partnership')) {
-            category = 'Partnership';
-        } else if (filenameLower.includes('data') || filenameLower.includes('database') || 
-                   filenameLower.includes('records')) {
-            category = 'Data';
-        } else if (filenameLower.includes('summit') || filenameLower.includes('event')) {
-            category = 'Event';
-        } else if (filenameLower.includes('who') || filenameLower.includes('announcement') || 
-                   filenameLower.includes('open_submissions')) {
-            category = 'Announcement';
-        }
-        
-        return {
-            filename: filename,
-            year: year,
-            month: month,
-            dateSort: `${year}-${month}`,
-            category: category,
-            slug: rest || filename
-        };
-    }
-
-    function extractMetadata(content) {
-        const lines = content.split('\n');
-        let metadata = {};
-        let inMetadata = false;
-        let contentStart = 0;
-        
-        if (lines[0].trim() === '---') {
-            inMetadata = true;
-            let i = 1;
-            while (i < lines.length) {
-                if (lines[i].trim() === '---') {
-                    inMetadata = false;
-                    contentStart = i + 1;
-                    break;
-                }
-                const line = lines[i];
-                const colonIndex = line.indexOf(':');
-                if (colonIndex > 0) {
-                    const key = line.substring(0, colonIndex).trim();
-                    const value = line.substring(colonIndex + 1).trim();
-                    metadata[key] = value.replace(/^["']|["']$/g, '');
-                }
-                i++;
-            }
-        }
-        
-        if (Object.keys(metadata).length === 0) {
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i].trim();
-                if (line.startsWith('# ')) {
-                    metadata.title = line.replace('# ', '').trim();
-                    contentStart = i + 1;
-                    break;
-                }
-            }
-        }
-        
-        return { metadata, contentStart };
-    }
-
-    // ============================================
-    // 4. FUNÇÃO PARA VERIFICAR SE IMAGEM EXISTE
-    // ============================================
-    async function imageExists(url) {
-        try {
-            const response = await fetch(url, { method: 'HEAD' });
-            return response.ok;
-        } catch {
-            return false;
-        }
-    }
-
-    // ============================================
-    // 5. CARREGAR NOTÍCIAS NA HOME
+    // 2. CARREGAR NOTÍCIAS NA HOME
     // ============================================
     async function loadHomeNews() {
         try {
-            const lang = localStorage.getItem('preferred_lang') || 'pt';
-            
-            const jsonUrl = 'content/news.json';
-            console.log('📡 Buscando news.json em:', jsonUrl);
-            
-            const response = await fetch(jsonUrl);
-            
-            if (!response.ok) {
-                console.warn('❌ Não foi possível carregar news.json');
-                return;
-            }
-            
-            const data = await response.json();
-            console.log('✅ news.json carregado');
-            
-            const langData = data[lang] || data.pt;
-
-            if (!langData || !langData['news-files']) {
-                console.warn('❌ Lista de arquivos não encontrada');
+            const NS = window.NewsShared;
+            if (!NS) {
+                console.error('❌ news-shared.js não foi carregado');
                 return;
             }
 
-            const fileList = langData['news-files'];
-            console.log('📄 Arquivos encontrados:', fileList.length);
+            // O basePath é relativo à raiz do site (home)
+            const newsItems = await NS.loadNewsData('./');
             
-            const newsItems = [];
-
-            for (const file of fileList) {
-                try {
-                    const fileUrl = `content/newspages/${file}`;
-                    
-                    const contentResponse = await fetch(fileUrl);
-                    if (!contentResponse.ok) {
-                        console.warn(`❌ Arquivo não encontrado: ${file}`);
-                        continue;
-                    }
-                    
-                    const content = await contentResponse.text();
-                    console.log(`✅ Carregado: ${file}`);
-                    
-                    const fileMeta = parseFilename(file);
-                    const { metadata } = extractMetadata(content);
-                    
-                    let title = metadata[`title_${lang}`] || metadata.title || fileMeta.slug;
-                    let excerpt = metadata[`excerpt_${lang}`] || metadata.excerpt || '';
-                    let image = metadata.image || `${file.replace(/\.[^/.]+$/, '')}.png`;
-                    let date = metadata.date || `${fileMeta.year}-${fileMeta.month}-01`;
-                    let category = metadata.category || fileMeta.category;
-                    let readTime = metadata.readTime || '3 min read';
-                    
-                    if (!excerpt) {
-                        const lines = content.split('\n');
-                        for (let i = 0; i < lines.length && i < 20; i++) {
-                            const line = lines[i].trim();
-                            if (line && !line.startsWith('#') && !line.startsWith('---') && !line.startsWith('[')) {
-                                excerpt = line;
-                                if (excerpt.length > 150) excerpt = excerpt.substring(0, 150) + '...';
-                                break;
-                            }
-                        }
-                    }
-                    
-                    if (!title || title === fileMeta.slug) {
-                        const lines = content.split('\n');
-                        for (let i = 0; i < lines.length; i++) {
-                            const line = lines[i].trim();
-                            if (line.startsWith('# ')) {
-                                title = line.replace('# ', '').trim();
-                                break;
-                            }
-                        }
-                    }
-                    
-                    const imagePath = `assets/news/${image}`;
-                    const hasImage = await imageExists(imagePath);
-                    
-                    newsItems.push({
-                        date: formatDate(date),
-                        dateSort: date,
-                        category: category,
-                        title: title || `Notícia ${fileMeta.slug}`,
-                        excerpt: excerpt || 'Leia mais sobre esta notícia...',
-                        image: hasImage ? imagePath : 'assets/news/default.png',
-                        imageAlt: title || 'Notícia',
-                        readTime: readTime,
-                        filename: file,
-                        slug: fileMeta.slug,
-                        year: fileMeta.year,
-                        month: fileMeta.month
-                    });
-
-                } catch (error) {
-                    console.error(`Erro ao carregar ${file}:`, error);
-                }
-            }
-
-            newsItems.sort((a, b) => b.dateSort.localeCompare(a.dateSort));
-            allNews = newsItems;
+            // Resolver caminhos de imagem para contexto da home
+            allNews = newsItems.map(n => ({
+                ...n,
+                image: NS.resolveImagePath(n.image, './')
+            }));
             
             console.log(`📊 Total de notícias carregadas: ${allNews.length}`);
             
-            const latestNews = newsItems.slice(0, 5);
+            const latestNews = allNews.slice(0, 5);
             
             if (latestNews.length > 0) {
                 renderHomeNews(latestNews);
@@ -253,9 +48,11 @@
     }
 
     // ============================================
-    // 6. RENDERIZAR NOTÍCIAS NA HOME
+    // 3. RENDERIZAR NOTÍCIAS NA HOME
     // ============================================
     function renderHomeNews(newsItems) {
+        const NS = window.NewsShared;
+
         if (!newsItems || newsItems.length === 0) {
             console.warn('⚠️ Nenhuma notícia para exibir na home');
             const section = document.getElementById('latest-news');
@@ -266,6 +63,7 @@
         const featured = newsItems[0];
         const thumbs = newsItems.slice(1, 5);
 
+        // Featured news
         const featuredImg = document.getElementById('news-featured-image');
         const featuredBadge = document.getElementById('news-featured-badge');
         const featuredDate = document.getElementById('news-featured-date');
@@ -283,9 +81,9 @@
         }
         
         if (featuredBadge) {
-            const categoryText = getText(`filter-${featured.category.toLowerCase()}`) || featured.category;
+            const categoryText = NS.getText(`filter-${featured.category.toLowerCase()}`) || featured.category;
             featuredBadge.textContent = categoryText;
-            const color = CATEGORY_COLORS[featured.category] || '#BA0225';
+            const color = NS.CATEGORY_COLORS[featured.category] || '#BA0225';
             featuredBadge.style.background = color;
             featuredBadge.style.display = 'inline-block';
         }
@@ -310,6 +108,7 @@
             });
         }
 
+        // Thumbs configuration
         const thumbConfigs = [
             { 
                 id: 1, 
@@ -374,9 +173,9 @@
             }
             
             if (badge) {
-                const categoryText = getText(`filter-${news.category.toLowerCase()}`) || news.category;
+                const categoryText = NS.getText(`filter-${news.category.toLowerCase()}`) || news.category;
                 badge.textContent = categoryText;
-                const color = CATEGORY_COLORS[news.category] || '#4A4A4A';
+                const color = NS.CATEGORY_COLORS[news.category] || '#4A4A4A';
                 badge.style.background = color;
                 badge.style.display = 'inline-block';
             }
@@ -401,6 +200,7 @@
             }
         });
 
+        // Esconder thumbs não utilizados
         for (let i = thumbs.length; i < thumbConfigs.length; i++) {
             const config = thumbConfigs[i];
             const container = document.getElementById(config.containerId);
@@ -411,9 +211,10 @@
     }
 
     // ============================================
-    // 7. MODAL PARA A HOME
+    // 4. MODAL PARA A HOME
     // ============================================
     function openHomeNewsModal(filename) {
+        const NS = window.NewsShared;
         const modal = document.getElementById('news-modal');
         const body = document.getElementById('news-modal-body');
         
@@ -437,127 +238,8 @@
             .then(content => {
                 const lang = localStorage.getItem('preferred_lang') || 'pt';
                 
-                const lines = content.split('\n');
-                let title = '';
-                let contentHtml = '';
-                let inContent = false;
-                
-                const langMarker = `# ${lang.toUpperCase()}`;
-                let contentLines = [];
-                let foundLang = false;
-                
-                for (let i = 0; i < lines.length; i++) {
-                    const line = lines[i].trim();
-                    
-                    if (line === langMarker) {
-                        foundLang = true;
-                        inContent = true;
-                        continue;
-                    }
-                    
-                    if (inContent && line.match(/^# (PT|EN|ES)$/)) {
-                        break;
-                    }
-                    
-                    if (inContent) {
-                        contentLines.push(lines[i]);
-                    }
-                }
-                
-                if (!foundLang) {
-                    let startCollecting = false;
-                    for (let i = 0; i < lines.length; i++) {
-                        const line = lines[i].trim();
-                        if (!startCollecting && line.match(/^# (PT|EN|ES)$/)) {
-                            startCollecting = true;
-                            continue;
-                        }
-                        if (startCollecting && line.match(/^# (PT|EN|ES)$/)) {
-                            break;
-                        }
-                        if (startCollecting) {
-                            contentLines.push(lines[i]);
-                        }
-                    }
-                }
-                
-                if (contentLines.length === 0) {
-                    contentLines = lines;
-                }
-
-                function processMarkdown(text) {
-                    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 
-                        '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: #BA0225; text-decoration: underline;">$1</a>');
-                    text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                    text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
-                    return text;
-                }
-                
-                let inList = false;
-                for (let i = 0; i < contentLines.length; i++) {
-                    let line = contentLines[i];
-                    let trimmed = line.trim();
-                    
-                    if (trimmed === '') {
-                        if (inList) {
-                            contentHtml += '</ul>';
-                            inList = false;
-                        }
-                        contentHtml += '<br>';
-                        continue;
-                    }
-                    
-                    if (trimmed.startsWith('# ')) {
-                        if (inList) {
-                            contentHtml += '</ul>';
-                            inList = false;
-                        }
-                        const text = trimmed.replace(/^#\s*/, '');
-                        if (!title) title = text;
-                        contentHtml += `<h1>${text}</h1>`;
-                        continue;
-                    }
-                    
-                    if (trimmed.startsWith('## ')) {
-                        if (inList) {
-                            contentHtml += '</ul>';
-                            inList = false;
-                        }
-                        const text = trimmed.replace(/^##\s*/, '');
-                        contentHtml += `<h2>${text}</h2>`;
-                        continue;
-                    }
-                    
-                    if (trimmed.startsWith('### ')) {
-                        if (inList) {
-                            contentHtml += '</ul>';
-                            inList = false;
-                        }
-                        const text = trimmed.replace(/^###\s*/, '');
-                        contentHtml += `<h3>${text}</h3>`;
-                        continue;
-                    }
-                    
-                    if (trimmed.startsWith('- ')) {
-                        if (!inList) {
-                            contentHtml += '<ul>';
-                            inList = true;
-                        }
-                        const text = trimmed.replace(/^-\s*/, '');
-                        contentHtml += `<li>${processMarkdown(text)}</li>`;
-                        continue;
-                    }
-                    
-                    if (inList) {
-                        contentHtml += '</ul>';
-                        inList = false;
-                    }
-                    contentHtml += `<p>${processMarkdown(trimmed)}</p>`;
-                }
-                
-                if (inList) {
-                    contentHtml += '</ul>';
-                }
+                const contentLines = NS.extractContentByLang(content, lang);
+                const { title, contentHtml } = NS.renderMarkdownToHtml(contentLines);
                 
                 const newsItem = allNews.find(n => n.filename === filename);
                 
@@ -580,7 +262,7 @@
     }
 
     // ============================================
-    // 8. FECHAR MODAL
+    // 5. FECHAR MODAL
     // ============================================
     function closeHomeNewsModal() {
         const modal = document.getElementById('news-modal');
@@ -591,7 +273,7 @@
     }
 
     // ============================================
-    // 9. INICIALIZAR MODAL
+    // 6. INICIALIZAR MODAL
     // ============================================
     function initHomeModal() {
         if (modalInitialized) return;
@@ -622,7 +304,7 @@
     }
 
     // ============================================
-    // 10. INICIALIZAÇÃO DA HOME
+    // 7. INICIALIZAÇÃO DA HOME
     // ============================================
     function initHome() {
         console.log('🏠 Inicializando home...');
@@ -654,7 +336,7 @@
     }
 
     // ============================================
-    // 11. MUDANÇA DE IDIOMA
+    // 8. MUDANÇA DE IDIOMA
     // ============================================
     const originalSwitch = window.switchLanguage;
     window.switchLanguage = function(lang) {
@@ -674,14 +356,14 @@
     };
 
     // ============================================
-    // 12. EXPOR FUNÇÕES
+    // 9. EXPOR FUNÇÕES
     // ============================================
     window.loadHomeNews = loadHomeNews;
     window.openHomeNewsModal = openHomeNewsModal;
     window.closeHomeNewsModal = closeHomeNewsModal;
 
     // ============================================
-    // 13. INICIAR
+    // 10. INICIAR
     // ============================================
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initHome);

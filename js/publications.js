@@ -56,7 +56,7 @@
 
             return {
                 title: work.title ? work.title[0] : fallbackData.title || 'Título não disponível',
-                authors: work.author ? work.author.map(a => `${a.given} ${a.family}`).join(', ') : fallbackData.authors || 'Autores não disponíveis',
+                authors: work.author ? work.author.map(a => a.name || [a.given, a.family].filter(Boolean).join(' ')).join(', ') : fallbackData.authors || 'Autores não disponíveis',
                 published: work['issued'] ? work['issued']['date-parts'][0].join('-') : fallbackData.year ? `${fallbackData.year}-01-01` : 'Data não disponível',
                 journal: work['container-title'] ? work['container-title'][0] : fallbackData.journal || 'Periódico não disponível',
                 doi: work.DOI || doi,
@@ -512,11 +512,16 @@
             });
         }
 
-        // Aguarda content-loader e carrega os dados
+        let attempts = 0;
+        const maxAttempts = 30;
         function checkAndInit() {
+            attempts++;
             const testEl = document.getElementById('hero-title');
             if (testEl && testEl.textContent && testEl.textContent.trim() !== '') {
                 console.log('✅ Conteúdo carregado, inicializando...');
+                loadPublications();
+            } else if (attempts >= maxAttempts) {
+                console.log('⚠️ Tempo limite excedido, carregando publicações mesmo assim...');
                 loadPublications();
             } else {
                 console.log('⏳ Aguardando content-loader...');
